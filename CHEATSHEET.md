@@ -13,14 +13,19 @@ print(x)  # prints "hej"
 ## Kinds of variables
 Strings, Integers, Floating Points
 
-The kind is determined when given to a variable
+The kind of a variable is determined when a variable is assigned a value
 
 ```python
 a = 1        # a is now an integer with the value 1
 a = "1"      # a is now a string with the value "1"
 a = int("1") # "1" is converted to the integer 1
 a = str(1)   # 1 is converted to the string "1"
+a = float(1) # 1 is converted to the float 1.0
+a = 1/1      # 1/1 evaluates to the float 1.0
 ```
+
+Note that ``` int("hej") ``` will crash on evaluation. 
+The ```int``` and ```float``` functions expects values that can be interpreted as numbers.
 
 ## Arithmetic
 
@@ -54,14 +59,14 @@ else:
 
 ## Iteration
 
-Print the power 2 of the first 10 whole numbers:
+Print the first 10 powers of 2:
 
 ```python
 for i in range(10):
     print(i**2)
 ```
 
-Print just the odd numbers of the first 10 whole numbers:
+Iterate over the first 10 natural numbers and print the odd ones:
 ```python 
 for i in range(10):
     if i%2 == 1:
@@ -81,7 +86,7 @@ print("Hello, " + name + "!")
 Read a whole number from input:
 
 ```python
-n = int(input())  # Can only be a whole number (an "integer")
+n = int(input())  # The number given by
 for i in range(n):
     print(i * 2)
 ```
@@ -98,8 +103,7 @@ hypotenuse = sqrt(base**2 + side**2)
 print("The hypotenuse is: " + str(hypotenuse))  # You must convert the number to a string before adding to another string
 ```
 
-If we want to compute this many time in out code, we can define a function
-that calculates the hypotenuse of a right triangle:
+If we want to compute this many time in our code, we can define a function instead:
 
 ```python
 from math import sqrt

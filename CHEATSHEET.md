@@ -1,15 +1,55 @@
 Cheatsheet for Python
 =====================
 
-Add two numbers together and print the result:
+## Variables and printing
 
 ```python
-print(1+2)
+x = 10    # the variable x gets the value 10
+print(x)  # prints 10
+x = "hej" # x value is changed to "hej"
+print(x)  # prints "hej"
+```
+
+## Kinds of variables
+Strings, Integers, Floating Points
+
+The kind is determined when given to a variable
+
+```python
+a = 1        # a is now an integer with the value 1
+a = "1"      # a is now a string with the value "1"
+a = int("1") # "1" is converted to the integer 1
+a = str(1)   # 1 is converted to the string "1"
+```
+
+## Arithmetic
+
+```python
+x0 = 1 + 1  # x0 == 2
+x1 = 1 - 1  # x1 == 0
+x2 = 2 * 3  # x2 == 6
+x3 = 3 / 2  # x3 == 1.5
+x4 = 3 // 2 # x4 == 1, largest integer <= 3/2
+x5 = 3 % 2  # x5 == 1, 3 mod 2 == 1
+```
+Lots of mathematical functions, like ```sin``` and ```sqrt``` are avaliable in the ```math``` package.
+```python
+import math
+print(math.sqrt(4)) # prints 2
 ```
 
 ## Control flow
 
-TODO
+Do different things dependent on expression values:
+
+```python
+if a < 10:
+    print("a is less than 10")
+elif a == 10:
+    print("a is equal to 10")
+else:
+    print("a is larger than 10")
+```
 
 ## Iteration
 
@@ -18,6 +58,13 @@ Print the power 2 of the first 10 whole numbers:
 ```python
 for i in range(10):
     print(i**2)
+```
+
+Print just the odd numbers of the first 10 whole numbers:
+```python 
+for i in range(10):
+    if i%2 == 1:
+        print(i)
 ```
 
 ## Input
@@ -57,9 +104,8 @@ from math import sqrt
 def hypotenuse(base, side):
     return sqrt(base**2 + side**2)
 
-print(hypotenuse(1, 1))
-print(hypotenuse(1, 2))
-print(hypotenuse(1, 3))
+print(hypotenuse(1, 1)) # prints 1.4142
+print(hypotenuse(3, 4)) # prints 5.0 
 ```
 
 ## Lists

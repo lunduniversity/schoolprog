@@ -31,6 +31,7 @@ x2 = 2 * 3  # x2 == 6
 x3 = 3 / 2  # x3 == 1.5
 x4 = 3 // 2 # x4 == 1, largest integer <= 3/2
 x5 = 3 % 2  # x5 == 1, 3 mod 2 == 1
+x6 = 2 ** 3 # x6 == 8, (2^3).
 ```
 Lots of mathematical functions, like ```sin``` and ```sqrt``` are avaliable in the ```math``` package.
 ```python
@@ -85,6 +86,9 @@ for i in range(n):
     print(i * 2)
 ```
 
+
+## Functions
+
 Calculate the hypotenuse of a right-angled triangle with two decimal numbers as input:
 
 ```python
@@ -94,9 +98,8 @@ hypotenuse = sqrt(base**2 + side**2)
 print("The hypotenuse is: " + str(hypotenuse))  # You must convert the number to a string before adding to another string
 ```
 
-## Functions
-
-Write a function that calculates the hypotenuse of a right triangle:
+If we want to compute this many time in out code, we can define a function
+that calculates the hypotenuse of a right triangle:
 
 ```python
 from math import sqrt
@@ -104,9 +107,12 @@ from math import sqrt
 def hypotenuse(base, side):
     return sqrt(base**2 + side**2)
 
-print(hypotenuse(1, 1)) # prints 1.4142
+print(hypotenuse(1, 1)) # prints 1.4142135623730951
 print(hypotenuse(3, 4)) # prints 5.0 
 ```
+
+A function definition in python starts with ```def```, then follows the name and an argument list, possbibly empty.
+Then follows some python code, and it ends with ```return x``` where x is an expression.
 
 ## Lists
 

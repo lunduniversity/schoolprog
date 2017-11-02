@@ -1,5 +1,5 @@
-Impact Sweden
-=============
+Involve Sweden
+==============
 
 A project for teaching programming and computer science in primary and secondary education.
 

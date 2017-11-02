@@ -47,6 +47,47 @@ hypotenuse = sqrt(base**2 + side**2)
 print("The hypotenuse is: " + str(hypotenuse))  # You must convert the number to a string before adding to another string
 ```
 
+## Functions
+
+Write a function that calculates the hypotenuse of a right triangle:
+
+```python
+from math import sqrt
+
+def hypotenuse(base, side):
+    return sqrt(base**2 + side**2)
+
+print(hypotenuse(1, 1))
+print(hypotenuse(1, 2))
+print(hypotenuse(1, 3))
+```
+
+## Lists
+
+Build a simple list:
+
+```python
+l = [1, 2, 3]
+print(l)
+```
+
+Do something to each number in a list:
+
+```python
+l = [1, 2, 3]
+for number in l:
+    print(number * 2)
+```
+
+Build a list with the first `n` whole numbers and sum them together:
+
+```python
+n = 100
+l = list(range(n))
+print(sum(l))
+```
+
+
 ## Debugging
 
 Ensure that a statement is true, otherwise crash.

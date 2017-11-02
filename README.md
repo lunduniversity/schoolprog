@@ -9,6 +9,11 @@ We have received a 15,000€ grant from [Google CS4HS](https://www.cs4hs.com/) t
  - We will try our hardest to make the content engaging and interesting for students.
  - We accept contributions.
 
+## Getting started
+
+To get started as fast as possible, we suggest you use the online [Python 3 environment at repl.it](https://repl.it/languages/python3).
+
+We still have more work to do before this is usable as a part of a curriculum. But in the meantime, you can check out the cheatsheet and the exercises.
 
 ## Problems
 

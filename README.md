@@ -31,4 +31,6 @@ We still have more work to do before this is usable as a part of a curriculum. B
 
  - http://www.matteboken.se
  - http://cmc.education/workshops/python/
+ - http://www.malinc.se/
+ - http://www.lth.se/programmera/
  - Jeremia Mörling: Användningen av programmering för att lära ut ett matematiskt innehåll i gymnasieskolan, Göteborgs Universitet, 2011. https://gupea.ub.gu.se/bitstream/2077/29950/1/gupea_2077_29950_1.pdf

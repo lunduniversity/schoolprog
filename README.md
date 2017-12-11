@@ -27,3 +27,8 @@ We still have more work to do before this is usable as a part of a curriculum. B
      - (+) The English terminology is a de-facto standard that you need to know as a programmer.
      - (+) All the help resources available online is in English.
 
+## Resources
+
+ - http://www.matteboken.se
+ - http://cmc.education/workshops/python/
+ - Jeremia Mörling: Användningen av programmering för att lära ut ett matematiskt innehåll i gymnasieskolan, Göteborgs Universitet, 2011. https://gupea.ub.gu.se/bitstream/2077/29950/1/gupea_2077_29950_1.pdf

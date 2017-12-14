@@ -5,7 +5,7 @@ Write a program that randomizes a number and lets you guess which number it is.
 
 The process will go something like this:
 
- 1. Randomize a number 
+ 1. Randomize a number between 1 and 100 
  ```python
  from random import randint
 

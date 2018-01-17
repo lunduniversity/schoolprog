@@ -33,7 +33,7 @@ The process will go something like this:
  a = 10
  b = 13
  
- while a is not b:
+ while a != b:
  
   if a < b:
    b = int(input("Try a lower number!))

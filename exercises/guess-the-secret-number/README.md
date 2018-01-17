@@ -15,43 +15,48 @@ The process will go something like this:
 
 
  2. Now you want code for asking the user to guess the number. Copy the following code to the editor:
- ```python
- # Reads a line of input and converts it to an integer, then assigns this number to "guessed_number".
- guessed_number = int(input("Write something here!"))
- ```
+
+```python
+# Reads a line of input and converts it to an integer, then assigns this number to "guessed_number".
+guessed_number = int(input("Write something here!"))
+```
+
  3. You want to be able to keep guessing as long as guessed_number isn't the same value as random_number. In order to do this you can use        something called a while-loop. Check this following example and try to figure out how you can use it for your own program:
- ```python
- a = 10
- b = 13
- 
- # This line of code under the while-block will keep repeating it self untill the condition is no longer fullfilled. Since 10 is not 13 the code will repeat itself.
- while a is not b:
-  b = int(input("Assign a new value to b with new input))
- ```
+
+```python
+a = 10
+b = 13
+
+# This line of code under the while-block will keep repeating it self untill the condition is no longer fullfilled. Since 10 is not 13 the code will repeat itself.
+while a != b:
+    b = int(input("Assign a new value to b with new input))
+```
+
  4. Now, it is still difficult to just randomly keep guessing numbers. Depending on the intervall it can take a great amount of time. You can make it easier if you can hint on wether to guess higher or lower when comparing to random_number. To do this you can use an if-statement within your while-loop. Check these following exampels:
-  ```python
- a = 10
- b = 13
  
- while a != b:
+```python
+a = 10
+b = 13
  
-  if a < b:
-   b = int(input("Try a lower number!))
-  
-  if a > b:
-   b = int(input("Try a higher number!))
- ```
+while a != b:
+    if a < b:
+        b = int(input("Try a lower number!))
+    if a > b:
+        b = int(input("Try a higher number!))
+```
  
  4. Some feedback to when you actually guessed the right number, for that you want to add after the while-loop a line of code that just prints out a string of text. You can try this command for that purpose:
-   ```python
-   print("Here you can write whatever you want and it will show in the terminal!")
-   ```
+ 
+```python
+print("Here you can write whatever you want and it will show in the terminal!")
+```
   
 ## Extra
 
 Write a program that based on a given number and the interval 0 - 100 finds the optimal amount of steps using binary search. 
 
 Example:
+
 ```
 IN      >>> 10
 OUT     6

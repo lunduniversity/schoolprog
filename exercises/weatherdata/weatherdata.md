@@ -1,7 +1,7 @@
 Use real weather data to calculate how the yearly average temperature has changed over the last 100 years.
 ==========================================================================================================
 
-We will in this exercaise use a computer to analyze large amounts of data.
+We will in this exercise use a computer to analyze large amounts of data.
 
 In fetchdata.py there exists two public functions:
 - get\_stations()

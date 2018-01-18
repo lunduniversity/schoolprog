@@ -29,7 +29,7 @@ b = 13
 
 # This line of code under the while-block will keep repeating it self untill the condition is no longer fullfilled. Since 10 is not 13 the code will repeat itself.
 while a != b:
-    b = int(input("Assign a new value to b with new input))
+    b = int(input("Assign a new value to b with new input"))
 ```
 
  4. Now, it is still difficult to just randomly keep guessing numbers. Depending on the intervall it can take a great amount of time. You can make it easier if you can hint on wether to guess higher or lower when comparing to random_number. To do this you can use an if-statement within your while-loop. Check these following exampels:
@@ -40,9 +40,9 @@ b = 13
  
 while a != b:
     if a < b:
-        b = int(input("Try a lower number!))
+        b = int(input("Try a lower number!"))
     if a > b:
-        b = int(input("Try a higher number!))
+        b = int(input("Try a higher number!"))
 ```
  
  4. Some feedback to when you actually guessed the right number, for that you want to add after the while-loop a line of code that just prints out a string of text. You can try this command for that purpose:
@@ -81,16 +81,28 @@ x = "hej" # x value is changed to "hej"
 print(x)  # prints "hej"
 ```
 
-### Kinds of variables
-Strings, Integers, Floating Points, Booleans
+### Types of variables
 
-The kind of a variable is determined when a variable is assigned a value
+ - Strings - text, such as `"Hello World!"`
+ - Integers - whole numbers, such as `1`, `2`, `3`, `5`, `8`, `13`, ...
+ - Floats - decimal numbers, such as `3.14`, `2.71`
+ - Booleans - `True` or `False`
+
+The type of a variable is determined when a variable is assigned a value.
 
 ```python
 a = 1        # a is now an integer with the value 1
 b = True     # b is now an boolean with the value True
 c = False    # c is now an boolean with the value False
 d = "1"      # d is now a string with the value "1"
+```
+
+Integers can turn into floats when divided:
+
+```python
+a = 3    # a is now an integer with the value 3
+a /= 2   # a is now a float with the value 1.5
+a *= 2   # a is now a float with the value 3.0
 ```
 
 ### Input

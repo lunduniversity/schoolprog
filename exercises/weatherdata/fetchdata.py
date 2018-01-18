@@ -1,22 +1,34 @@
-import json, re
+import json, re, sys
+import os.path
 from urllib import request
-base = 'https://opendata-download-metobs.smhi.se/api/version/latest'
 
-def __get(url):
-    return json.loads(__getraw(url))
+def __base():
+    return 'https://opendata-download-metobs.smhi.se/api/version/latest'
+
+def __getjson(url):
+    return json.loads('\n'.join(__getraw(url)))
 
 def __getraw(url):
-    return request.urlopen(url).read()
+    path = url.replace(__base(), 'latest').replace('/', '.')
+    if os.path.isfile(path):
+        with open(path, 'r') as f:
+            content = [l.replace('\n', '') for l in f.readlines()]
+    else: 
+        data = request.urlopen(url).read().decode('utf-8')
+        with open(path, 'w') as f:
+            f.write(data)
+        content = data.split('\n')
+    return content
 
 def __parameters():
-    apidump = __get(base + '.json')
+    apidump = __getjson(__base() + '.json')
     rs = apidump['resource']
     for r in sorted(rs, key=lambda x: int(x['key'])):
         yield (int(r['key']), r['summary'])
 
 def __get_stations(param):
-    stationurl = base + '/parameter/'+ str(param) + '.json'
-    stationpage = __get(stationurl)
+    stationurl = __base() + '/parameter/'+ str(param) + '.json'
+    stationpage = __getjson(stationurl)
     stations = stationpage['station']
     return [(s['id'], s['name']) for s in sorted(stations, key=lambda x: x['name'])]
 
@@ -25,14 +37,13 @@ def get_stations():
 
 def __get_raw_data(station_id, parameter):
     url = ''.join([
-        base,
+        __base(),
         '/parameter/',
         str(parameter),
         '/station/',
         str(station_id),
         '/period/corrected-archive/data.csv'])
-    return __getraw(url).decode('utf-8').split('\n')
-
+    return __getraw(url)
 
 def get_data(station_id):
     data_points = []
@@ -45,8 +56,3 @@ def get_data(station_id):
             data_points.append(((y, m, d), float(a[3])))
     return sorted(data_points)
 
-stations = get_stations()
-print(stations[0])
-data = get_data(stations[1][0])
-for i in range(10):
-    print(data[i])

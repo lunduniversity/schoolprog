@@ -1,6 +1,2 @@
-from fetchdata import *
+# call on module that reads weather data from zipfile.
 
-stations = get_stations()
-for i, name in stations[:10]:
-    print(i, name)
-    print(get_data(i)[:10])

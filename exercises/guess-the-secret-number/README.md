@@ -1,11 +1,18 @@
-Guess the secret number
-======================
+---
+layout: page
+title: Guess the secret number
+permalink: /exercises/guess-the-secret-number/
+toc: true
+---
 
 Write a program that randomizes a number and lets you guess which number it is.
 
+## Instructions
+
 The process will go something like this:
 
- 1. Randomize a number; In order to make python give you a random number you will have to first import the method randint() from a package called random. You can do this by copying the following code to the editor:
+1. Randomize a number; In order to make python give you a random number you will have to first import the method randint() from a package called random. You can do this by copying the following code to the editor:
+
  ```python
  from random import randint
 
@@ -14,6 +21,7 @@ The process will go something like this:
 ```
 
 
+{:start="2"}
  2. Now you want code for asking the user to guess the number. Copy the following code to the editor:
 
 ```python
@@ -21,6 +29,7 @@ The process will go something like this:
 guessed_number = int(input("Write something here!"))
 ```
 
+{:start="3"}
  3. You want to be able to keep guessing as long as guessed_number isn't the same value as random_number. In order to do this you can use        something called a while-loop. Check this following example and try to figure out how you can use it for your own program:
 
 ```python
@@ -32,6 +41,7 @@ while a != b:
     b = int(input("Assign a new value to b with new input"))
 ```
 
+{:start="4"}
  4. Now, it is still difficult to just randomly keep guessing numbers. Depending on the intervall it can take a great amount of time. You can make it easier if you can hint on wether to guess higher or lower when comparing to random_number. To do this you can use an if-statement within your while-loop. Check these following exampels:
  
 ```python
@@ -45,7 +55,8 @@ while a != b:
         b = int(input("Try a higher number!"))
 ```
  
- 4. Some feedback to when you actually guessed the right number, for that you want to add after the while-loop a line of code that just prints out a string of text. You can try this command for that purpose:
+{:start="5"}
+ 5. Some feedback to when you actually guessed the right number, for that you want to add after the while-loop a line of code that just prints out a string of text. You can try this command for that purpose:
  
 ```python
 print("Here you can write whatever you want and it will show in the terminal!")

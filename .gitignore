@@ -1,1 +1,6 @@
 **/__pycache__
+
+# Jekyll
+_site
+.sass-cache
+.jekyll-metadata

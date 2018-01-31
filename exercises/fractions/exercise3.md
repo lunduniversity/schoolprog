@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 Hur man räknar ut summan av två bråk (3:4)
 ==========================================
 

@@ -15,6 +15,25 @@ To get started as fast as possible, we suggest you use the online [Python 3 envi
 
 We still have more work to do before this is usable as a part of a curriculum. But in the meantime, you can check out the cheatsheet and the exercises.
 
+## Hosting it locally
+
+In case you want to help develop the material you might want to run the website locally to preview your changes before committing and pushing. **If this doesn't work for you, create an issue or contact the maintainers so we can find and eliminate the bugs.**
+
+First make sure you have `ruby` and `bundle` installed.
+
+Then install the necessary ruby packages:
+
+```sh
+make install-deps
+```
+
+Then start the development server with:
+
+```sh
+make serve
+```
+
+
 ## Problems
 
  - How do you make programming exercises for a mathematics course?
@@ -34,3 +53,8 @@ We still have more work to do before this is usable as a part of a curriculum. B
  - http://www.malinc.se/
  - http://www.lth.se/programmera/
  - Jeremia Mörling: Användningen av programmering för att lära ut ett matematiskt innehåll i gymnasieskolan, Göteborgs Universitet, 2011. https://gupea.ub.gu.se/bitstream/2077/29950/1/gupea_2077_29950_1.pdf
+
+
+### About learning programming
+
+ - http://norvig.com/21-days.html

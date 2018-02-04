@@ -34,7 +34,7 @@ Få ut ett av delvärdena i taget genom att tänka sig att de numreras från vä
 |`val n = b._2`      |`t = b[1]`    |
 
 
-Prova i en REPL att deklarera ett värde med namnet `x` som representerar "tre sjundedelar", och prova att dekonstruera det för att få ut delvärdena tre och sju.
+Prova att deklarera ett värde med namnet `x` som representerar "tre sjundedelar", och prova att dekonstruera det för att få ut delvärdena tre och sju.
 
 I programspråk som inte stödjer tuplar kan man i stället använda arrayer eller objekt, men det blir lite krångligare.
 

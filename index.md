@@ -11,12 +11,12 @@ Här hittar du programmeringsuppdrag tänkta att användas i Matematik 1C på gy
 
 Om du inte har programmerat tidigare rekommenderar vi att du börjar med [Kojo/Scala](http://www.lth.se/programmera/).
 
-## Programmeringsmiljöer
+## Kom igång
 
 För att komma igång snabbt kan du göra programmeringen online. Då slipper du ladda ner en programmeringsmiljö på din egen dator. Vi rekommenderar:
 
 * [Scala/Kojo online-miljö](http://kojojs.kogics.net/)
-* [Python 3.0 online-miljö](https://repl.it/languages/python3)
+* [Python 3.0 online-miljö](https://repl.it/languages/python3). Se vårt Python [CHEATSHEET](programming/python/CHEATSHEET.md) för vanliga konstruktioner
 
 ## Uppdrag
 

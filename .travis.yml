@@ -1,0 +1,31 @@
+# Based on: https://github.com/ActivityWatch/activitywatch.github.io/blob/05744092a631328f6ac05ee1bc248790d4be6593/.travis.yml
+
+dist: trusty
+
+language: python
+python:
+ - '3.6'
+
+branches:
+  except:
+  #- master
+
+install:
+ - make install-deps
+
+script:
+ - make build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN
+  target_branch: master
+  local_dir: _site
+  on:
+    branch: develop
+
+env:
+  global:
+    # Contains GH_TOKEN that's used in `make push-github`
+    secure:

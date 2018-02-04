@@ -15,7 +15,12 @@ Om du inte har programmerat tidigare rekommenderar vi att du börjar med [Kojo/S
 
 För att komma igång snabbt kan du göra programmeringen online. Då slipper du ladda ner en programmeringsmiljö på din egen dator. Vi rekommenderar:
 
-* [Python 3.0 online-miljö](https://repl.it/languages/python3)
 * [Scala/Kojo online-miljö](http://kojojs.kogics.net/)
+* [Python 3.0 online-miljö](https://repl.it/languages/python3)
 
+## Uppdrag
 
+Här är några uppdrag du kan börja med:
+
+* [Guess the secret number](exercises/guess-the-secret-number/README.md) (Python)
+* [Bråkspel](exercises/fractions/README.md) (Scala/Python)

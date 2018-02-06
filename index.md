@@ -22,5 +22,5 @@ För att komma igång snabbt kan du göra programmeringen online. Då slipper du
 
 Här är några uppdrag du kan börja med:
 
-* [Guess the secret number](exercises/guess-the-secret-number/README.md) (Python)
-* [Bråkspel](exercises/fractions/README.md) (Scala/Python)
+* [Guess the secret number](exercises/guess-the-secret-number/) (Python)
+* [Bråkspel](exercises/fractions/) (Scala/Python)

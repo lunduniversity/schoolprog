@@ -14,7 +14,7 @@ install:
  - make install-deps
 
 script:
- - make build
+ - JEKYLL_ENV=production make build
 
 deploy:
   provider: pages

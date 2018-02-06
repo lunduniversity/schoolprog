@@ -24,6 +24,7 @@ twitter_username:
 github_username:  InvolveSweden
 
 # Build settings
+baseurl: /schoolprog
 markdown: kramdown
 kramdown:
     input: GFM

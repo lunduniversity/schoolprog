@@ -5,7 +5,7 @@ toc: true
 permalink: /exercises/
 ---
 
-Here our proposed exercises will go!
+Here are the exercises we've written so far, in no particular order.
 
 <ul>
 {% assign sitepages = site.pages | sort: 'order' %}

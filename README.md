@@ -9,9 +9,13 @@ We have received a 15,000€ grant from [Google CS4HS](https://www.cs4hs.com/) t
  - We will try our hardest to make the content engaging and interesting for students.
  - We accept contributions.
 
-## Web site
+## Website
 
-The web site for this repository is [https://lunduniversity.github.io/schoolprog/](https://lunduniversity.github.io/schoolprog/). It is still under construction. Meanwhile, you can browse the approximate content by starting [here](index.md).
+[![Build Status](https://travis-ci.org/lunduniversity/schoolprog.svg?branch=master)](https://travis-ci.org/lunduniversity/schoolprog)
+
+The website is served at [lunduniversity.github.io/schoolprog/](https://lunduniversity.github.io/schoolprog/).
+
+It is automatically built by [Travis CI](https://travis-ci.org/lunduniversity/schoolprog) from the master branch whenever it is updated.
 
 ## Getting started
 

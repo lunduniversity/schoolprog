@@ -32,7 +32,7 @@ guessed_number = int(input("Write something here!"))
 ```
 
 {:start="3"}
- 3. Du vill ha möjligheten att kunna fortsätta gissa så länge guessed_number inte är samma värde som random_number. För att åstadkomma detta kan du använda något som kallas 'while-loop', är du osäker på detta kan du läsa mer på: "https//:". Kolla in följande kod exempel och försök lista ut hur du kan använda satsen för ditt eget program:
+ 3. Du vill ha möjligheten att kunna fortsätta gissa så länge guessed_number inte är samma värde som random_number. För att åstadkomma detta kan du använda något som kallas 'while-loop', är du osäker på detta kan du läsa mer i [cheatsheetet](../../cheatsheet/python/). Kolla in följande kod exempel och försök lista ut hur du kan använda satsen för ditt eget program:
 
 ```python
 a = 10

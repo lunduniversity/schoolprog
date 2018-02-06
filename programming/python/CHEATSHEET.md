@@ -2,6 +2,7 @@
 title: Cheatsheet
 layout: page
 toc: true
+permalink: /cheatsheet/python/
 ---
 
 ## Variables and printing

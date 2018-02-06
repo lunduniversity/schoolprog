@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Guess the secret number
-permalink: /exercises/guess-the-secret-number/
+permalink: /exercises/guess-the-secret-number/en
 toc: true
 ---
 

@@ -1,5 +1,8 @@
-Cheatsheet for Python
-=====================
+---
+title: Cheatsheet
+layout: page
+toc: true
+---
 
 ## Variables and printing
 

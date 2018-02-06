@@ -103,7 +103,7 @@ hypotenuse = sqrt(base**2 + side**2)
 print("The hypotenuse is: " + str(hypotenuse))  # You must convert the number to a string before adding to another string
 ```
 
-If we want to compute this many time in our code, we can define a function instead:
+If we want to compute this many times in our code, we can define a function instead:
 
 ```python
 from math import sqrt

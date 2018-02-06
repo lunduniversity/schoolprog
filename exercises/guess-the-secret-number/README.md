@@ -6,14 +6,16 @@ toc: true
 type: exercise
 ---
 
-Skriv ett programn som väljer ett slumpmässigt nummer och låter dig gissa
+**Note:** This exercise is also available [in english](README_EN.md).
+
+Skriv ett program som väljer ett slumpmässigt nummer och låter dig gissa
 fram till vilket.
 
 ## Instruktioner
 
 Det kommer gå till ungefär såhär:
 
-1. Randomisera ett nummer: För att kunna få Python att ge dig ett slumpnmässigt nummer måste du först importera paketet 'random' som innehåller metoden 'randint()'. Detta gör du genom att kopiera följande kod i din "editor" (textredigerare):
+1. Randomisera ett nummer: För att kunna få Python att ge dig ett slumpmässigt nummer måste du först importera paketet 'random' som innehåller metoden 'randint()'. Detta gör du genom att kopiera följande kod i din "editor" (textredigerare):
 
  ```python
  from random import randint
@@ -32,7 +34,7 @@ guessed_number = int(input("Write something here!"))
 ```
 
 {:start="3"}
- 3. Du vill ha möjligheten att kunna fortsätta gissa så länge guessed_number inte är samma värde som random_number. För att åstadkomma detta kan du använda något som kallas 'while-loop', är du osäker på detta kan du läsa mer i [cheatsheetet](../../cheatsheet/python/). Kolla in följande kod exempel och försök lista ut hur du kan använda satsen för ditt eget program:
+ 3. Du vill ha möjligheten att kunna fortsätta gissa så länge guessed_number inte är samma värde som random_number. För att åstadkomma detta kan du använda något som kallas 'while-loop', är du osäker på detta kan du läsa mer i [cheatsheetet](../../cheatsheet/python/). Kolla in följande kodexempel och försök lista ut hur du kan använda satsen för ditt eget program:
 
 ```python
 a = 10

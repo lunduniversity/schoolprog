@@ -3,6 +3,7 @@ layout: page
 title: Guess the secret number
 permalink: /exercises/guess-the-secret-number/
 toc: true
+type: exercise
 ---
 
 Skriv ett programn som väljer ett slumpmässigt nummer och låter dig gissa

@@ -20,7 +20,7 @@ Man kan sedan anropa funktionen med olika parametervärden:
     sum(37, 5)
     sum(sum(39,4), 7)
 
-Prova i en REPL att definiera en funktion, t.ex. `sum` ovan, och anropa den med lite olika parametrar.
+Prova att definiera en funktion, t.ex. `sum` ovan, och anropa den med lite olika parametrar.
 
 Prova också att göra något mer i funktionen än att returnera resultatet. Till exempel att skriva ut<sup>2</sup> parametrarna:
 

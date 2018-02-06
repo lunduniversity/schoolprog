@@ -7,11 +7,11 @@ Bråkspel
 
 För att programmera spelet behöver du lösa några centrala delproblem:
 
-* Hitta på hur ett bråk skall representeras. Vi rekommenderar *tuplar*. Se [tupeltips](prog1.md).
-* Skriva en funktion som kan summera två bråk. Se [funktiontips](prog2.md).
-* Skriva ett huvudprogram som kan läsa in två bråk och skriva ut summan. Se [huvudprogramtips](prog3.md).
+* Hitta på hur ett bråk skall representeras. Vi rekommenderar *tuplar*. Se [tips om tuplar](../../programming/general/tuples.md).
+* Skriva en funktion som kan summera två bråk. Se [tips om funktioner](../../programming/general/functions.md).
+* Skriva en funktion som kan läsa in två bråk och skriva ut summan. Se [tips om att läsa in och skriva ut](../../programming/general/consoleio.md).
 
-Vet du hur tuplar, funktioner och huvudprogram fungerar? Då är det bara att sätta igång. Titta annars på tipsen ovan.
+Vet du hur tuplar, funktioner och inläsning och utskrift fungerar? Då är det bara att sätta igång. Titta annars på tipsen ovan.
 
 Tycker du att du är klar med spelet? Gå vidare:
 

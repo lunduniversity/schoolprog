@@ -3,6 +3,7 @@ layout: page
 title: Bråkspel (In Swedish)
 permalink: /exercises/fractions/
 toc: true
+type: exercise
 ---
 Detta uppdrag går ut på att programmera ett spel där datorn kan hjälpa oss att summera heltalsbråk, eller kontrollera att vi summerar rätt.
 

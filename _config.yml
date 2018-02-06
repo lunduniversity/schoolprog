@@ -36,6 +36,10 @@ plugins:
   - jekyll-feed
   - jekyll-toc
   - jekyll-relative-links
+header_pages:
+  - exercises/README.md
+  - programming/python/CHEATSHEET.md
+  - about.md
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

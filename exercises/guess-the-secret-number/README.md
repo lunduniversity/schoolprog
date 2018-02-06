@@ -3,6 +3,7 @@ layout: page
 title: Guess the secret number
 permalink: /exercises/guess-the-secret-number/
 toc: true
+type: exercise
 ---
 
 Write a program that randomizes a number and lets you guess which number it is.

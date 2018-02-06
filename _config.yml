@@ -28,6 +28,8 @@ markdown: kramdown
 kramdown:
     input: GFM
 theme: minima
+sass:
+    sass_dir: _sass
 plugins:
   - jekyll-feed
   - jekyll-toc

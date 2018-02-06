@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 Inläsning och utskrifter
 ========================
 
@@ -24,15 +28,13 @@ I Python: (talen behöver göras om till strängar med `str`)
 
 Inläsning
 ---------
-|                    | Scala              | Python       |
+|                    | Scala<sup>2</sup> | Python       |
 |:-                  |:------------------|:------------|
-|Läs in en text      |`val namn = readLine("Vad heter du? ")`|`print("Vad heter du?")`<br>`namn = input()`|
-|Läs in ett heltal   |`print("Hur gammal är du?")`<br>`val age = readInt()` |`print("Hur gammal är du?")`<br>`age = int(input())`    |
-
-BRASKLAPP 1: Jag får inte Scala-inläsningen ovan att fungera i online-kojo. Hur gör man??
-
-
+|Läs in en text      |`val namn = scala.io.StdIn.readLine()("Vad heter du? ")`|`print("Vad heter du?")`<br>`namn = input()`|
+|Läs in ett heltal   |`print("Hur gammal är du?")`<br>`val age = scala.io.StdIn.readInt()` |`print("Hur gammal är du?")`<br>`age = int(input())`    |
 
 <sup>1</sup>Ofta startar man ett program genom att klicka på en ikon, t.ex. på en mobiltelefon eller på en vanlig dator. Man kan också starta ett program genom att skriva dess namn i ett "terminalfönster" på datorn, eller genom att klicka RUN inifrån en programmeringsmiljö.
 
-Terminalfönstret kallas ofta "console", och även om man startar programmet genom att klicka igång det, så har man ofta ett "console-fönster" där programmet kan skriva ut och läsa in text..
+Terminalfönstret kallas ofta "console", och även om man startar programmet genom att klicka igång det, så har man ofta ett "console-fönster" där programmet kan skriva ut och läsa in text.
+
+<sup>2</sup>Inläsning i Scala fungerar tyvärr för närvarande inte i online-miljöer som kojojs eller scalafiddle (Februari 2018), utan bara om man har laddat ner en Scala-miljö på sin dator.

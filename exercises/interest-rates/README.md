@@ -1,4 +1,10 @@
-#   Calculating and comparing interest rates
+---
+title: Calculating and comparing interest rates
+layout: page
+toc: true
+type: exercise
+permalink: /exercises/interest-rates/
+---
 
 In this exercise you will learn the basic concept of functions in Python. You
 will create your own function and then call it from antother function.  

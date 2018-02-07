@@ -1,14 +1,14 @@
 ---
-title: Exercises
+title: Uppgifter
 layout: page
 toc: true
 permalink: /exercises/
 ---
 
-Here are the exercises we've written so far, in no particular order.
+Här är uppgifterna vi börjat jobba på hittils. De kommer i blandad ordning så använd taggarna som står vid sidan om varje uppgift för att hitta rätt!
 
 <ul>
-{% assign sitepages = site.pages | sort: 'order' %}
+{% assign sitepages = site.pages | sort: 'title' %}
 {% for sitepage in sitepages %}
   {% if sitepage.type == 'exercise' %}
     <li>

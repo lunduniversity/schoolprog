@@ -13,25 +13,16 @@ variables to work with:
     Starting Amount s
 
 ### Functions in Python
-Here is an example of a function in python that converts the time in hours (h)
-into the time minutes (m):
+Start of by reading the part about functions in the CHEATSHEET, below you will
+find another example of a function. The function below converts a given time
+of hours (h) into the time minutes (m):
 
 ```python
 def minute_converter(h):
     m = h * 60
     return m
 ```
-
-"def" is common keyword reserved in Python that tells the compiler that the
-code that follows is a function. The following code is the name of the
-function, usually with small letters and "_" between words. Pick a self
-explanatory name for your own sake, it will be easier to remember. Inside the
-parentheses is where you can put parameters, potential input for your function (here we
-have h for the hours that are going to be converted). Also here you should
-think about self explanatory variable names. After the parentheses is a ":",
-this will tell the compilator where the block of code starts fot the function.
-Indentation (the extra space before the code) will then tell the compilator
-what is part of the function. "return" will give back a valuw when calling the
+"return" will give back a value when calling the
 function, here we will get "m", the minutes.
 
 ##  Part B
@@ -39,7 +30,8 @@ function, here we will get "m", the minutes.
 Now try running the program you wrote in Part A. You will have to call your
 function last, that is after you have declared your function.
 
-### Running a function in Python
+The following sample describes how a function is first declared and then
+called:
 
 ```python
 def minute_converter(h):
@@ -72,6 +64,5 @@ def minute_compare(h1, h2):
     else:
         return m2
 ```
-##   Part D
 
-Now try your new program in the compilator!
+Now try to run your new program!

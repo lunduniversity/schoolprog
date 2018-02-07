@@ -13,7 +13,7 @@ variables to work with:
     Starting Amount s
 
 ### Functions in Python
-Start of by reading the part about functions in the CHEATSHEET, below you will
+Start of by reading the part about functions in the [cheatsheet](../../cheatsheet/python/), below you will
 find another example of a function. The function below converts a given time
 of hours (h) into the time minutes (m):
 

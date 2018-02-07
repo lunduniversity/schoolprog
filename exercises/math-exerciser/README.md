@@ -1,13 +1,24 @@
-# Math Exerciser
+---
+layout: page
+title: Math Exerciser
+permalink: /exercises/math-exerciser/
+tags: 
+ - avancerad
+ - funktioner
+toc: true
+---
 
 ## Motivering
 
-Du har hört det sägas att "repetition är kunskapens moder" och vill därför sitta och göra så många mattetal du kan. Matteboken är bra men den har vissa begränsningar:
-- att bläddra sidor slösar på din dyrbara övningstid
+Du har hört det sägas att "repetition är kunskapens moder" och vill därför sitta
+och göra så många mattetal du kan. Matteboken är bra men den har vissa
+begränsningar:
 - du kan inte öva på vad du vill
+- att bläddra sidor slösar på din dyrbara övningstid
 - uppgifterna kan när som helst ta slut!
 
-Du hade kanske kunnat använda dina nyvunna programmeringskunskaper för att skriva ett matte-övningsprogram!
+Du hade kanske kunnat använda dina nyvunna programmeringskunskaper för att
+skriva ett matte-övningsprogram!
 
 ## Outline
 
@@ -17,7 +28,8 @@ Du hade kanske kunnat använda dina nyvunna programmeringskunskaper för att skr
 
 ## Genomgång
 
-Vi vill göra en lista med de frågor vi vill ställa och deras svar. Ett sådant par av en fråga och frågans svar kan man i python skriva med en `tuple`:
+Vi vill göra en lista med de frågor vi vill ställa och deras svar. Ett sådant
+par av en fråga och frågans svar kan man i python skriva med en `tuple`:
 
 ```python
 question = ("Vad är kunskapens moder?", "repetition")
@@ -26,8 +38,18 @@ question = ("Vad är kunskapens moder?", "repetition")
 dessa par kan man sen spara i en lista
 
 ```python
-questions = [("Vad är kunskapens moder?", "repetition"),("Vilken funktion används i python för att skriva text till kommandotolken?", "print")]
+questions = [("Vad är kunskapens moder?", "repetition"),("Vilken funktion används i python för att skriva ut text i kommandotolken?", "print")]
 ```
 
-Ditt program kan sen plocka en slumpmässig fråga ur listan och presentera den till användaren.
+Ditt program kan sen plocka en slumpmässig fråga ur listan och presentera den
+till användaren.
 
+Vi har fortfarande inte riktig löst problemet med att uppgifterna tar slut, det
+kan bli väldigt jobbigt att skriva alla matteuppgifter du vill öva på. Vi kan
+använda programmeringsknep för att göra det lättare! Om du vill öva på femmans
+multiplikationstabell kan du lägga till alla frågor
+
+```python
+for i in range(1, 11):
+    questions.add(('Vad är "5 * {}"?'.format(i), 5 * i))
+```

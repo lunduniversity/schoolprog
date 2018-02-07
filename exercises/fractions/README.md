@@ -39,7 +39,7 @@ Tycker du att du är klar med spelet? Gå vidare:
 
 * Låt någon annan prova spelet. Fungerar det som det ska? Är det lätt för användaren att förstå vad man skall göra när man kör spelet?
 * Visa koden för någon annan. Kan de förstå vad programmet gör? Går något att förbättra så det blir tydligare?
-* Hur kan du bygga ut ditt spel? Se [Ideer för att utöka spelet](spel2.md).
+* Hur kan du bygga ut ditt spel? Se ideerna nedan för att utöka spelet.
 
 Utöka Bråkspelet
 ================

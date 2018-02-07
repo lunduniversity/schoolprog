@@ -97,7 +97,18 @@ for i in range(n):
 
 
 ## Functions
+'def' is a common keyword reserved in Python which indicates that the code
+that follows is a function. Straight after 'def' comes the name of the function, usually typed with small
+letters and "_" between words. Pick a self explanatory name for your own
+sake, it will be easier to remember. Inside the paratnheses is where you can
+put parameters, potential input for your function. The name for your parameters
+should also be chosen with care. After the parantheses is a ";", this will
+tell the compilater where the block of code starts for the function.
+Indentation (the extra space before the code) will then tell the compilator
+what is part of the function.
 
+
+Check the following example:
 Calculate the hypotenuse of a right-angled triangle with two decimal numbers as input:
 
 ```python
@@ -118,9 +129,6 @@ def hypotenuse(base, side):
 print(hypotenuse(1, 1)) # prints 1.4142135623730951
 print(hypotenuse(3, 4)) # prints 5.0 
 ```
-
-A function definition in python starts with ```def```, then follows the name and an argument list, possbibly empty.
-Then follows some python code, and it ends with ```return x``` where x is an expression.
 
 ## Lists
 

@@ -12,7 +12,11 @@ Here are the exercises we've written so far, in no particular order.
 {% for sitepage in sitepages %}
   {% if sitepage.type == 'exercise' %}
     <li>
-      <a href="{{ site.baseurl }}{{ sitepage.url }}">{{ sitepage.title }}</a>
+    <a href="{{ site.baseurl }}{{ sitepage.url }}">{{ sitepage.title }}</a>
+
+    {% if sitepage.tags %}
+        ({{ sitepage.tags | join: ', '}})
+    {% endif %}
     </li>
   {% endif %}
 {% endfor %}

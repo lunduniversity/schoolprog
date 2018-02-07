@@ -3,6 +3,10 @@ title: Turtle
 toc: true
 layout: page
 type: exercise
+tags: 
+ - nybörjare
+ - grafiskt
+ - funktioner
 permalink: /exercises/turtle/
 ---
 

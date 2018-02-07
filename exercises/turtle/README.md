@@ -29,7 +29,7 @@ for c in range(4):
     t.left(90)
 ```
 
-Run it and see what happens, can you figure out what happens? Try modifying some values and see how the behavior changes.
+Run it and see what happens. Can you figure out what each line does? Try modifying some values and see how the behavior changes.
 
 # Drawing squares
 

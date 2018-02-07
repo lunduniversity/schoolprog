@@ -1,5 +1,13 @@
-Implement Arithmetic Operators
-==============================
+---
+title: Implementera aritmetiska operatorer
+toc: true
+layout: page
+type: exercise
+tags:
+ - aritmetik
+ - funktioner
+permalink: /exercises/implement-arithmetic-operators/
+---
 
  - Implement the arithmetic functions (subtract, mul, floordiv) using only an add function and a negate function.
     - Implement subtraction by using add and negation in the correct order.

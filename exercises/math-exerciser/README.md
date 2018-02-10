@@ -7,6 +7,15 @@ tags:
  - funktioner
 toc: true
 ---
+![solution](https://github.com/ahnlabb/schoolprog-external/blob/master/math-exerciser.gif)
+
+## Denna övning innehåller:
+
+- Strängar
+- Listor [(exempel)](https://repl.it/@ahnlabb/RowdyOliveWeevil)
+- Loopar
+- Slump
+
 
 ## Motivering
 
@@ -28,18 +37,17 @@ skriva ett matte-övningsprogram!
 
 ## Genomgång
 
-Vi vill göra en lista med de frågor vi vill ställa och deras svar. Ett sådant
-par av en fråga och frågans svar kan man i python skriva med en `tuple`:
+Vi vill göra en lista med de frågor vi vill öva på och en lista med frågornas
+svar så att vi kan kolla att användaren skrivit rätt.
+I python kan vi skriva de två listorna så här:
 
 ```python
-question = ("Vad är kunskapens moder?", "repetition")
+questions = ["Vad är kunskapens moder?", "Vilken funktion används i python för att skriva ut text i kommandotolken?"]
+answers = ["repetition", "print"]
 ```
 
-dessa par kan man sen spara i en lista
-
-```python
-questions = [("Vad är kunskapens moder?", "repetition"),("Vilken funktion används i python för att skriva ut text i kommandotolken?", "print")]
-```
+Första frågan i `questions` listan är "Vad är kunskapens moder?" och svaret på den
+frågan hittar vi först i `answers` listan: "repetition".
 
 Ditt program kan sen plocka en slumpmässig fråga ur listan och presentera den
 till användaren.

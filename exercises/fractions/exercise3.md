@@ -2,8 +2,10 @@
 layout: page
 ---
 
-Hur man räknar ut summan av två bråk (3:4)
-==========================================
+Tillbaka till [uppdraget](README.md)
+
+Hur man räknar ut summan av två bråk (steg 3 av 4)
+==================================================
 
 Ja, det blir förstås 5 sjättedels-tårtbitar:
 

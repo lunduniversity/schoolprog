@@ -2,8 +2,10 @@
 layout: page
 ---
 
-Hur man räknar ut summan av två bråk (2:4)
-==========================================
+Tillbaka till [uppdraget](README.md)
+
+Hur man räknar ut summan av två bråk (steg 2 av 4)
+==================================================
 
 Vi skall så klart dela tårthalvan i tre bitar och tårt-tredjedelen i två bitar, så varje del kan beskrivas som ett antal sjättedelar. Halvan blir tre stycken tårtbitar, som vardera är en sjättedel stor:
 

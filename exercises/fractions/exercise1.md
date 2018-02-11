@@ -2,8 +2,10 @@
 layout: page
 ---
 
-Hur man räknar ut summan av två bråk (1:4)
-==========================================
+Tillbaka till [uppdraget](README.md)
+
+Hur man räknar ut summan av två bråk (steg 1 av 4)
+==================================================
 
 Vi börjar med ett trivialt exempel. Vad blir följande summa?
 

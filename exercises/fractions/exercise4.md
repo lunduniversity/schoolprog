@@ -2,9 +2,10 @@
 layout: page
 ---
 
+Tillbaka till [uppdraget](README.md)
 
-Hur man räknar ut summan av två bråk (4:4)
-==========================================
+Hur man räknar ut summan av två bråk (steg 4 av 4)
+==================================================
 
 Problemet var alltså: Om du har följande två bråk, hur skall du skriva om dem för att de skall få samma nämnare?
 

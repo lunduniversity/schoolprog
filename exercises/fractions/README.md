@@ -4,6 +4,10 @@ title: Bråkspel
 permalink: /exercises/fractions/
 toc: true
 type: exercise
+tags:
+ - medel
+ - bråk
+ - text
 ---
 
 Detta uppdrag går ut på att programmera ett spel där datorn kan hjälpa oss att summera heltalsbråk, eller kontrollera att vi summerar rätt.

@@ -4,6 +4,10 @@ title: Piece of cake
 permalink: /exercises/piece-of-cake/
 toc: true
 type: exercise
+tags:
+ - nybörjare
+ - bråk
+ - grafiskt
 ---
 
 <img src="cake.png" width="100">

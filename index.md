@@ -17,8 +17,13 @@ Om du inte har programmerat tidigare rekommenderar vi att du börjar med [Kojo/S
 
 För att komma igång snabbt kan du göra programmeringen online. Då slipper du ladda ner en programmeringsmiljö på din egen dator. Vi rekommenderar:
 
-* [Python 3 online-miljö](https://repl.it/languages/python3). Se vårt Python [CHEATSHEET](programming/python/CHEATSHEET.md) för vanliga konstruktioner.
-* [Scala/Kojo online-miljö](http://kojojs.kogics.net/)
+* **Online Python med turtle graphics**: [repl.it/languages/python_turtle](https://repl.it/languages/python_turtle)
+    * Se vårt [Python CheatSheet](programming/python/CHEATSHEET.md) för vanliga konstruktioner.
+    * Köra Python3 utan turtle: [repl.it/languages/python3](https://repl.it/languages/python3).
+
+* **Online Scala med turtle graphics**: [kojojs](http://kojojs.kogics.net/) (experimentell än så länge)
+    * Ladda ner kojo på din dator i stället: [kojo](http://www.lth.se/programmera/installera/)
+
 
 ## Uppdrag
 

@@ -1,5 +1,5 @@
 ---
-title: Cheatsheet
+title: Python Cheatsheet
 layout: page
 toc: true
 permalink: /cheatsheet/python/
@@ -28,7 +28,7 @@ a = float(1) # 1 is converted to the float 1.0
 a = 1/1      # 1/1 evaluates to the float 1.0
 ```
 
-Note that ``` int("hej") ``` will crash on evaluation. 
+Note that ``` int("hej") ``` will crash on evaluation.
 The ```int``` and ```float``` functions expects values that can be interpreted as numbers.
 
 ## Arithmetic
@@ -71,7 +71,7 @@ for i in range(10):
 ```
 
 Iterate over the first 10 natural numbers and print the odd ones:
-```python 
+```python
 for i in range(10):
     if i%2 == 1:
         print(i)
@@ -127,7 +127,7 @@ def hypotenuse(base, side):
     return sqrt(base**2 + side**2)
 
 print(hypotenuse(1, 1)) # prints 1.4142135623730951
-print(hypotenuse(3, 4)) # prints 5.0 
+print(hypotenuse(3, 4)) # prints 5.0
 ```
 
 ## Lists

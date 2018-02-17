@@ -2,11 +2,11 @@
 title: Turtle
 toc: true
 layout: page
-tags: 
+tags:
  - nybörjare
  - grafiskt
  - funktioner
-permalink: /exercises/turtle/
+permalink: /exercises/turtle/en
 ---
 
 Want to draw pretty & cool things using a programmable turtle with a paint problem? Then this is the exercise for you!

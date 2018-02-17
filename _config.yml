@@ -16,11 +16,11 @@
 title: Lund University School Programming
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Programmering för lärare och elever, utvecklat på Lunds Universitet.
+  Programmering för lärare och elever, utvecklat på Lunds universitet.
 baseurl: "/schoolprog" # the subpath of your site, e.g. /blog
 url: "https://lunduniversity.github.io/schoolprog/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
-github_username:  lunduniversity
+github_username:  lunduniversity/schoolprog
 google_analytics: UA-113639419-1
 
 # Build settings

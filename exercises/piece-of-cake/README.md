@@ -10,53 +10,158 @@ tags:
  - grafiskt
 ---
 
-<img src="cake.png" width="100">
+<img src="finalcake.png" height="150">
 
-Detta uppdrag går ut på att illustrera heltalsbråk som delar av tårtor.
+Denna uppgift går ut på att illustrera heltalsbråk som delar av tårtor.
 
-Innan du gör detta uppdrag bör du ha gjort uppdraget [Turtle](../turtle/README.md) där du får prova på "turtle graphics".
+Innan du gör uppgiften bör du ha lite koll på "turtle graphics", t.ex. genom att göra uppgiften [Turtle](../turtle/README.md).
 
-Rita en tårta
-=============
+A: Tredjedelar och fjärdedelar
+==============================
 
-Rita en avlång rektangulär tårta med "turtle graphics". Kanten på tårtan skall vara i en färg och den skall vara fylld med en annan färg.
+## Rita en tårta
 
-Rita flera tårtor
-=================
+Rita en avlång rektangulär tårta med "turtle graphics". Kanten på tårtan skall vara i en färg och den skall vara fylld med en annan färg. T.ex.:
 
-Gör om koden för tårtan till en funktion `drawCake(x)` som ritar en tårta `x` pixlar från origo. Anropa funktionen med två olika värden på `x` så att du får två tårtor snyggt placerade bredvid varann. Tårtorna skall vara lika stora.
+<img src="cake.png" height="70">
 
-Extra: snygga till tårtorna
-===========================
+Till din hjälp, deklarera en turtle som du kallar `t`:
 
-Om du tycker om snygga tårtor, skriv en funktion `decorateCake(x)` som dekorerar tårtan på plats `x` på något sätt. Kanske med en ros i mitten?
+```python
+t = turtle.Turtle()
+```
+och klistra in följande funktioner i ditt script för att kunna hoppa till en given plats och för kunna att rita en fylld rektangel:
 
-Skär upp tårtan
-===============
+```python
+# Jump to a position without drawing anything
+def jumpTo(x,y):
+  t.penup()
+  t.setx(x)
+  t.sety(y)
+  t.pendown()
+```
+```python
+def drawFilledRect(width, height):
+  t.setheading(0)
+  t.fill(True)
+  t.forward(width)
+  t.right(90)
+  t.forward(height)
+  t.right(90)
+  t.forward(width)
+  t.right(90)
+  t.forward(height)
+  t.right(90)
+  t.fill(False)
+```
+Tips: Så här kan du sätta pennbredden, pennfärgen, och fyllningsfärgen:
 
-Tänk dig att du vill skära tårtan i delar. Skriv en funktion `cutCake(x, n)` som skär tårtan på plats `x` i `n` lika stora bitar. Skär tårtan genom att rita linjer med en tredje färg.
+```python
+  t.width(3)            # Sätt bredden på pennan
+  t.color('green')      # Sätt färgen på pennan
+  t.fillcolor('red')    # Sätt fyllningsfärgen
+```
 
-Prova att skära den ena tårtan i tredjedelar och den andra i fjärdedelar.
+**Uppdrag:** Rita tårtan! Prova med olika färger, t.ex. `blue`, `violet`, `pink`, `gold`, `orange`, `brown`. [Här](https://www.tcl.tk/man/tcl8.4/TkCmd/colors.htm) finns en lista på fler färger som kan användas.
 
-Ät tårta
-========
+## Rita två tårtor
 
-Skriv en funktion `eatCake(x, n)`som äter upp den första biten av en tårta genom att färga delen svart.
+**Uppdrag:** Rita två tårtor snyggt placerade bredvid varann. Tårtorna skall vara lika stora. T.ex. så här:
 
-Prova att äta en bit av tårtan som är skuren i tredjedelar och en av tårtan som är skuren i fjärdedelar.
+<img src="twocakes.png" height="130">
 
-Hur mycket har du ätit?
-=======================
 
-Hur mycket tårta är uppäten, räknat i delar av en hel tårta?
+## Extra: snygga till tårtorna
 
-Om vi hade delat varje tårta i tolftedelar (delbart med både 3 och 4), så hade vi lätt kunnat se hur mycket tårta som ätits sammanlagt.
+**Uppdrag:** Om du tycker om snygga tårtor, skriv kod som dekorerar dem. Kanske med en ros i mitten på varje tårta?
 
-Illustrera detta genom att skriva en funktion `slicePieces(x, g)` som skär tårtan på plats `x` i `g` lika stora delar. Gör detta genom att rita linjer med en fjärde färg. Rita sådana linjer både på de bitar som ätits upp och de som är kvar.
+## Skär upp tårtorna
 
-Prova genom att anropa med `g=12` för de två tårtorna.
+Nu ska vi skära upp tårtorna.
 
-Hur många tolftedelar tårta är uppätna?
+Till din hjälp, klistra in följande funktion i ditt script.
+
+```python
+# Slice a rectangle in a number of pieces
+def sliceRect(width, height, pieces):
+  savex = t.xcor() # Save current turtle x-position
+  savey = t.ycor() # Save current turtle y-position
+  pieceWidth = float(width)/pieces
+  for i in range(pieces-1):
+    t.penup()
+    t.setheading(0)
+    t.forward(pieceWidth)
+    t.right(90)
+    t.pendown()
+    t.forward(height)
+    t.penup()
+    t.backward(height)
+  t.setpos(savex, savey) # Restore turtle position
+
+```
+
+Funktionen `sliceRect` skär upp en rektangel i ett antal lika stora bitar genom att rita streck över rektangeln.
+
+**Uppdrag:** Skär upp översta tårtan i tredjedelar och nedersta tårtan i fjärdedelar. Använd en annan färg till snitten än du hade tidigare. Den tredelade tårtan borde se ut ungefär så här:
+
+<img src="cutcake.png" height="70">
+
+*Obs!* Du måste positionera paddan rätt innan du anropar funktionen, och du måste anropa den med samma bredd och höjd som du ritade rektanglarna med tidigare.
+
+*Tips:* Går det långsamt att rita? Du kan ställa in hastigheten på paddan så här:
+
+```python
+t.speed(0)   # Rita så fort som möjligt
+```
+
+
+## Ät tårta
+
+Nu skall vi illustrera att du äter en bit av den ena tårtan och en bit av den andra.
+
+**Uppdrag:** Färga tårtbiten längst till vänster på vardera tårtan. Resultatet borde bli ungefär så här för den tredelade tårtan:
+
+<img src="eatencake.png" height="70">
+
+*Tips*: Anropa `drawFilledRect` med en tredjedel av bredden för den första tårtan och en fjärdedel av bredden för den andra tårtan. Till exempel så här:
+
+```python
+w = ... # the width of a full cake
+h = ... # the height of a full cake
+drawFilledRect(w/3, h)
+```
+
+## Hur mycket har du ätit?
+
+Nu har du ju ätit 1/3 tårta plus 1/4 tårta. Hur mycket tårta blir det sammanlagt?
+
+Om vi hade delat varje tårta i tolftedelar (delbart med både 3 och 4), så hade vi lätt kunnat se hur mycket tårta det blir.
+
+Nu skall vi illustrera detta. Till din hjälp, klistra in följande funktion:
+
+```python
+# Slice each piece into a number of slices
+def slicePieces(width, height, pieces, slices):
+  savex = t.xcor()
+  savey = t.ycor()
+  pieceWidth = float(width)/pieces
+  for p in range(pieces):
+    sliceRect(pieceWidth, height, slices)
+    t.penup()
+    t.setheading(0)
+    t.forward(pieceWidth)
+  t.setpos(savex, savey)
+```
+
+Denna funktion skär upp en tårta som redan är delad i `pieces` bitar, så att varje bit delas ytterligare i `slices` delar.
+
+**Uppdrag:** Skär upp de båda tårtorna i tolftedelar.
+
+*Tips:* Anropa `slicePieces` så du skär upp bitarna i den tredelade tårtan i fjärdedelar och bitarna i den fyra-delade tårtan i tredjedelar. Den tredelade tårtan borde nu se ut så här:
+
+<img src="slicedcake.png" height="70">
+
+**Quiz:** Hur många tolftedelar tårta är uppätna totalt?
 
 <details>
   <summary markdown="span">
@@ -68,8 +173,10 @@ Hur många tolftedelar tårta är uppätna?
 </details>
 
 
-Generalisera ditt program
-=========================
+B: Godtyckliga tårtbitar
+========================
+
+## Generalisera programmet
 
 Ditt program illustrerar hur
 
@@ -77,18 +184,48 @@ Ditt program illustrerar hur
     ––– + –––  =  ––––
      3     4       12
 
-Skriv en funktion `addCakePieces(n,m)` som:
+Vi skall nu generalisera programmet så att du kan prova med andra bråk.
 
-* ritar upp två tårtor
-* delar den ena i `n` bitar och den andra i `m` bitar
-* äter en bit från varje tårta
-* illustrerar hur mycket tårta som ätits genom att snitta upp tårtorna i `n*m` bitar
-* skriver ut ekvationen för den bråk-addition som illustreras, t.ex. `Eating cake: 1/3 + 1/4 = 7/12`
+*Tips:* Spara en kopia av ditt fungerande program innan du börjar ändra något.
 
-Prova ditt program med olika värden på `n` och `m` för att räkna ut `1/n + 1/m`. Kontrollera t.ex. att
+**Uppdrag:** Kapsla in koden för att rita, dela, äta, och skära tårtorna i en ny funktion `showFractionAdd(n,m)` så att du kan anropa den för att illustrera ekvationen:
+
+     1     1       n+m
+    ––– + –––  =  ––––-
+     n     m       n*m
+
+Om du t.ex. anropar `showFractionAdd(2,5)` så skall du få följande resultat:
+
+<img src="showFractions.png" height="130">
+
+*Tips:* Börja med att lägga in din kod i den nya funktionen, och att den fungerar när du anropar den med `showFractionAdd(3,4)`. Generalisera sedan funktionen så att den använder parametrarna `n` och `m` i stället för `3` och `4`.
+
+## Lägg till ekvationen
+
+**Uppdrag:** Utöka koden i `showFractionAdd` så att den skriver ut ekvationen under tårtorna. När du nu anropar `showFractionAdd(2,5)` så skall du få följande resultat:
+
+<img src="finalcake.png" height="150">
+
+*Tips:* Här är lite kod du kan använda för att skriva ut ekvationen:
+
+```python
+s1 = "1/"+str(n)
+s2 = "1/"+str(m)
+s3 = str(n+m)+"/"+str(n*m)
+s4 = s1 + " + " + s2 + " = " + s3
+t.write(s4, font=("Arial", 12, "normal"))
+```
+## Testa olika tårtbitar
+
+Prova din funktion med olika värden på `n` och `m` för att räkna ut `1/n + 1/m`. Kontrollera t.ex. att
 * 1/2 + 1/5 = 7/10
 
-Prova fler exempel. Vilka exempel kan du komma på som verkar intressanta att testa?
+**Uppdrag:** Prova fler exempel. T.ex.:
+
+* 1/3 + 1/4 = 7/12
+* 1/5 + 1/7 = 12/35
+
+Fungerar programmet bra för alla exempel? Vilka exempel kan du komma på som verkar intressanta att testa?
 <details>
   <summary markdown="span">
     Tips
@@ -104,10 +241,10 @@ Prova fler exempel. Vilka exempel kan du komma på som verkar intressanta att te
   </p>
 </details>
 
-Fungerade ditt program bra för alla exemplen?
+Fungerade programmet bra för alla exemplen? Kanske det kan förbättras?
 
-Extra: Snitta tårtorna smartare
-===============================
+C: Snitta tårtorna smartare
+===========================
 
 Hur hanterar ditt program fallet med `n=2` och `m=4`? Skärs tårtorna upp med onödigt många snitt? För detta exempel borde det räcka att snitta tårtorna i fjärdedelar. Men ditt program kanske snittar dem i åttondelar?
 
@@ -122,10 +259,49 @@ Kan du räkna ut det smartaste sättet att snitta tårtorna (fjärdedelar i dett
   </p>
 </details>
 
-Innan du går vidare med denna extrauppgift bör du göra [detta uppdrag](../gcd/README.md) där du lär dig hur man programmerar uträkning av största gemensamma delaren mellan två tal. Sedan kan du förbättra ditt tårtprogram så det snittar tårtorna på smartaste sätt. Testa t.ex. att:
+## Räkna ut största gemensamma delaren
+
+Det finns flera olika sätt att räkna ut största gemensamma delaren till två tal. Här är Euclides ursprungliga algoritm:
+
+```python
+def gcd(a, b):
+  while a != b:
+    if a > b:
+      a = a - b
+    else:
+      b = b - a
+  return a
+```
+**Uppdrag:** Klistra in koden ovan för `gcd`-funktionen (Greatest Common Divisor) och kontrollera att den fungerar på några exempel, t.ex.:
+
+* `print(gcd(2,4))` borde ge `2`
+* `print(gcd(15,6))` borde ge `3`
+
+## Skär tårtorna smartare
+
+**Uppdrag:** Ändra ditt program så att `gcd` används för att skära tårtorna med så få snitt som möjligt.
+
+T.ex. borde du kunna få följande resultat:
+
+<img src="smartcake.png" height="150">
+
+
+Testa fler exempel, t.ex. att:
 
 * `1/2 + 1/4 = 3/4` (i stället för `6/8`)
 * `1/6 + 1/15 = 7/30` (i stället för `21/90`)
+
+Kommer du inte på hur du skall göra?
+
+<details>
+  <summary markdown="span">
+    Tips
+  </summary>
+  <p>
+  Som vi nämnde tidigare så behöver tårtorna bara snittas (n*m)/d gånger. För tårtan med n bitar behöver vi alltså skära varje bit i m/d skivor. Och för tårtan med m bitar behöver vi skära varje bit i n/d skivor. Båda dessa tal kommer att vara heltal eftersom både m och n kan delas jämnt med d.
+  </p>
+</details>
+
 
 Extra: Bygg ut programmet
 =========================

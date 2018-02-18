@@ -196,7 +196,7 @@ Vi skall nu generalisera programmet så att du kan prova med andra bråk.
 
 Om du t.ex. anropar `showFractionAdd(2,5)` så skall du få följande resultat:
 
-<img src="showFractions.png" height="130">
+<img src="showfractions.png" height="130">
 
 *Tips:* Börja med att lägga in din kod i den nya funktionen, och att den fungerar när du anropar den med `showFractionAdd(3,4)`. Generalisera sedan funktionen så att den använder parametrarna `n` och `m` i stället för `3` och `4`.
 
@@ -231,13 +231,7 @@ Fungerar programmet bra för alla exempel? Vilka exempel kan du komma på som ve
     Tips
   </summary>
   <p>
-  <ul>
-    <li>Låt n eller m vara lika med 1
-    <li>Låt n eller m vara lika med 0
-    <li>Låt n eller m vara negativt
-    <li>Prova med större värden
-    <li>Prova med värden som har gemensamma faktorer, t.ex. n=2 och m=4
-  </ul>
+  Låt n eller m vara lika med 1 eller 0 eller negativt. Prova med större värden. Prova med värden som har gemensamma faktorer, t.ex. 2 och 4.
   </p>
 </details>
 

@@ -12,7 +12,7 @@ def jumpTo(x,y):
   t.sety(y)
   t.pendown()
 
-# Draw a rectangle
+# Draw a filled rectangle
 def drawFilledRect(width, height):
   savex = t.xcor()
   savey = t.ycor()
@@ -64,7 +64,7 @@ def gcd(a, b):
     else:
       b = b - a
   return a
-  
+
 # Illustrate addition of fractions
 def showFractionAdd(n, m):
   # Draw the two cakes

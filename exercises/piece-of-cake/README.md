@@ -17,9 +17,9 @@ Denna uppgift går ut på att illustrera heltalsbråk som delar av tårtor.
 Innan du gör uppgiften bör du ha lite koll på "turtle graphics", t.ex. genom att göra uppgiften [Turtle](../turtle/README.md).
 
 A: Tredjedelar och fjärdedelar
-==============================
+------------------------------
 
-## Rita en tårta
+### A.1 Rita en tårta
 
 Rita en avlång rektangulär tårta med "turtle graphics". Kanten på tårtan skall vara i en färg och den skall vara fylld med en annan färg. T.ex.:
 
@@ -41,6 +41,7 @@ def jumpTo(x,y):
   t.pendown()
 ```
 ```python
+# Draw a filled rectangle
 def drawFilledRect(width, height):
   t.setheading(0)
   t.fill(True)
@@ -64,18 +65,18 @@ Tips: Så här kan du sätta pennbredden, pennfärgen, och fyllningsfärgen:
 
 **Uppdrag:** Rita tårtan! Prova med olika färger, t.ex. `blue`, `violet`, `pink`, `gold`, `orange`, `brown`. [Här](https://www.tcl.tk/man/tcl8.4/TkCmd/colors.htm) finns en lista på fler färger som kan användas.
 
-## Rita två tårtor
+### A.2 Rita två tårtor
 
 **Uppdrag:** Rita två tårtor snyggt placerade bredvid varann. Tårtorna skall vara lika stora. T.ex. så här:
 
 <img src="twocakes.png" height="130">
 
 
-## Extra: snygga till tårtorna
+### A.3 Extra: snygga till tårtorna
 
 **Uppdrag:** Om du tycker om snygga tårtor, skriv kod som dekorerar dem. Kanske med en ros i mitten på varje tårta?
 
-## Skär upp tårtorna
+### A.4 Skär upp tårtorna
 
 Nu ska vi skära upp tårtorna.
 
@@ -115,7 +116,7 @@ t.speed(0)   # Rita så fort som möjligt
 ```
 
 
-## Ät tårta
+### A.5 Ät tårta
 
 Nu skall vi illustrera att du äter en bit av den ena tårtan och en bit av den andra.
 
@@ -131,7 +132,7 @@ h = ... # the height of a full cake
 drawFilledRect(w/3, h)
 ```
 
-## Hur mycket har du ätit?
+### A.6 Hur mycket har du ätit?
 
 Nu har du ju ätit 1/3 tårta plus 1/4 tårta. Hur mycket tårta blir det sammanlagt?
 
@@ -174,9 +175,9 @@ Denna funktion skär upp en tårta som redan är delad i `pieces` bitar, så att
 
 
 B: Godtyckliga tårtbitar
-========================
+------------------------
 
-## Generalisera programmet
+### B.1 Generalisera programmet
 
 Ditt program illustrerar hur
 
@@ -198,9 +199,9 @@ Om du t.ex. anropar `showFractionAdd(2,5)` så skall du få följande resultat:
 
 <img src="showfractions.png" height="130">
 
-*Tips:* Börja med att lägga in din kod i den nya funktionen, och att den fungerar när du anropar den med `showFractionAdd(3,4)`. Generalisera sedan funktionen så att den använder parametrarna `n` och `m` i stället för `3` och `4`.
+*Tips:* Börja med att lägga in din kod i den nya funktionen, och kolla att den fungerar när du anropar den med `showFractionAdd(3,4)`. Generalisera sedan funktionen så att den använder parametrarna `n` och `m` i stället för `3` och `4`.
 
-## Lägg till ekvationen
+### B.2 Lägg till ekvationen
 
 **Uppdrag:** Utöka koden i `showFractionAdd` så att den skriver ut ekvationen under tårtorna. När du nu anropar `showFractionAdd(2,5)` så skall du få följande resultat:
 
@@ -215,7 +216,7 @@ s3 = str(n+m)+"/"+str(n*m)
 s4 = s1 + " + " + s2 + " = " + s3
 t.write(s4, font=("Arial", 12, "normal"))
 ```
-## Testa olika tårtbitar
+### B.3 Testa olika tårtbitar
 
 Prova din funktion med olika värden på `n` och `m` för att räkna ut `1/n + 1/m`. Kontrollera t.ex. att
 * 1/2 + 1/5 = 7/10
@@ -238,7 +239,7 @@ Fungerar programmet bra för alla exempel? Vilka exempel kan du komma på som ve
 Fungerade programmet bra för alla exemplen? Kanske det kan förbättras?
 
 C: Snitta tårtorna smartare
-===========================
+---------------------------
 
 Hur hanterar ditt program fallet med `n=2` och `m=4`? Skärs tårtorna upp med onödigt många snitt? För detta exempel borde det räcka att snitta tårtorna i fjärdedelar. Men ditt program kanske snittar dem i åttondelar?
 
@@ -253,9 +254,9 @@ Kan du räkna ut det smartaste sättet att snitta tårtorna (fjärdedelar i dett
   </p>
 </details>
 
-## Räkna ut största gemensamma delaren
+### C.1 Räkna ut största gemensamma delaren
 
-Det finns flera olika sätt att räkna ut största gemensamma delaren till två tal. Här är Euclides ursprungliga algoritm:
+Det finns flera olika sätt att räkna ut största gemensamma delaren till två tal. Här är [Euclides](https://sv.wikipedia.org/wiki/Euklides) ursprungliga algoritm:
 
 ```python
 def gcd(a, b):
@@ -271,7 +272,17 @@ def gcd(a, b):
 * `print(gcd(2,4))` borde ge `2`
 * `print(gcd(15,6))` borde ge `3`
 
-## Skär tårtorna smartare
+<details>
+  <summary markdown="span">
+    Kommentar om gcd-algoritmen
+  </summary>
+  <p>
+  gcd-algoritmen ovan fungerar bara för positiva tal. Fler algoritmer diskuteras på wikipedia-sidan <a href="https://en.wikipedia.org/wiki/Euclidean_algorithm">Euclidean algorithm</a>.
+  </p>
+</details>
+
+
+### C.2 Skär tårtorna smartare
 
 **Uppdrag:** Ändra ditt program så att `gcd` används för att skära tårtorna med så få snitt som möjligt.
 
@@ -297,8 +308,8 @@ Kommer du inte på hur du skall göra?
 </details>
 
 
-Extra: Bygg ut programmet
-=========================
+D: Extra. Bygg ut programmet
+----------------------------
 
 Hur skulle du kunna förbättra och utöka programmet? Kanske:
 

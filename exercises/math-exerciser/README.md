@@ -2,6 +2,7 @@
 layout: page
 title: Math Exerciser
 permalink: /exercises/math-exerciser/
+type: exercise
 tags: 
  - avancerad
  - funktioner

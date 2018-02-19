@@ -1,4 +1,6 @@
+# Python related caches
 **/__pycache__
+**/.mypy_cache
 
 # Editor cache files
 *.swp

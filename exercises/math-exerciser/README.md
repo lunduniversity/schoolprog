@@ -8,7 +8,7 @@ tags:
  - funktioner
 toc: true
 ---
-![solution](https://github.com/ahnlabb/schoolprog-external/blob/master/math-exerciser.gif)
+![solution](https://media.githubusercontent.com/media/ahnlabb/schoolprog-external/master/math-exerciser.gif)
 
 ## Denna övning innehåller:
 

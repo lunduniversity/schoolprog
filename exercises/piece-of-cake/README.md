@@ -8,6 +8,7 @@ tags:
  - nybörjare
  - bråk
  - grafiskt
+ - python
 ---
 
 <img src="finalcake.png" height="150">
@@ -15,6 +16,8 @@ tags:
 Denna uppgift går ut på att illustrera heltalsbråk som delar av tårtor.
 
 Innan du gör uppgiften bör du ha lite koll på "turtle graphics", t.ex. genom att göra uppgiften [Turtle](../turtle/README.md).
+
+Koden i denna uppgift är provkörd på http://repl.it/languages/python-turtle (Python 2.7).
 
 A: Tredjedelar och fjärdedelar
 ------------------------------
@@ -28,6 +31,7 @@ Rita en avlång rektangulär tårta med "turtle graphics". Kanten på tårtan sk
 Till din hjälp, deklarera en turtle som du kallar `t`:
 
 ```python
+import turtle
 t = turtle.Turtle()
 ```
 och klistra in följande funktioner i ditt script för att kunna hoppa till en given plats och för kunna att rita en fylld rektangel:
@@ -42,9 +46,8 @@ def jumpTo(x,y):
 ```
 ```python
 # Draw a filled rectangle
-def drawFilledRect(width, height):
-  t.setheading(0)
-  t.fill(True)
+def drawRect(width, height):
+  t.begin_fill()
   t.forward(width)
   t.right(90)
   t.forward(height)
@@ -53,7 +56,7 @@ def drawFilledRect(width, height):
   t.right(90)
   t.forward(height)
   t.right(90)
-  t.fill(False)
+  t.end_fill()
 ```
 Tips: Så här kan du sätta pennbredden, pennfärgen, och fyllningsfärgen:
 
@@ -63,7 +66,7 @@ Tips: Så här kan du sätta pennbredden, pennfärgen, och fyllningsfärgen:
   t.fillcolor('red')    # Sätt fyllningsfärgen
 ```
 
-**Uppdrag:** Rita tårtan! Prova med olika färger, t.ex. `blue`, `violet`, `pink`, `gold`, `orange`, `brown`. [Här](https://www.tcl.tk/man/tcl8.4/TkCmd/colors.htm) finns en lista på fler färger som kan användas.
+**Uppdrag:** Rita tårtan! Prova med olika färger, t.ex. `blue`, `violet`, `pink`, `gold`, `orange`, `brown`. [Här](https://www.tcl.tk/man/tcl8.4/TkCmd/colors.htm) finns en lista på fler färger som kan användas. Prova att placera tårtan på olika ställen genom att anropa `jumpTo` innan du anropar `drawRect`
 
 ### A.2 Rita två tårtor
 
@@ -85,20 +88,14 @@ Till din hjälp, klistra in följande funktion i ditt script.
 ```python
 # Slice a rectangle in a number of pieces
 def sliceRect(width, height, pieces):
-  savex = t.xcor() # Save current turtle x-position
-  savey = t.ycor() # Save current turtle y-position
   pieceWidth = float(width)/pieces
   for i in range(pieces-1):
-    t.penup()
-    t.setheading(0)
-    t.forward(pieceWidth)
+    hop(pieceWidth)
     t.right(90)
-    t.pendown()
     t.forward(height)
-    t.penup()
-    t.backward(height)
-  t.setpos(savex, savey) # Restore turtle position
-
+    hop(-height)
+    t.left(90)
+  hop(-pieceWidth*(pieces-1)) # Go back to original pos
 ```
 
 Funktionen `sliceRect` skär upp en rektangel i ett antal lika stora bitar genom att rita streck över rektangeln.
@@ -107,7 +104,7 @@ Funktionen `sliceRect` skär upp en rektangel i ett antal lika stora bitar genom
 
 <img src="cutcake.png" height="70">
 
-*Obs!* Du måste positionera paddan rätt innan du anropar funktionen, och du måste anropa den med samma bredd och höjd som du ritade rektanglarna med tidigare.
+*Obs!* Du måste hoppa till rätt ställe innan du anropar `sliceRect`, och du måste anropa den med samma bredd och höjd som du ritade rektanglarna med tidigare.
 
 *Tips:* Går det långsamt att rita? Du kan ställa in hastigheten på paddan så här:
 
@@ -115,8 +112,32 @@ Funktionen `sliceRect` skär upp en rektangel i ett antal lika stora bitar genom
 t.speed(0)   # Rita så fort som möjligt
 ```
 
+### A.5 Lägg till konstanter
+Du använder nu troligen samma värden för position, bredd och höjd på flera ställen i ditt program. Då blir koden svårläst. Det blir också jobbigt att t.ex. flytta en tårta eftersom du måste ändra värdena på flera ställen i ditt program.
 
-### A.5 Ät tårta
+Det vore enklare om du hade namn på dessa värden, t.ex. `cake1pos`, `cake2pos`, `cakewidth`, `cakeheight`, så slipper du skriva numeriska värden på många ställen i programmet.
+
+Börja med att lägga till en funktion som gör det möjligt att hoppa till en position som är sparad som ett par av koordinater:
+
+```python
+# Jump to a position given as a pair of coordinates
+def jumpToPos(pos):
+  (x,y) = pos
+  jumpTo(x,y)
+```
+
+Inför sedan konstanter för dina värden, t.ex.
+
+```python
+cake1pos = (-50, 100)
+cake2pos = (-50, 25)
+cakewidth = 300
+cakeheight = 50
+```
+
+**Uppdrag:** Inför konstanter för tårtpositioner och bredd och höjd på tårtorna. Ändra dina anrop så de använder konstanterna i stället för numeriska värden. Prova att ändra konstanterna och kontrollera att ditt program fortfarande fungerar.
+
+### A.6 Ät tårta
 
 Nu skall vi illustrera att du äter en bit av den ena tårtan och en bit av den andra.
 
@@ -124,15 +145,13 @@ Nu skall vi illustrera att du äter en bit av den ena tårtan och en bit av den 
 
 <img src="eatencake.png" height="70">
 
-*Tips*: Anropa `drawFilledRect` med en tredjedel av bredden för den första tårtan och en fjärdedel av bredden för den andra tårtan. Till exempel så här:
+*Tips*: Anropa `drawRect` med en tredjedel av bredden för den första tårtan och en fjärdedel av bredden för den andra tårtan. Till exempel så här:
 
 ```python
-w = ... # the width of a full cake
-h = ... # the height of a full cake
-drawFilledRect(w/3, h)
+drawRect(cakewidth/3, cakeheight)
 ```
 
-### A.6 Hur mycket har du ätit?
+### A.7 Hur mycket har du ätit?
 
 Nu har du ju ätit 1/3 tårta plus 1/4 tårta. Hur mycket tårta blir det sammanlagt?
 
@@ -143,15 +162,11 @@ Nu skall vi illustrera detta. Till din hjälp, klistra in följande funktion:
 ```python
 # Slice each piece into a number of slices
 def slicePieces(width, height, pieces, slices):
-  savex = t.xcor()
-  savey = t.ycor()
   pieceWidth = float(width)/pieces
   for p in range(pieces):
     sliceRect(pieceWidth, height, slices)
-    t.penup()
-    t.setheading(0)
-    t.forward(pieceWidth)
-  t.setpos(savex, savey)
+    hop(pieceWidth)
+  hop(-(pieceWidth)*(pieces)) # Go back to original pos
 ```
 
 Denna funktion skär upp en tårta som redan är delad i `pieces` bitar, så att varje bit delas ytterligare i `slices` delar.
@@ -173,6 +188,7 @@ Denna funktion skär upp en tårta som redan är delad i `pieces` bitar, så att
   </p>
 </details>
 
+----
 
 B: Godtyckliga tårtbitar
 ------------------------
@@ -201,7 +217,7 @@ Om du t.ex. anropar `showFractionAdd(2,5)` så skall du få följande resultat:
 
 *Tips:* Börja med att lägga in din kod i den nya funktionen, och kolla att den fungerar när du anropar den med `showFractionAdd(3,4)`. Generalisera sedan funktionen så att den använder parametrarna `n` och `m` i stället för `3` och `4`.
 
-### B.2 Lägg till ekvationen
+### B.2 Skriv ut ekvationen
 
 **Uppdrag:** Utöka koden i `showFractionAdd` så att den skriver ut ekvationen under tårtorna. När du nu anropar `showFractionAdd(2,5)` så skall du få följande resultat:
 
@@ -216,6 +232,8 @@ s3 = str(n+m)+"/"+str(n*m)
 s4 = s1 + " + " + s2 + " = " + s3
 t.write(s4, font=("Arial", 12, "normal"))
 ```
+*Förklaring av koden:* Plustecknet ovan sätter ihop strängar (snarare än att addera tal). Ett tal som skall skrivas ut, t.ex., `n` behöver då först göras om till en sträng, vilket görs med standardfunktionen `str`.
+
 ### B.3 Testa olika tårtbitar
 
 Prova din funktion med olika värden på `n` och `m` för att räkna ut `1/n + 1/m`. Kontrollera t.ex. att
@@ -236,6 +254,8 @@ Fungerar programmet bra för alla exempel? Vilka exempel kan du komma på som ve
   </p>
 </details>
 
+----
+
 Fungerade programmet bra för alla exemplen? Kanske det kan förbättras?
 
 C: Snitta tårtorna smartare
@@ -254,11 +274,14 @@ Kan du räkna ut det smartaste sättet att snitta tårtorna (fjärdedelar i dett
   </p>
 </details>
 
+----
+
 ### C.1 Räkna ut största gemensamma delaren
 
 Det finns flera olika sätt att räkna ut största gemensamma delaren till två tal. Här är [Euclides](https://sv.wikipedia.org/wiki/Euklides) ursprungliga algoritm:
 
 ```python
+# Compute greatest common divisor
 def gcd(a, b):
   while a != b:
     if a > b:
@@ -280,6 +303,8 @@ def gcd(a, b):
   gcd-algoritmen ovan fungerar bara för positiva tal. Fler algoritmer diskuteras på wikipedia-sidan <a href="https://en.wikipedia.org/wiki/Euclidean_algorithm">Euclidean algorithm</a>.
   </p>
 </details>
+
+----
 
 
 ### C.2 Skär tårtorna smartare
@@ -306,6 +331,8 @@ Kommer du inte på hur du skall göra?
   Som vi nämnde tidigare så behöver tårtorna bara snittas (n*m)/d gånger. För tårtan med n bitar behöver vi alltså skära varje bit i m/d skivor. Och för tårtan med m bitar behöver vi skära varje bit i n/d skivor. Båda dessa tal kommer att vara heltal eftersom både m och n kan delas jämnt med d.
   </p>
 </details>
+
+----
 
 
 D: Extra. Bygg ut programmet

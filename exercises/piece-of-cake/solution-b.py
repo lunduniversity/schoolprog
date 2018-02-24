@@ -1,23 +1,26 @@
+# Code tested on Python 2.7 in http://repl.it/languages/python-turtle
+
 import turtle
 
 t = turtle.Turtle()
-t.speed(0)
-cakeWidth = 300
-cakeHeight = 50
 
 # Jump to a position without drawing
-def jumpTo(x,y):
+def jumpToPos(pos):
+  (x,y) = pos
   t.penup()
   t.setx(x)
   t.sety(y)
   t.pendown()
 
+# Hop forward without drawing
+def hop(x):
+  t.penup()
+  t.forward(x)
+  t.pendown()
+
 # Draw a filled rectangle
-def drawFilledRect(width, height):
-  savex = t.xcor()
-  savey = t.ycor()
-  t.setheading(0)
-  t.fill(True)
+def drawRect(width, height):
+  t.begin_fill()
   t.forward(width)
   t.right(90)
   t.forward(height)
@@ -26,77 +29,82 @@ def drawFilledRect(width, height):
   t.right(90)
   t.forward(height)
   t.right(90)
-  t.fill(False)
-  t.setpos(savex, savey)
+  t.end_fill()
 
 # Slice a rectangle in a number of pieces
 def sliceRect(width, height, pieces):
-  savex = t.xcor()
-  savey = t.ycor()
   pieceWidth = float(width)/pieces
   for i in range(pieces-1):
-    t.penup()
-    t.setheading(0)
-    t.forward(pieceWidth)
+    hop(pieceWidth)
     t.right(90)
-    t.pendown()
     t.forward(height)
-    t.penup()
-    t.backward(height)
-  t.setpos(savex, savey)
+    hop(-height)
+    t.left(90)
+  hop(-pieceWidth*(pieces-1))
 
 # Slice each piece into a number of slices
 def slicePieces(width, height, pieces, slices):
-  savex = t.xcor()
-  savey = t.ycor()
   pieceWidth = float(width)/pieces
   for p in range(pieces):
     sliceRect(pieceWidth, height, slices)
-    t.penup()
-    t.setheading(0)
-    t.forward(pieceWidth)
-  t.setpos(savex, savey)
+    hop(pieceWidth)
+  hop(-pieceWidth*(pieces-1))
+
+
 
 # Illustrate addition of fractions
 def showFractionAdd(n, m):
+  # set constants
+  t.speed(0)
+  t.setheading(0)
+  cakeWidth = 300
+  cakeHeight = 50
+  cake1pos = (-150, 100)
+  cake2pos = (-150, 25)
+  writepos = (-150, -50)
+
   # Draw the two cakes
   t.width(3)
   t.color('brown')
   t.fillcolor('pink')
-  jumpTo(-150, 100)
-  drawFilledRect(cakeWidth, cakeHeight)
-  jumpTo(-150, 25)
-  drawFilledRect(cakeWidth, cakeHeight)
+  t.setheading(0)
+  jumpToPos(cake1pos)
+  drawRect(cakeWidth, cakeHeight)
+  jumpToPos(cake2pos)
+  drawRect(cakeWidth, cakeHeight)
+
   # Cut cakes in n and m pieces
   t.color('red')
   t.width(5)
-  jumpTo(-150, 100)
+  jumpToPos(cake1pos)
   sliceRect(cakeWidth, cakeHeight, n)
-  jumpTo(-150, 25)
+  jumpToPos(cake2pos)
   sliceRect(cakeWidth, cakeHeight, m)
+
   # Eat one piece from each cake
   t.color('brown')
   t.fillcolor('brown')
   t.width(1)
-  jumpTo(-150, 100)
-  drawFilledRect(cakeWidth/n, cakeHeight)
-  jumpTo(-150, 25)
-  drawFilledRect(cakeWidth/m, cakeHeight)
+  jumpToPos(cake1pos)
+  drawRect(cakeWidth/n, cakeHeight)
+  jumpToPos(cake2pos)
+  drawRect(cakeWidth/m, cakeHeight)
+
   # Slice each piece in m and n slices
   t.color('blue')
   t.width(1)
-  jumpTo(-150, 100)
+  jumpToPos(cake1pos)
   slicePieces(cakeWidth, cakeHeight, n, m)
-  jumpTo(-150, 25)
+  jumpToPos(cake2pos)
   slicePieces(cakeWidth, cakeHeight, m, n)
+
   # Write equation
-  jumpTo(-150, -50)
+  jumpToPos(writepos)
   s1 = "1/"+str(n)
   s2 = "1/"+str(m)
   s3 = str(n+m)+"/"+str(n*m)
   s4 = s1 + " + " + s2 + " = " + s3
   t.write(s4, font=("Arial", 12, "normal"))
-  jumpTo(-150, 50)
 
 # Example call
 showFractionAdd(2,5)

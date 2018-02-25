@@ -31,4 +31,4 @@ Här är några uppdrag du kan börja med:
 
 * [Guess the secret number](exercises/guess-the-secret-number/) (Python)
 * [Turtle](exercises/turtle/) (Python)
-* [Piece of cake](exercises/piece-of-cake/) (Python)
+* [Piece of cake (Python)](exercises/piece-of-cake/python.md) eller [Piece of cake (Scala)](exercises/piece-of-cake/scala.md)

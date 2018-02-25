@@ -1,23 +1,12 @@
----
-layout: page
-title: Piece of cake
-permalink: /exercises/piece-of-cake/
-toc: true
-type: exercise
-tags:
- - nybörjare
- - bråk
- - grafiskt
- - python
----
-
 <img src="finalcake.png" height="150">
 
 Denna uppgift går ut på att illustrera heltalsbråk som delar av tårtor.
 
 Innan du gör uppgiften bör du ha lite koll på "turtle graphics", t.ex. genom att göra uppgiften [Turtle](../turtle/README.md).
 
+{% if page.proglang == "python" %}
 Koden i denna uppgift är provkörd på http://repl.it/languages/python-turtle (Python 2.7).
+{% endif %}
 
 A: Tredjedelar och fjärdedelar
 ------------------------------
@@ -28,14 +17,19 @@ Rita en avlång rektangulär tårta med "turtle graphics". Kanten på tårtan sk
 
 <img src="cake.png" height="70">
 
+{% if page.proglang == "python" %}
 Till din hjälp, deklarera en turtle som du kallar `t`:
 
 ```python
 import turtle
 t = turtle.Turtle()
 ```
-och klistra in följande funktioner i ditt script för att kunna hoppa till en given plats och för kunna att rita en fylld rektangel:
+{% endif %}
 
+Klistra in följande funktioner i ditt script för att kunna hoppa till en given plats och för kunna att rita en fylld rektangel:
+
+{% case page.proglang %}
+{% when "python" %}
 ```python
 # Jump to a position without drawing anything
 def jumpTo(x,y):
@@ -58,15 +52,25 @@ def drawRect(width, height):
   t.right(90)
   t.end_fill()
 ```
+{% endcase %}
+
 Tips: Så här kan du sätta pennbredden, pennfärgen, och fyllningsfärgen:
 
+{% case page.proglang %}
+{% when "python" %}
 ```python
   t.width(3)            # Sätt bredden på pennan
   t.color('green')      # Sätt färgen på pennan
   t.fillcolor('red')    # Sätt fyllningsfärgen
 ```
+{% endcase %}
 
-**Uppdrag:** Rita tårtan! Prova med olika färger, t.ex. `blue`, `violet`, `pink`, `gold`, `orange`, `brown`. [Här](https://www.tcl.tk/man/tcl8.4/TkCmd/colors.htm) finns en lista på fler färger som kan användas. Prova att placera tårtan på olika ställen genom att anropa `jumpTo` innan du anropar `drawRect`
+**Uppdrag:** Rita tårtan!
+Prova med olika färger, t.ex. `blue`, `violet`, `pink`, `gold`, `orange`, `brown`.
+{% if page.proglang == "python" %}
+[Här](https://www.tcl.tk/man/tcl8.4/TkCmd/colors.htm) finns en lista på fler färger som kan användas.
+{% endif %}
+Prova att placera tårtan på olika ställen genom att anropa `jumpTo` innan du anropar `drawRect`
 
 ### A.2 Rita två tårtor
 
@@ -85,6 +89,8 @@ Nu ska vi skära upp tårtorna.
 
 Till din hjälp, klistra in följande funktion i ditt script.
 
+{% case page.proglang %}
+{% when "python" %}
 ```python
 # Slice a rectangle in a number of pieces
 def sliceRect(width, height, pieces):
@@ -97,6 +103,7 @@ def sliceRect(width, height, pieces):
     t.left(90)
   hop(-pieceWidth*(pieces-1)) # Go back to original pos
 ```
+{% endcase %}
 
 Funktionen `sliceRect` skär upp en rektangel i ett antal lika stora bitar genom att rita streck över rektangeln.
 
@@ -108,9 +115,12 @@ Funktionen `sliceRect` skär upp en rektangel i ett antal lika stora bitar genom
 
 *Tips:* Går det långsamt att rita? Du kan ställa in hastigheten på paddan så här:
 
+{% case page.proglang %}
+{% when "python" %}
 ```python
 t.speed(0)   # Rita så fort som möjligt
 ```
+{% endcase %}
 
 ### A.5 Lägg till konstanter
 Du använder nu troligen samma värden för position, bredd och höjd på flera ställen i ditt program. Då blir koden svårläst. Det blir också jobbigt att t.ex. flytta en tårta eftersom du måste ändra värdena på flera ställen i ditt program.
@@ -119,21 +129,27 @@ Det vore enklare om du hade namn på dessa värden, t.ex. `cake1pos`, `cake2pos`
 
 Börja med att lägga till en funktion som gör det möjligt att hoppa till en position som är sparad som ett par av koordinater:
 
+{% case page.proglang %}
+{% when "python" %}
 ```python
 # Jump to a position given as a pair of coordinates
 def jumpToPos(pos):
   (x,y) = pos
   jumpTo(x,y)
 ```
+{% endcase %}
 
 Inför sedan konstanter för dina värden, t.ex.
 
+{% case page.proglang %}
+{% when "python" %}
 ```python
 cake1pos = (-50, 100)
 cake2pos = (-50, 25)
 cakewidth = 300
 cakeheight = 50
 ```
+{% endcase %}
 
 **Uppdrag:** Inför konstanter för tårtpositioner och bredd och höjd på tårtorna. Ändra dina anrop så de använder konstanterna i stället för numeriska värden. Prova att ändra konstanterna och kontrollera att ditt program fortfarande fungerar.
 
@@ -159,6 +175,8 @@ Om vi hade delat varje tårta i tolftedelar (delbart med både 3 och 4), så had
 
 Nu skall vi illustrera detta. Till din hjälp, klistra in följande funktion:
 
+{% case page.proglang %}
+{% when "python" %}
 ```python
 # Slice each piece into a number of slices
 def slicePieces(width, height, pieces, slices):
@@ -168,6 +186,7 @@ def slicePieces(width, height, pieces, slices):
     hop(pieceWidth)
   hop(-(pieceWidth)*(pieces)) # Go back to original pos
 ```
+{% endcase %}
 
 Denna funktion skär upp en tårta som redan är delad i `pieces` bitar, så att varje bit delas ytterligare i `slices` delar.
 
@@ -225,6 +244,8 @@ Om du t.ex. anropar `showFractionAdd(2,5)` så skall du få följande resultat:
 
 *Tips:* Här är lite kod du kan använda för att skriva ut ekvationen:
 
+{% case page.proglang %}
+{% when "python" %}
 ```python
 s1 = "1/"+str(n)
 s2 = "1/"+str(m)
@@ -232,7 +253,13 @@ s3 = str(n+m)+"/"+str(n*m)
 s4 = s1 + " + " + s2 + " = " + s3
 t.write(s4, font=("Arial", 12, "normal"))
 ```
-*Förklaring av koden:* Plustecknet ovan sätter ihop strängar (snarare än att addera tal). Ett tal som skall skrivas ut, t.ex., `n` behöver då först göras om till en sträng, vilket görs med standardfunktionen `str`.
+{% endcase %}
+
+*Förklaring av koden:* Plustecknet ovan sätter ihop strängar (snarare än att addera tal). Ett tal som skall skrivas ut, t.ex., `n` behöver då först göras om till en sträng, vilket görs med standardfunktionen
+{% case page.proglang %}
+{% when "python" %}
+`str`.
+{% endcase %}
 
 ### B.3 Testa olika tårtbitar
 
@@ -280,6 +307,8 @@ Kan du räkna ut det smartaste sättet att snitta tårtorna (fjärdedelar i dett
 
 Det finns flera olika sätt att räkna ut största gemensamma delaren till två tal. Här är [Euclides](https://sv.wikipedia.org/wiki/Euklides) ursprungliga algoritm:
 
+{% case page.proglang %}
+{% when "python" %}
 ```python
 # Compute greatest common divisor
 def gcd(a, b):
@@ -290,10 +319,15 @@ def gcd(a, b):
       b = b - a
   return a
 ```
+{% endcase %}
+
 **Uppdrag:** Klistra in koden ovan för `gcd`-funktionen (Greatest Common Divisor) och kontrollera att den fungerar på några exempel, t.ex.:
 
+{% case page.proglang %}
+{% when "python" %}
 * `print(gcd(2,4))` borde ge `2`
 * `print(gcd(15,6))` borde ge `3`
+{% endcase %}
 
 <details>
   <summary markdown="span">

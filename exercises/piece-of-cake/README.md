@@ -4,9 +4,12 @@ Denna uppgift går ut på att illustrera heltalsbråk som delar av tårtor.
 
 Innan du gör uppgiften bör du ha lite koll på "turtle graphics", t.ex. genom att göra uppgiften [Turtle](../turtle/README.md).
 
-{% if page.proglang == "python" %}
-Koden i denna uppgift är provkörd på http://repl.it/languages/python-turtle (Python 2.7).
-{% endif %}
+{% case page.proglang %}
+{% when "python" %}
+Koden i denna uppgift är provkörd på [http://repl.it/languages/python-turtle](http://repl.it/languages/python-turtle) (Python 2.7).
+{% when "scala" %}
+Koden i denna uppgift är provkörd på [http://kojojs.kogics.net](http://kojojs.kogics.net) (Scala).
+{% endcase %}
 
 A: Tredjedelar och fjärdedelar
 ------------------------------
@@ -52,6 +55,26 @@ def drawRect(width, height):
   t.right(90)
   t.end_fill()
 ```
+{% when "scala" %}
+```scala
+// Jump to a position without drawing anything
+def jumpTo(x: Int, y: Int) = {
+  setPosition(x,y);
+}
+```
+```scala
+// Draw a rectangle
+def drawRect(width:Int, height:Int) = {
+  forward(width)
+  right(90)
+  forward(height)
+  right(90)
+  forward(width)
+  right(90)
+  forward(height)
+  right(90)
+}
+```
 {% endcase %}
 
 Tips: Så här kan du sätta pennbredden, pennfärgen, och fyllningsfärgen:
@@ -63,14 +86,32 @@ Tips: Så här kan du sätta pennbredden, pennfärgen, och fyllningsfärgen:
   t.color('green')      # Sätt färgen på pennan
   t.fillcolor('red')    # Sätt fyllningsfärgen
 ```
+{% when "scala" %}
+```scala
+  setPenThickness(3)    // Sätt bredden på pennan
+  setPenColor(green)    // Sätt färgen på pennan
+  setFillColor(red)     // Sätt fyllningsfärgen
+```
+{% endcase %}
+
+Och så här kan du sätta riktningen på sköldpaddan:
+
+{% case page.proglang %}
+{% when "python" %}
+```python
+  t.setheading(0) # Sätt riktningen till 0 grader (dvs mot öster)
+```
+{% when "scala" %}
+```scala
+  setHeading(0)  // Sätt riktningen till 0 grader (dvs mot öster)
+```
 {% endcase %}
 
 **Uppdrag:** Rita tårtan!
-Prova med olika färger, t.ex. `blue`, `violet`, `pink`, `gold`, `orange`, `brown`.
-{% if page.proglang == "python" %}
-[Här](https://www.tcl.tk/man/tcl8.4/TkCmd/colors.htm) finns en lista på fler färger som kan användas.
-{% endif %}
-Prova att placera tårtan på olika ställen genom att anropa `jumpTo` innan du anropar `drawRect`
+
+Prova med olika färger, t.ex. `blue`, `violet`, `pink`, `gold`, `orange`, `brown`, `red`, `green`, `white`, `black`. {% if page.proglang == "python" %} [Här](https://www.tcl.tk/man/tcl8.4/TkCmd/colors.htm) finns en lista på fler färger som kan användas. {% endif %}
+Pr
+ova att placera tårtan på olika ställen genom att anropa `jumpTo` innan du anropar `drawRect`
 
 ### A.2 Rita två tårtor
 
@@ -87,11 +128,17 @@ Prova att placera tårtan på olika ställen genom att anropa `jumpTo` innan du 
 
 Nu ska vi skära upp tårtorna.
 
-Till din hjälp, klistra in följande funktion i ditt script.
+Till din hjälp, klistra in följande kod i ditt script.
 
 {% case page.proglang %}
 {% when "python" %}
 ```python
+# Hop forward without drawing
+def hop(x):
+  t.penup()
+  t.forward(x)
+  t.pendown()
+
 # Slice a rectangle in a number of pieces
 def sliceRect(width, height, pieces):
   pieceWidth = float(width)/pieces
@@ -102,6 +149,29 @@ def sliceRect(width, height, pieces):
     hop(-height)
     t.left(90)
   hop(-pieceWidth*(pieces-1)) # Go back to original pos
+```
+{% when "scala" %}
+```scala
+// Helper function for coding repetition
+def repeat(n: Int)(f: => Unit) {
+  if (n > 0) {
+    f
+    repeat(n-1)(f)
+  }
+}
+
+// Slice a rectangle in a number of pieces
+def sliceRect(width:Double, height:Double, pieces:Int) = {
+  val pieceWidth = width/pieces
+  repeat (pieces-1) {
+    hop(pieceWidth)
+    right(90)
+    forward(height)
+    hop(-height)
+    left(90)
+  }
+  hop(-(pieceWidth)*(pieces-1)) // hop back to initial position
+}
 ```
 {% endcase %}
 
@@ -120,6 +190,10 @@ Funktionen `sliceRect` skär upp en rektangel i ett antal lika stora bitar genom
 ```python
 t.speed(0)   # Rita så fort som möjligt
 ```
+{% when "scala" %}
+```scala
+setAnimationDelay(0)  // Rita så fort som möjligt
+```
 {% endcase %}
 
 ### A.5 Lägg till konstanter
@@ -137,6 +211,14 @@ def jumpToPos(pos):
   (x,y) = pos
   jumpTo(x,y)
 ```
+{% when "scala" %}
+```scala
+// Jump to a position given as a pair of coordinates
+def jumpToPos(pos:(Int, Int)) = {
+  val (x,y) = pos
+  setPosition(x,y)
+}
+```
 {% endcase %}
 
 Inför sedan konstanter för dina värden, t.ex.
@@ -148,6 +230,13 @@ cake1pos = (-50, 100)
 cake2pos = (-50, 25)
 cakewidth = 300
 cakeheight = 50
+```
+{% when "scala" %}
+```scala
+val cake1pos = (-50, 75)
+val cake2pos = (-50, 0)
+val cakewidth = 300
+val cakeheight = 50
 ```
 {% endcase %}
 
@@ -185,6 +274,18 @@ def slicePieces(width, height, pieces, slices):
     sliceRect(pieceWidth, height, slices)
     hop(pieceWidth)
   hop(-(pieceWidth)*(pieces)) # Go back to original pos
+```
+{% when "scala" %}
+```scala
+// Slice each piece into a number of slices
+def slicePieces(width:Double, height:Double, pieces:Int, slices:Int) = {
+  val pieceWidth = width/pieces
+  repeat (pieces) {
+    sliceRect(pieceWidth, height, slices)
+    hop(pieceWidth)
+  }
+  hop(-(pieceWidth)*(pieces))
+}
 ```
 {% endcase %}
 
@@ -253,13 +354,17 @@ s3 = str(n+m)+"/"+str(n*m)
 s4 = s1 + " + " + s2 + " = " + s3
 t.write(s4, font=("Arial", 12, "normal"))
 ```
+{% when "scala" %}
+```scala
+val s1 = "1/"+n.toString
+val s2 = "1/"+m.toString
+val s3 = (n+m).toString + "/" + (n*m).toString
+val s4 = s1 + " + " + s2 + " = " + s3
+write(s4)
+```
 {% endcase %}
 
-*Förklaring av koden:* Plustecknet ovan sätter ihop strängar (snarare än att addera tal). Ett tal som skall skrivas ut, t.ex., `n` behöver då först göras om till en sträng, vilket görs med standardfunktionen
-{% case page.proglang %}
-{% when "python" %}
-`str`.
-{% endcase %}
+*Förklaring av koden:* Plustecknet ovan sätter ihop strängar (snarare än att addera tal). Ett tal som skall skrivas ut, t.ex., `n` behöver då först göras om till en sträng, vilket görs med standardfunktionen {% case page.proglang %} {% when "python" %}`str`{% case page.proglang %} {% when "scala" %}`toString`{% endcase %}.
 
 ### B.3 Testa olika tårtbitar
 
@@ -319,14 +424,32 @@ def gcd(a, b):
       b = b - a
   return a
 ```
+{% when "scala" %}
+```scala
+// Compute greatest common divisor
+def gcd(aIn:Int, bIn:Int):Int = {
+  var a = aIn
+  var b = bIn
+  while (a != b) {
+    if (a > b)
+      a = a - b
+    else
+      b = b - a
+  }
+  return a
+}
+```
 {% endcase %}
 
 **Uppdrag:** Klistra in koden ovan för `gcd`-funktionen (Greatest Common Divisor) och kontrollera att den fungerar på några exempel, t.ex.:
 
 {% case page.proglang %}
 {% when "python" %}
-* `print(gcd(2,4))` borde ge `2`
-* `print(gcd(15,6))` borde ge `3`
+* `t.write(gcd(2,4))` borde ge `2`
+* `t.write(gcd(15,6))` borde ge `3`
+{% when "scala" %}
+* `write(gcd(2,4).toString)` borde ge `2`
+* `write(gcd(15,6).toString)` borde ge `3`
 {% endcase %}
 
 <details>

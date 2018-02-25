@@ -110,8 +110,8 @@ Och så här kan du sätta riktningen på sköldpaddan:
 **Uppdrag:** Rita tårtan!
 
 Prova med olika färger, t.ex. `blue`, `violet`, `pink`, `gold`, `orange`, `brown`, `red`, `green`, `white`, `black`. {% if page.proglang == "python" %} [Här](https://www.tcl.tk/man/tcl8.4/TkCmd/colors.htm) finns en lista på fler färger som kan användas. {% endif %}
-Pr
-ova att placera tårtan på olika ställen genom att anropa `jumpTo` innan du anropar `drawRect`
+
+Prova att placera tårtan på olika ställen genom att anropa `jumpTo` innan du anropar `drawRect`
 
 ### A.2 Rita två tårtor
 
@@ -364,7 +364,7 @@ write(s4)
 ```
 {% endcase %}
 
-*Förklaring av koden:* Plustecknet ovan sätter ihop strängar (snarare än att addera tal). Ett tal som skall skrivas ut, t.ex., `n` behöver då först göras om till en sträng, vilket görs med standardfunktionen {% case page.proglang %} {% when "python" %}`str`{% case page.proglang %} {% when "scala" %}`toString`{% endcase %}.
+*Förklaring av koden:* Plustecknet ovan sätter ihop strängar (snarare än att addera tal). Ett tal som skall skrivas ut, t.ex., `n` behöver då först göras om till en sträng, vilket görs med standardfunktionen {% case page.proglang %} {% when "python" %}`str`{% when "scala" %}`toString`{% endcase %}.
 
 ### B.3 Testa olika tårtbitar
 

@@ -6,7 +6,12 @@
 
 // Adds a lefthand bar at the side of <details> elements
 details {
-  border: 5px solid #444;
+  border: solid #444;
   border-width: 0 0 0 4px;
   padding-left: 0.5em;
+  margin-bottom: 1em;
+
+  summary {
+    cursor: pointer;
+  }
 }

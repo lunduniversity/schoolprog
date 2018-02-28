@@ -1,5 +1,5 @@
 ---
-title: Uppgifter
+title: Uppdrag
 layout: page
 toc: true
 permalink: /exercises/

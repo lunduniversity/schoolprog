@@ -194,4 +194,12 @@ TODO - en övning för att göra en funktion som ritar en liten enkel blomma. Ge
 
 TODO - övning för att göra en funktion som ritar en x och en y-axel. Att användas senare i uppdrag om att rita matematiska funktioner.
 
+# Färgglad sköldpadda
+
+Kör följande i varje steg i loopen (glöm inte att lägga till `import random` längst upp i filen!)
+
+```py
+t.color(random.choice(['red', 'green', 'magenta', 'orange', 'blue']))
+```
+
 -->

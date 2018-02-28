@@ -15,20 +15,30 @@ Om du inte har programmerat tidigare rekommenderar vi att du börjar med [Kojo/S
 
 ## Kom igång
 
-För att komma igång snabbt kan du göra programmeringen online. Då slipper du ladda ner en programmeringsmiljö på din egen dator. Vi rekommenderar:
+För att komma igång snabbt kan du programmera online. Då slipper du ladda ner en programmeringsmiljö på din egen dator. Vi rekommenderar:
 
-* **Online Python med turtle graphics**: [repl.it/languages/python_turtle](https://repl.it/languages/python_turtle)
-    * Se vårt [Python CheatSheet](programming/python/CHEATSHEET.md) för vanliga konstruktioner.
-    * Köra Python3 utan turtle: [repl.it/languages/python3](https://repl.it/languages/python3).
+* **Python med turtle graphics**:
+    * Kör online på [Python-turtle på repl.it](https://repl.it/languages/python_turtle)
+    * Vår [snabbreferens till Python-turtle](programming/turtle-cheatsheet/python.md).
+    * Vår [snabbreferens till Python-konstruktioner](programming/python/CHEATSHEET.md).
+    * Kör online utan turtle på [Python3 på repl.it](https://repl.it/languages/python3).
 
-* **Online Scala med turtle graphics**: [kojojs](http://kojojs.kogics.net/) (experimentell än så länge)
-    * Ladda ner kojo på din dator i stället: [kojo](http://www.lth.se/programmera/installera/)
+* **Scala med kojo turtle graphics**:
+    * Kör online på [kojo-js](http://kojojs.kogics.net/) (experimentell än så länge)
+    * Vår [snabbreferens till kojo-js](programming/turtle-cheatsheet/scala.md)
+    * Kör offline genom att [ladda ner kojo](http://www.lth.se/programmera/installera/) på din dator.
 
 
 ## Uppdrag
 
-Här är några uppdrag du kan börja med:
+Här är några uppdrag (i svårighetsordning):
 
-* [Guess the secret number](exercises/guess-the-secret-number/) (Python)
-* [Turtle](exercises/turtle/) (Python)
-* [Piece of cake (Python)](exercises/piece-of-cake/python.md) eller [Piece of cake (Scala)](exercises/piece-of-cake/scala.md)
+* [Sköldpaddsgrafik](exercises/turtle) (Python-turtle)
+* [Månghörningar](exercises/back-to-start) (Python-turtle)
+* [Gissa det hemliga numret](exercises/guess-the-secret-number/) (Python 3)
+* [Beräkna ränta](exercises/interest-rates) (Python 3)
+* [Aritmetiska operatorer](exercises/implement-arithmetic-operators) (Python 3)
+* [Bråk med Piece of cake](exercises/piece-of-cake/python.md) (Python-turtle)
+* [Bråk med Piece of cake](exercises/piece-of-cake/scala.md) (Kojo/Scala)
+* [Bråkspel](exercises/fractions) (Python 3)
+* [Mattetränaren](exercises/math-exerciser) (Python 3)

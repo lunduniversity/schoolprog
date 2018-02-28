@@ -1,3 +1,14 @@
+---
+layout: page
+title: Månghörningar
+permalink: /exercises/back-to-start/
+toc: true
+type: exercise
+tags:
+ - beginner
+ - geometry
+ - turtle graphics
+---
 I denna uppgift kommer du att träna på vinklar i regelbundna månghörningar. Vi använder "turtle graphics" för detta.
 
 Du får även träna på att ändra i och experimentera med program.
@@ -120,4 +131,3 @@ För att få med decimalerna i kvoten behöver man skriva `360.0 / n`.
 Om man skriver `360 / n` får man en kvot utan decimaler, så om `n = 7` får man kvoten 51 istället för 51,428.
 </p>
 </details>
-

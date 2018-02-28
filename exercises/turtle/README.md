@@ -8,6 +8,8 @@ tags:
  - grafiskt
  - funktioner
 permalink: /exercises/turtle/
+cover_image: https://i.imgur.com/YHHBJaS.png
+cover_y_offset: 25%
 ---
 
 **Note:** This exercise is also available [in english](README_EN.md).

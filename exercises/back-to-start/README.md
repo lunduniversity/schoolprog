@@ -105,18 +105,18 @@ for i in range(n):
 Tips
 </summary>
 <p>
-Raden `t.left(120)` behöver ändras.
+Raden <code>t.left(120)</code> behöver ändras.
 </p>
 </details>
 
-**Uppdrag:** ändra programmet så att det fungerar för andra värden på `n`.
+**Uppdrag:** ändra programmet så att det fungerar för andra värden på `n`. (T.ex., om n = 5 skall en liksidig femhörning ritas ut.)
 
 <details>
 <summary markdown="span">
 Tips
 </summary>
 <p>
-Du behöver stoppa in beräkningen `360.0 / n` på rätt ställe.
+Du behöver stoppa in beräkningen <code>360.0 / n</code> på rätt ställe.
 </p>
 </details>
 
@@ -125,9 +125,9 @@ Du behöver stoppa in beräkningen `360.0 / n` på rätt ställe.
 Tips: glipar din månghörning?
 </summary>
 <p>
-Kanske upptäcker du att vissa månghörningar ändå glipar lite grann, exempelvis för `n = 7`.
+Kanske upptäcker du att vissa månghörningar ändå glipar lite grann, exempelvis för <code>n = 7</code>.
 Det beror på att 7 inte går jämnt upp i 360.
-För att få med decimalerna i kvoten behöver man skriva `360.0 / n`.
-Om man skriver `360 / n` får man en kvot utan decimaler, så om `n = 7` får man kvoten 51 istället för 51,428.
+För att få med decimalerna i kvoten behöver man skriva <code>360.0 / n</code>.
+Om man skriver <code>360 / n</code> får man en kvot utan decimaler, så om <code>n = 7</code> får man kvoten 51 istället för 51,428.
 </p>
 </details>

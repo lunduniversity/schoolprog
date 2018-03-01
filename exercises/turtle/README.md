@@ -122,7 +122,7 @@ t.left(120)
 vimpel()
 ```
 
-**Uppdrag myfig:** Kan du göra en funktion som ritar en enkel figur? T.ex. bokstaven L, eller något du hittar på själv. Prova att rita ut den på flera ställen. Funktionen skall vara *rotationsneutral*, dvs på slutet av funktionen skall paddan ha samma riktning som i början.
+**Uppdrag figur:** Kan du göra en funktion `figur` som ritar en enkel figur? T.ex. bokstaven L, eller något du hittar på själv. Prova att rita ut den på flera ställen. Funktionen skall vara *rotationsneutral*, dvs på slutet av funktionen skall paddan ha samma riktning som i början.
 
 
 
@@ -149,7 +149,7 @@ hop(10)
 t.forward(20)
 ```
 
-**Uppdrag skalbar figur:** Ändra din funktion `myfig` så den tar en parameter `height` som representerar höjden på figuren. Rita alla delar skalenligt. Låt `100` motsvara att figuren ritas ut i skala 1:1. Anropa din funktion med olika värden på `height`.
+**Uppdrag skalbar figur:** Ändra din funktion `figur` så den tar en parameter `height` som representerar höjden på figuren. Rita alla delar skalenligt. Låt `100` motsvara att figuren ritas ut i skala 1:1. Anropa din funktion med olika värden på `height`.
 
 <details>
   <summary markdown="span">
@@ -168,9 +168,9 @@ t.setposition(p)
 t.setheading(h)
 ```
 
-**Uppdrag neutral figur:** Ändra din funktion `myfig` så den blir rotations- och positionsneutral.
+**Uppdrag neutral figur:** Ändra din funktion `figur` så den blir rotations- och positionsneutral.
 
-**Uppdrag decor:** Skriv en funktion `decor` som anropar `myfig` några gånger för att få ett intressant mönster. Prova med olika vinklar, olika storlekar och olika positioner. Du kan använda loopar och extra funktioner om du vill.
+**Uppdrag dekor:** Skriv en funktion `dekor` som anropar `figur` några gånger för att få ett intressant mönster. Prova med olika vinklar, olika storlekar och olika positioner. Du kan använda loopar och extra funktioner om du vill.
 
 
 

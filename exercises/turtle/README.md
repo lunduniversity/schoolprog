@@ -18,6 +18,10 @@ Vill du rita snygga & coola saker med en programmerbar sköldpadda? Då är dett
 
 Börja med att öppna online-miljön för [Python-turtle](https://repl.it/languages/python_turtle)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EQ_qSMKEWJI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+**Uppdrag:** Titta igenom videon (1 minut, inget ljud).
+
 ### 2. Rektangel
 <!--Sekvens-->
 
@@ -111,19 +115,25 @@ for c in range(16):
 
 Genom att definiera en funktion kan du göra egna byggblock som du kan använda på flera ställen.
 
-Här definierar vi en funktion som ritar en liten vimpel:
+Här definierar vi en funktion som ritar en liten vimpel, och gör sedan ett anrop av funktionen:
 
 ```python
-def vimpel() :
+import turtle
+t = turtle.Turtle()
+t.color("blue")
+
+def vimpel() :   # Definition av vimpel
   t.forward(100)
   t.right(100)
   t.forward(40)
   t.right(160)
   t.forward(40)
   t.right(100)
+
+vimpel()         # Anrop av vimpeln
 ```
 
-Vi kan sedan prova att rita ut vimpeln på flera ställen. För att hoppa till olika ställen får vi be paddan dra upp sin penna.
+Vi kan prova att rita ut vimpeln på flera ställen. För att hoppa till olika ställen får vi be paddan dra upp sin penna.
 
 ```python
 t.setheading(90)

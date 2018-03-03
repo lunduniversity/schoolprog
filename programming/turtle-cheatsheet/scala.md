@@ -61,6 +61,12 @@ setAnimationDelay(0)     // Paddan ritar så snabbt som möjligt
 setAnimationDelay(10000) // Paddan ritar väldigt långsamt
 ```
 
+## Spara/återställ position och riktning
+```scala
+savePosHe()     // Spara paddans position och riktning
+restorePosHe()  // Återställ tidigare sparad position och riktning
+```
+
 # Annat du kan göra i Kojo
 
 ## Läs in och skriv ut

@@ -43,6 +43,7 @@ t.circle(50, extent = 90) # Paddan ritar en båge med radien 50 och vinkeln 90
 Det är praktiskt att låta paddan kunna hoppa framåt utan att rita. För att göra detta, klistra in följande funktion som lyfter pennan, går framåt, och sedan sänker pennan igen:
 
 ```python
+# Hoppa framåt utan att rita
 def hop(length):
   t.penup()
   t.forward(length)
@@ -59,8 +60,19 @@ t.forward(10)
 
 ## Styr med absoluta koordinater
 
+För att flytta paddan till en viss `(x,y)`-position är följande funktion användbar att klistra in:
+
 ```python
-t.setpos(100,200) # Paddan hoppar till läget (100, 100) utan att rita
+# Hoppa till (x,y) utan att rita
+def jumpTo(x,y):
+  t.penup()
+  t.setpos(x,y)
+  t.pendown()
+```
+
+Du kan också sätta vinkeln på paddan:
+
+```python
 t.setheading(45)  # Paddan vrider nosen till vinkeln 45 grade
 ```
 
@@ -94,6 +106,15 @@ t.write("hello", font=("Arial", 12, "normal"))  # Skriv med ett visst typsnitt
 t.speed(1)     # Paddan ritar väldigt långsamt
 t.speed(20)    # Paddan ritar väldigt snabbt
 t.speed(0)     # Paddan ritar så snabbt som möjligt
+```
+
+## Spara/sätt position och riktning
+```python
+x = t.xcor()     // Spara paddans x-position i variabeln x
+y = t.ycor()     // Spara paddans y-position i variabeln y
+t.setpos(x,y)    // Sätt paddans position till (x,y))
+h = t.heading()  // Spara paddans riktning i variabeln h
+t.setheading(h)  // Sätt paddans riktning till h
 ```
 
 # Annat du kan göra i Python-turtle

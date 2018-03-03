@@ -14,11 +14,12 @@ cover_y_offset: 25%
 
 Vill du rita snygga & coola saker med en programmerbar sköldpadda? Då är detta uppdraget för dig!
 
-# Komma igång
+### 1. Komma igång
 
 Börja med att öppna online-miljön för [Python-turtle](https://repl.it/languages/python_turtle)
 
-# Sekvens
+### 2. Rektangel
+<!--Sekvens-->
 
 Vi börjar med att låta paddan göra några saker i *sekvens*. Här är ett enkelt exempel där paddan går en liten tur:
 
@@ -34,14 +35,17 @@ t.forward(100)
 t.right(90)
 ```
 
-Kör programmet och se vad som händer. Kan du lista ut vad varje rad gör? Prova att ändra några värden och se hur beteendet förändras.
+Kör programmet och se vad som händer. Kan du lista ut vad varje rad gör? Prova att ändra ett värde och se hur beteendet förändras. Prova tills du förstår vad `forward`, `left` och `right` gör.
 
-**Uppdrag rektangel:** Kan du få paddan att rita en rektangel?
+**Uppdrag:** Kan du få paddan att rita en rektangel?
+
+<img src="fig-rectangle.png" height="70">
 
 *Tips!* Om du tycker paddan ritar för långsamt, lägg till ett anrop `t.speed(10)` för att rita snabbare.
 
 
-# Repetition
+### 3. Kvadrat
+<!-- Repetition -->
 
 Ibland vill vi låta paddan *repetera* en sekvens av saker. Här är ett enkelt exempel där sköldpaddan repeterar en liten sekvens med hjälp av en *for-loop*.
 
@@ -59,7 +63,10 @@ for c in range(3):
 ```
 Prova programmet och se vad som händer. Prova att ändra olika saker i programmet. Kan du få paddan att repetera fler gånger? Kan du rita en annan slags figur genom att ändra innehållet i for-loopen?
 
-**Uppdrag kvadrat:** Kan du rita en kvadrat på ett smart sätt med hjälp av en for-loop?
+**Uppdrag:** Kan du rita en kvadrat på ett smart sätt med hjälp av en for-loop?
+
+<img src="fig-square.png" height="70">
+
 
 <details>
   <summary markdown="span">
@@ -72,6 +79,9 @@ for c in range(4):
   </pre>
 </details>
 
+### 4. Spiral
+<!-- Loop variabel -->
+
 Variabeln `c` i for-loopen är ett heltal som ändrar värde för varje varv i loopen. Prova att se vad värdet på loop-variabeln är genom att lägga till
 
 ```python
@@ -79,7 +89,10 @@ t.write(c)
 ```
 inuti loopen.
 
-**Uppdrag spiral:** Kan du rita en fyrkantig spiral på ett smart sätt genom att använda `c` för att låta paddan gå lite längre efter varje sväng?
+**Uppdrag:** Kan du rita en fyrkantig spiral på ett smart sätt genom att använda `c` för att låta paddan gå lite längre efter varje sväng?
+
+<img src="fig-spiral.png" height="70">
+
 
 <details>
   <summary markdown="span">
@@ -93,7 +106,8 @@ for c in range(16):
 </details>
 
 
-# Funktioner
+### 5. Figur
+<!-- funktion -->
 
 Genom att definiera en funktion kan du göra egna byggblock som du kan använda på flera ställen.
 
@@ -122,15 +136,19 @@ t.left(120)
 vimpel()
 ```
 
-**Uppdrag figur:** Kan du göra en funktion `figur` som ritar en enkel figur? T.ex. bokstaven L, eller något du hittar på själv. Prova att rita ut den på flera ställen. Funktionen skall vara *rotationsneutral*, dvs på slutet av funktionen skall paddan ha samma riktning som i början.
+
+**Uppdrag:** Kan du göra en funktion `figur` som ritar en enkel figur? T.ex. bokstaven L, eller något du hittar på själv. Prova att rita ut den på flera ställen.
+
+<img src="fig-figure.png" height="70">
 
 
 
-# Funktion med parameter
+### 6. Hoppa
+<!-- funktion med parameter -->
 
 Genom att ge en funktion parametrar blir den mer användbar.
 
-För att få paddan att hoppa kan vi t.ex. definiera följande funktion:
+För att slippa lyfta och sänka pennan kan vi definiera följande funktion `hop` som tar en parameter `length` för att hoppa en viss längd:
 
 ```python
 def hop(length) :
@@ -139,39 +157,80 @@ def hop(length) :
   t.pendown()
 ```
 
-Nu kan paddan hoppa, dvs gå framåt utan att rita. Prova med t.ex.
+**Uppdrag:** Lägg till funktionen `hop` ovan. Prova att ersätta din kod som lyfte och sänkte pennan med att anropa `hop`, t.ex:
 
 ```python
-t.forward(20)
-hop(10)
-t.forward(20)
-hop(10)
-t.forward(20)
+t.setheading(90)
+figur()
+t.right(120)
+hop(70)
+t.left(120)
+figur()
 ```
 
-**Uppdrag skalbar figur:** Ändra din funktion `figur` så den tar en parameter `height` som representerar höjden på figuren. Rita alla delar skalenligt. Låt `100` motsvara att figuren ritas ut i skala 1:1. Anropa din funktion med olika värden på `height`.
+### 7. Skalbar figur
+<!-- funktion med parameter -->
+
+**Uppdrag:** Ändra din funktion `figur` så den tar en parameter `h` som representerar höjden på figuren. Rita alla delar skalenligt. Låt `100` motsvara att figuren ritas ut i skala 1:1. Anropa din funktion med olika värden på `h`.
+
+<img src="fig-scaled.png" height="70">
+
 
 <details>
   <summary markdown="span">
     Tips
   </summary>
-Multiplicera sträckor med <code>height</code> och dividera med 100. Dvs i stället för att skriva <code>forward(60)</code>, skriv <code>forward(60*height/100)</code>.
+Multiplicera sträckor med <code>h</code> och dividera med 100. Dvs i stället för att skriva <code>forward(60)</code>, skriv <code>forward(60*h/100)</code>.
 </details>
 
-Det kan vara praktiskt att en funktion är *rotations-* och *positionsneutral*, dvs att efter du har anropat funktionen så är sköldpaddans position och riktning oförändrad. Detta kan du åstadkomma genom att spara positionen och riktningen innan du ritar, och återställa dem efteråt:
+### 8. Neutral figur
+<!-- funktion med flera parametrar -->
+
+Lägg till nedanstående funktion `jumpTo` som flyttar paddan till läget `(x,y)`, utan att rita:
 
 ```python
-p = t.position()
-h = t.heading()
-... # rita
-t.setposition(p)
-t.setheading(h)
+def jumpTo(x, y) :
+  t.penup()
+  t.setpos(x,y)
+  t.pendown()
 ```
 
-**Uppdrag neutral figur:** Ändra din funktion `figur` så den blir rotations- och positionsneutral.
+Prova att anropa `jumpTo` i stället för `hop` för att rita figuren på flera ställen.
 
-**Uppdrag dekor:** Skriv en funktion `dekor` som anropar `figur` några gånger för att få ett intressant mönster. Prova med olika vinklar, olika storlekar och olika positioner. Du kan använda loopar och extra funktioner om du vill.
+Det kan vara praktiskt att en ritfunktion är både *rotations-* och *positionsneutral*, dvs att sköldpaddans position och riktning är oförändrad efter ett anrop till funktionen.
+Detta kan du åstadkomma genom att spara positionen och riktningen innan du ritar, och återställa dem efteråt:
 
+```python
+x = t.xcor()    // spara x-koordinaten i variabeln x
+y = t.ycor()    // spara y-koordinaten i variabeln y
+v = t.heading() // spara vinkeln i variabeln v
+# rita ...
+jumpTo(x,y)     // hoppa tillbaka
+t.setheading(v) // återställ riktningen
+```
+
+**Uppdrag:** Ändra din funktion `figur` så den blir rotations- och positionsneutral.
+
+Prova att du lyckades genom att omväxlande anropa `figur` och `right`.
+
+<img src="fig-neutral.png" height="70">
+
+
+
+### 9. Dekor
+<!-- Flera funktioner och anrop -->
+
+**Uppdrag:** Skriv en funktion `dekor` som anropar `figur` några gånger för att få ett intressant mönster. Prova med olika vinklar och olika storlekar. Prova att flytta paddan på olika sätt mellan anropen till `figur`. Du kan använda loopar och extra funktioner om du vill.
+
+<img src="fig-decor.png" height="100">
+
+*Tips!* Figuren ovan har ritats med `fill` påslaget:
+
+```python
+t.fill(True)
+# rita ...
+t.fill(False)
+```
 
 
 

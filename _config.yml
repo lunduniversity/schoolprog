@@ -37,7 +37,7 @@ plugins:
   - jekyll-relative-links
 header_pages:
   - exercises/README.md
-  - programming/python/CHEATSHEET.md
+  - programming/README.md
   - about.md
 
 # Exclude from processing.

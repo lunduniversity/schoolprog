@@ -32,8 +32,6 @@ t.forward(20) # Paddan går 20 steg framåt
 t.back(20)    # Paddan går 20 steg framåt
 t.right(45)   # Paddan vrider sig 45 grader åt höger
 t.left(45)    # Paddan vrider sig 45 grader åt vänster
-t.hop(20)     # Paddan hoppar 20 steg framåt, utan att rita
-t.hop(-20)    # Paddan hoppar -20 steg framåt, dvs 20 steg bakåt, utan att rita
 t.circle(50)  # Paddan ritar en cirkel med radien 50
 t.circle(50, extent = 90) # Paddan ritar en båge med radien 50 och vinkeln 90
 ```

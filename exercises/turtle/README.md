@@ -16,7 +16,9 @@ Vill du rita snygga & coola saker med en programmerbar sköldpadda? Då är dett
 
 ### 1. Komma igång
 
-Börja med att öppna online-miljön för [Python-turtle](https://repl.it/languages/python_turtle)
+Börja med att öppna två fönster, sida vid sida. Ett för detta uppdrag, och ett för [Python-turtle](https://repl.it/languages/python_turtle)
+
+*Tips!* För att få fönstren sida vid sida kan du 1) göra detta fönster smalare, som halva skärmbredden, 2) öppna python-turtle i en ny flik, 3) dra fliken till sidan, så blir den ett nytt fönster.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EQ_qSMKEWJI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
@@ -67,6 +69,8 @@ for c in range(3):
 ```
 Prova programmet och se vad som händer. Prova att ändra olika saker i programmet. Kan du få paddan att repetera fler gånger? Kan du rita en annan slags figur genom att ändra innehållet i for-loopen?
 
+*Obs!* Som du ser är innehållet i loopen *indraget* några blanksteg. Detta är Pythons sätt att hålla reda på vad som ingår i loopen. Du kan använda hur många blanksteg du vill, det viktiga är att det är lika många blanksteg för varje sats i loopen. Här har vi använt 2 blanksteg.
+
 **Uppdrag:** Kan du rita en kvadrat på ett smart sätt med hjälp av en for-loop?
 
 <img src="fig-square.png" height="70">
@@ -82,6 +86,7 @@ for c in range(4):
   t.left(90)
   </pre>
 </details>
+
 
 ### 4. Spiral
 <!-- Loop variabel -->
@@ -113,7 +118,7 @@ for c in range(16):
 ### 5. Figur
 <!-- funktion -->
 
-Genom att definiera en funktion kan du göra egna byggblock som du kan använda på flera ställen.
+Genom att definiera en *funktion* kan du göra egna byggblock som du kan använda på flera ställen.
 
 Här definierar vi en funktion som ritar en liten vimpel, och gör sedan ett anrop av funktionen:
 
@@ -133,6 +138,8 @@ def vimpel() :   # Definition av vimpel
 vimpel()         # Anrop av vimpeln
 ```
 
+*Obs!* Som du ser är innehållet i definitionen *indraget* några blanksteg, så att Python skall veta vilka satser som ingår i definitionen. Anropet ingår inte i definitionen, utan ligger ute i vänsterkanten. Blankrader betyder ingenting, utan är bara till för att programmet skall bli lättare att läsa.
+
 Vi kan prova att rita ut vimpeln på flera ställen. För att hoppa till olika ställen får vi be paddan dra upp sin penna.
 
 ```python
@@ -147,10 +154,23 @@ vimpel()
 ```
 
 
-**Uppdrag:** Kan du göra en funktion `figur` som ritar en enkel figur? T.ex. bokstaven L, eller något du hittar på själv. Prova att rita ut den på flera ställen.
+**Uppdrag:** Kan du lägga till en funktion `figur` som ritar en enkel figur? T.ex. bokstaven L, eller något du hittar på själv. Prova att rita ut den på flera ställen.
+
 
 <img src="fig-figure.png" height="70">
 
+*Tips!* Om du har flera funktioner kan du lägga dem efter varann, och anropen till funktionerna sist i programmet, i följande stil:
+
+```python
+def f1():
+  # innehåll i f1
+
+def f2():
+  # innehåll i f2
+
+f1() # anrop av f1
+f2() # anrop av f2
+```
 
 
 ### 6. Hoppa

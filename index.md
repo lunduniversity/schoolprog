@@ -35,7 +35,7 @@ Här är några uppdrag (i svårighetsordning):
 
 * [Sköldpaddsgrafik](exercises/turtle) (Python-turtle)
 * [Månghörningar](exercises/back-to-start) (Python-turtle)
-* [Slumpvandring](exercises/randomwalk) (Python-turtle)
+* [Slumpvandring](exercises/random-walk) (Python-turtle)
 * [Gissa det hemliga numret](exercises/guess-the-secret-number/) (Python 3)
 * [Beräkna ränta](exercises/interest-rates) (Python 3)
 * [Aritmetiska operatorer](exercises/implement-arithmetic-operators) (Python 3)

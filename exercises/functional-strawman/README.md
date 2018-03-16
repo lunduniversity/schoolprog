@@ -141,7 +141,7 @@ Istället ska du vi införa en funktion till. Denna gång är det en funktion so
 
 Vi börjar med den enkla funktionen
 
-<img src="f1.png" width="200">
+<img src="f1.png">
 
 En sådan funktion skrivs i Python så här:
 
@@ -215,7 +215,7 @@ Nu ska gubben ha två armar, en som pekar uppåt, och en som pekar neråt.
 
 **Uppdrag:** använd din streckgubbe för att plotta följande funktioner:
 
-<img src="f2.png" width="200">
+<img src="f2.png">
 
 där pi har ett välkänt värde (3.14159...).
 

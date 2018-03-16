@@ -140,9 +140,7 @@ def f(x):
   return -x
 ```
 
-Texten från `#` och framåt är en kommentar. Den är inte nödvändig för att programmet ska fungera, utan fungerar istället som en anteckning för programmeraren.
-
-Lägg till funktionen ovan i ditt program. Liksom tidigare händer det förrän funktionen anropas.
+Lägg till funktionen ovan i ditt program. Liksom tidigare händer det inget förrän funktionen anropas.
 
 Vi ska snart använda funktionen till streckgubben, men först vill vi pröva den och se att den fungerar som vi förväntar oss.
 
@@ -170,7 +168,7 @@ def plot(x, y):
 
 <details>
 <summary markdown="span">
-Tips: snabba upp utritningen
+Tips: om du tycker det går för långsamt
 </summary>
 <p>
 Det är många punkter som ska plottas. Man kan snabba upp Turtle-grafiken genom att bara uppdatera fönstret (exempelvis) var 20:e gång. Stoppa in följande rad i ditt program, direkt efter raden `t = turtle.Turtle()`:
@@ -183,7 +181,7 @@ t.getscreen().tracer(20)
 
 Vi behöver tydligen ändra i programmet för att få med båda armarna. Just nu antar `i` ovan bara värden >= 0.
 
-**Uppdrag:** Ändra `for`-satsen så att `i` antar värden från -100 till 100. Använd `range(-100,100)`.
+**Uppdrag:** Ändra din `for`-sats så att `i` antar värden från -100 till 100. Använd `range(-100,100)`.
 
 <details>
 <summary markdown="span">
@@ -199,15 +197,13 @@ def armar():
 
 </details>
 
-Nu ska gubben ha två armar, en som pekar uppåt, och en som pekar neråt.
+Nu ska gubben ha två armar, en som pekar uppåt, och en som pekar neråt. Kan du se att det är funktionen f(x) enligt ovan som avbildas?
 
 ### 6. Vi prövar andra funktioner
 
-**Uppdrag:** använd din streckgubbe för att plotta följande funktioner:
+**Uppdrag:** använd din streckgubbe för att plotta följande funktioner, en i taget.
 
 <img src="f2.png">
-
-där pi har ett välkänt värde (3.14159...).
 
 <details>
 <summary markdown="span">
@@ -222,7 +218,7 @@ I Python skrivs sin(x) som `math.sin(x)` och pi som `math.pi`. Detta förutsätt
 
 Uppgiften ovan löste du genom att ändra i din funktion `f`. Det vore praktiskt om man istället kunde ha många olika funktioner definierade, och därefter bara peka ut den önskade funktionen i anropet till `armar`.
 
-Vi vill alltså ha en funktion `armar` som har en parameter. Parametern syftar i sin tur på den funktion som ska plottas. Så här kan det se ut när man definierar ett par bra funktioner, och använder `armar` för att plotta en av dem:
+Vi vill alltså ha en funktion `armar` som har en parameter. Parametern syftar i sin tur på den funktion som ska plottas. Om vår `armar`-funktion fungerar så, så kan den användas så här:
 
 ```python
 def g(x):
@@ -234,6 +230,8 @@ def h(x):
 gubbe()
 armar(g)    # plotta funktionen g
 ```
+
+Här definieras ett par bra funktioner `g` och `h`, och därefter används `armar` för att plotta en av dem.
 
 **Uppdrag:** ändra din funktion `armar` så att man kan använda en parameter enligt ovan.
 

@@ -6,7 +6,7 @@ Koden i denna uppgift är provkörd på [http://repl.it/languages/python-turtle]
 
 Inför fortsättningen behöver vi programkod som ritar en streckgubbe utan armar. (Gubben kommer att få armar senare.)
 
-Till att börja med beöver vi ett tomt program, som importerar `turtle`- och `math`-paketen och skapar en Turtle. Vi behöver även återanvända funktionen `jumpTo` från en tidigare uppgift.
+Till att börja med behöver vi ett tomt program, som importerar `turtle`- och `math`-paketen och skapar en Turtle. Vi behöver även återanvända funktionen `jumpTo` från en tidigare uppgift.
 
 ```python
 import turtle

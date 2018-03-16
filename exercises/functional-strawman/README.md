@@ -99,22 +99,9 @@ Jämför med vimpel-exemplet i uppgiften Sköldpaddsgrafik om du är osäker.
 
 Vi kommer att pröva ett par olika sätt att rita gubbens armar. Först vill vi rita ett helt vanligt streck.
 
-Vi återanvänder funktionen `jumpTo` från Sköldpaddsgrafik-uppgiften:
-
-```python
-def jumpTo(x, y):
-  t.penup()
-  t.setpos(x,y)
-  t.pendown()
-```
-
-Denna funktion flyttar paddan till läget `(x,y)` utan att rita.
-
-**Uppdrag:** Stoppa in Python-raderna ovan i ditt program, på något lämpligt ställe. De kan exempelvis passa bra innan din `gubbe`-funktion. Kontrollera att programmet fortfarande gör samma sak som tidigare -- du har ju inte med något anrop till `jumpTo` ännu.
-
 **Uppdrag:** Lägg nu in en tredje funktion i ditt program. Den kan exempelvis heta `armar`. I funktionen `armar` ska tre saker göras:
 
-1. Sköldpaddan flyttas till lämpliga koordinater. Använd koordinaterna `(-50, 50)` så länge. Du kommer säkert att behöva justera dem strax.
+1. Sköldpaddan flyttas till koordinaterna `(-100, 0)`. (Du kan använda `jumpTo`, som vi ju återanvände sedan tidigare.)
 2. Sköldpaddans riktning sätts till 0 grader, dvs rakt åt höger. (Du kan använda `t.setheading()`.)
 3. Sköldpaddan tar 200 steg framåt.
 
@@ -129,9 +116,12 @@ Kom ihåg att funktionen `armar` måste anropas, precis som `gubbe`.
 </p>
 </details>
 
-När du fått programmet att rita ut armarna kommer de troligen att ha hamnat på fel ställe. Ovan lät vi dem börja på koordinaterna `(-50,50)`, vilket troligen inte alls passar med din streckgubbe.
+När du fått programmet att rita ut armarna kommer de troligen att ha hamnat på fel ställe. De utgår från att streckgubben har sina axlar i origo, vilket troligen inte alls passar med din streckgubbe.
 
-Justera koordinaterna så att armarna hamnar rätt. De ska vara lika långa, och sitta på kroppen.
+**Uppdrag:** stoppa in ett `jumpTo`-anrop först i din funktion `gubbe`, så att gubben hamnar med axlarna i origo.
+Justera koordinaterna så att armarna hamnar rätt. Det kan mycket väl behövas några försök för att det ska bli rätt.
+
+Armarna ska vara lika långa, och sitta på kroppen.
 
 ### 4. Vi prövar en matematisk funktion
 

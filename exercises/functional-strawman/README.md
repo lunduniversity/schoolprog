@@ -6,7 +6,7 @@ Koden i denna uppgift är provkörd på [http://repl.it/languages/python-turtle]
 
 Inför fortsättningen behöver vi programkod som ritar en streckgubbe utan armar. (Gubben kommer att få armar senare.)
 
-Till att börja med behöver vi ett tomt program, som importerar `turtle`- och `math`-paketen och skapar en Turtle. Vi behöver även återanvända funktionen `jumpTo` från en tidigare uppgift.
+Till att börja med behöver vi ett tomt program, som importerar `turtle`- och `math`-paketen och skapar en Turtle. Vi behöver även återanvända funktionen `jumpTo` från en tidigare uppgift. Vi kommer att ha nytta av den senare.
 
 ```python
 import turtle
@@ -187,14 +187,11 @@ Vi behöver tydligen ändra i programmet för att få med båda armarna. Just nu
 <summary markdown="span">
 Tips
 </summary>
-<p>
 ```python
 def armar():
   for i in range(-100, 100):
     # ...
 ```
-  </p>
-
 </details>
 
 Nu ska gubben ha två armar, en som pekar uppåt, och en som pekar neråt. Kan du se att det är funktionen f(x) enligt ovan som avbildas?

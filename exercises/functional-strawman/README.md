@@ -8,7 +8,8 @@ Inför fortsättningen behöver vi programkod som ritar en streckgubbe utan arma
 
 Till att börja med beöver vi ett tomt program, som importerar `turtle`- och `math`-paketen och skapar en Turtle. Vi behöver även återanvända funktionen `jumpTo` från en tidigare uppgift.
 
-```import turtle
+```python
+import turtle
 import math
 
 t = turtle.Turtle()
@@ -64,8 +65,12 @@ Nu ska vi införa en funktion för att rita streckgubben. Denna funktion ska inn
 
 ```python
 import turtle
+import math
 
 t = turtle.Turtle()
+
+def jumpTo(x, y):
+  # ... enligt tidigare
 
 def gubbe():
   # ... satserna för att rita gubben, enligt tidigare uppgift
@@ -88,7 +93,7 @@ Jämför med vimpel-exemplet i uppgiften Sköldpaddsgrafik om du är osäker.
 </p>
 </details>
 
-**Uppdrag:** Kör programmet igen. Nu när anropet till funktionen `gubbe` är på plats ska gubben vara tillbaka -- fortfarande utan armar.
+**Uppdrag:** Kör programmet igen. Nu när anropet till funktionen `gubbe` är på plats ska gubben vara tillbaka, fortfarande utan armar.
 
 ### 3. Vi inför en funktion till för armarna
 
@@ -136,11 +141,11 @@ Istället ska du vi införa en funktion till. Denna gång är det en funktion so
 
 Vi börjar med den enkla funktionen
 
-f(x) = -x
+<img src="f1.png" width="200">
 
 En sådan funktion skrivs i Python så här:
 
-```
+```python
 def f(x):
   return -x
 ```
@@ -210,11 +215,7 @@ Nu ska gubben ha två armar, en som pekar uppåt, och en som pekar neråt.
 
 **Uppdrag:** använd din streckgubbe för att plotta följande funktioner:
 
-* f(x) = x
-* f(x) = 50 cos (x * pi / 200)
-* f(x) = 50 sin (x * pi / 200)
-* f(x) = 50 sin (x * pi / 400)
-* f(x) = x * x / 100
+<img src="f2.png" width="200">
 
 där pi har ett välkänt värde (3.14159...).
 
@@ -245,3 +246,14 @@ armar(g)    # plotta funktionen g
 ```
 
 **Uppdrag:** ändra din funktion `armar` så att man kan använda en parameter enligt ovan.
+
+<details>
+<summary markdown="span">
+Tips
+</summary>
+<p>
+I `armar` används namnet `f` för att bestämma vilken funktion som ska plottas. Låt `f` vara en parameter till `armar`, på samma sätt som `x` och `y` är parametrar till `jumpTo`.
+</p>
+</details>
+
+Genom att ändra `g` till `h` ovan kan man nu enkelt välja vilken funktion som ska plottas.

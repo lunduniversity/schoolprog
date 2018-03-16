@@ -95,7 +95,7 @@ Jämför med vimpel-exemplet i uppgiften Sköldpaddsgrafik om du är osäker.
 
 **Uppdrag:** Kör programmet igen. Nu när anropet till funktionen `gubbe` är på plats ska gubben vara tillbaka, fortfarande utan armar.
 
-### 3. Vi inför en funktion till för armarna
+### 3. Vi inför en funktion till, för armarna
 
 Vi kommer att pröva ett par olika sätt att rita gubbens armar. Först vill vi rita ett helt vanligt streck.
 
@@ -131,7 +131,7 @@ Istället ska du vi införa en funktion till. Denna gång är det en funktion so
 
 Vi börjar med den enkla funktionen
 
-<img src="f1.png">
+<img src="f1.png" width="50%">
 
 En sådan funktion skrivs i Python så här:
 
@@ -203,7 +203,7 @@ Nu ska gubben ha två armar, en som pekar uppåt, och en som pekar neråt. Kan d
 
 **Uppdrag:** använd din streckgubbe för att plotta följande funktioner, en i taget.
 
-<img src="f2.png">
+<img src="f2.png" width="50%">
 
 <details>
 <summary markdown="span">

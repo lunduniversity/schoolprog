@@ -183,17 +183,6 @@ Vi behöver tydligen ändra i programmet för att få med båda armarna. Just nu
 
 **Uppdrag:** Ändra din `for`-sats så att `i` antar värden från -100 till 100. Använd `range(-100,100)`.
 
-<details>
-<summary markdown="span">
-Tips
-</summary>
-```python
-def armar():
-  for i in range(-100, 100):
-    # ...
-```
-</details>
-
 Nu ska gubben ha två armar, en som pekar uppåt, och en som pekar neråt. Kan du se att det är funktionen f(x) enligt ovan som avbildas?
 
 ### 6. Vi prövar andra funktioner

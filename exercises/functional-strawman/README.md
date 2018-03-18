@@ -1,3 +1,15 @@
+---
+layout: page
+title: Funktionsgubbe
+permalink: /exercises/functional-strawman/
+toc: true
+type: exercise
+tags:
+ - intermediate
+ - functions
+ - turtle graphics
+---
+
 I denna uppgift kommer du att träna på funktioner.
 
 Koden i denna uppgift är provkörd på [http://repl.it/languages/python-turtle](http://repl.it/languages/python-turtle) (Python 2.7).
@@ -22,6 +34,8 @@ def jumpTo(x, y):
 
 Lägg nu till rader i programmet som ritar gubbens ben, kropp och huvud.
 
+*Tips:* Använd funktionerna `t.right(...)`, `t.forward(...)`, och `t.left(...)`.
+
 Kom ihåg att lösa uppgiften i delar. Börja exempelvis med ett av benen, och se till att det blir rätt. När det stämmer utökar du ditt program med ett ben till. På samma sätt fortsätter du med ett streck för kroppen. Om du hellre vill börja med huvudet går det naturligtvis också bra.
 
 <details>
@@ -31,7 +45,7 @@ Möjlig lösning
 <p>
 Följande Python-program ritar en enkel streckgubbe, med en cirkel som huvud.
 
-```python
+<pre>
 import turtle
 
 t = turtle.Turtle()
@@ -53,7 +67,7 @@ for sida in range(3):
   t.forward(100)
   t.left(90)
 t.forward(50)
-```
+</pre>
 </p>
 </details>
 
@@ -112,7 +126,7 @@ Provkör programmet. Vad händer?
 Tips
 </summary>
 <p>
-Kom ihåg att funktionen `armar` måste anropas, precis som `gubbe`.
+Kom ihåg att funktionen <code>armar</code> måste anropas, precis som <code>gubbe</code>.
 </p>
 </details>
 
@@ -140,6 +154,8 @@ def f(x):
   return -x
 ```
 
+(Nyckelordet `return` talar om vilket värde funktionen skall returnera. De andra funktionerna vi skrivit tidigare har bara utfört kommandon, och inte räknat ut något resultat.)
+
 Lägg till funktionen ovan i ditt program. Liksom tidigare händer det inget förrän funktionen anropas.
 
 Vi ska snart använda funktionen till streckgubben, men först vill vi pröva den och se att den fungerar som vi förväntar oss.
@@ -164,6 +180,8 @@ def plot(x, y):
 
 Ändra nu i din funktion `armar` så att du använder repetition (en `for`-sats) för att plotta punkterna `(i, f(i))`. Låt `i` anta värdena 0 till 100.
 
+*Tips:* Ta bort den gamla koden i `armar` som ritade ett streck, och ersätt med en `for`-loop som anropar `plot` för att sätta en punkt för varje varv i loopen.
+
 **Uppdrag:** kör programmet. Hur många armar har streckgubben? Kan du se hur armen motsvarar funktionen `f`?
 
 <details>
@@ -171,15 +189,15 @@ def plot(x, y):
 Tips: om du tycker det går för långsamt
 </summary>
 <p>
-Det är många punkter som ska plottas. Man kan snabba upp Turtle-grafiken genom att bara uppdatera fönstret (exempelvis) var 20:e gång. Stoppa in följande rad i ditt program, direkt efter raden `t = turtle.Turtle()`:
+Det är många punkter som ska plottas. Man kan snabba upp Turtle-grafiken genom att bara uppdatera fönstret (exempelvis) var 10:e gång. Stoppa in följande rad i ditt program, direkt efter raden <code>t = turtle.Turtle()</code>:
 
-```python
-t.getscreen().tracer(20)
-```
+<pre>
+t.getscreen().tracer(10)
+</pre>
 </p>
 </details>
 
-Vi behöver tydligen ändra i programmet för att få med båda armarna. Just nu antar `i` ovan bara värden >= 0.
+Vi behöver tydligen ändra i programmet för att få med båda armarna. Just nu antar `i` ovan bara positiva värden.
 
 **Uppdrag:** Ändra din `for`-sats så att `i` antar värden från -100 till 100. Använd `range(-100,100)`.
 
@@ -191,14 +209,14 @@ Nu ska gubben ha två armar, en som pekar uppåt, och en som pekar neråt. Kan d
 
 <img src="f2.png">
 
-<details>
-<summary markdown="span">
-Tips: cos, sin och pi i Python
-</summary>
-<p>
+*Tips:* cos, sin och pi i Python
 I Python skrivs sin(x) som `math.sin(x)` och pi som `math.pi`. Detta förutsätter att man i början av programmet skrivit `import math`, som vi gjort.
-</p>
-</details>
+
+*Tips:* Glöm inte att man måste använda nyckelordet `return` i Python-funktionen för att den skall returnera ett värde till anropet.
+
+**Uppdrag:** Hitta på en egen funktion som du plottar som armar.
+
+*Tips:* För att armarna skall hamna förnuftigt, så se till att funktionen är noll eller nära noll för x=0. Du kan göra `print(f(0))` för att se vad funktionens värde är vid x=0.
 
 ### 7. Funktion som parameter (avancerat)
 
@@ -208,10 +226,10 @@ Vi vill alltså ha en funktion `armar` som har en parameter. Parametern syftar i
 
 ```python
 def g(x):
-  return 50 * math.exp(x / 100.0)
+  return x / 2.0
 
 def h(x):
-  return x / 2.0
+  return 50 * math.exp(x / 100.0) - 50
 
 gubbe()
 armar(g)    # plotta funktionen g
@@ -226,8 +244,10 @@ Här definieras ett par bra funktioner `g` och `h`, och därefter används `arma
 Tips
 </summary>
 <p>
-I `armar` används namnet `f` för att bestämma vilken funktion som ska plottas. Låt `f` vara en parameter till `armar`, på samma sätt som `x` och `y` är parametrar till `jumpTo`.
+I <code>armar</code> används namnet <code>f</code> för att bestämma vilken funktion som ska plottas. Låt <code>f</code> vara en parameter till <code>armar<\code>, på samma sätt som <code>x\code> och <code>y\code> är parametrar till <code>jumpTo\code>.
 </p>
 </details>
 
 Genom att ändra `g` till `h` ovan kan man nu enkelt välja vilken funktion som ska plottas.
+
+*Kommentar:* Vid divisionerna i `g` och `h` används reella tal som `2.0` och `100.0` i stället för heltal `2` och `100`. Det är för att Python 2.7 (som används för paddan) tolkar division mellan två heltal som heltalsdivision där resten försvinner. När t.ex. Python räknar ut 3/2 blir resultatet 1 (i stället för 1.5). Men när något av talen i divisionen är ett reellt tal, så blir resultatet också reellt. Så när Python räknar ut 3/2.0 blir resultatet 1.5, som vi förväntar oss.

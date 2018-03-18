@@ -44,3 +44,7 @@ Här är några uppdrag (i svårighetsordning):
 * [Bråk med Piece of cake](exercises/piece-of-cake/scala.md) (Kojo/Scala)
 * [Bråkspel](exercises/fractions) (Python 3)
 * [Mattetränaren](exercises/math-exerciser) (Python 3)
+
+## Unplugged
+
+Innan man börjar med programmering på dator kan det vara kul att köra lite [unplugged](exercises/unplugged)!

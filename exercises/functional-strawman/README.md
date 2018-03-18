@@ -244,7 +244,7 @@ Här definieras ett par bra funktioner `g` och `h`, och därefter används `arma
 Tips
 </summary>
 <p>
-I <code>armar</code> används namnet <code>f</code> för att bestämma vilken funktion som ska plottas. Låt <code>f</code> vara en parameter till <code>armar<\code>, på samma sätt som <code>x\code> och <code>y\code> är parametrar till <code>jumpTo\code>.
+I <code>armar</code> används namnet <code>f</code> för att bestämma vilken funktion som ska plottas. Låt <code>f</code> vara en parameter till <code>armar</code>, på samma sätt som <code>x</code> och <code>y</code> är parametrar till <code>jumpTo</code>.
 </p>
 </details>
 

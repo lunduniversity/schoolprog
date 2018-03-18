@@ -9,7 +9,7 @@ tags:
  - functions
  - turtle graphics
 ---
-
+<img src="strawman.png" height="100">
 I denna uppgift kommer du att träna på funktioner.
 
 Koden i denna uppgift är provkörd på [http://repl.it/languages/python-turtle](http://repl.it/languages/python-turtle) (Python 2.7).

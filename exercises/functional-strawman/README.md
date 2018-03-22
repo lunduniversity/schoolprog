@@ -43,7 +43,7 @@ Kom ihåg att lösa uppgiften i delar. Börja exempelvis med ett av benen, och s
 Möjlig lösning
 </summary>
 <p>
-Följande Python-program ritar en enkel streckgubbe, med en cirkel som huvud.
+Följande Python-program ritar en enkel streckgubbe med fyrkantigt huvud.
 
 <pre>
 import turtle

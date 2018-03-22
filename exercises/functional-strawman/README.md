@@ -209,7 +209,7 @@ Nu ska gubben ha två armar, en som pekar uppåt, och en som pekar neråt. Kan d
 
 <img src="f2.png">
 
-*Tips:* cos, sin och pi i Python
+*Tips:*
 I Python skrivs sin(x) som `math.sin(x)` och pi som `math.pi`. Detta förutsätter att man i början av programmet skrivit `import math`, som vi gjort.
 
 *Tips:* Glöm inte att man måste använda nyckelordet `return` i Python-funktionen för att den skall returnera ett värde till anropet.

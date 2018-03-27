@@ -109,15 +109,21 @@ Jämför med vimpel-exemplet i uppgiften Sköldpaddsgrafik om du är osäker.
 
 **Uppdrag:** Kör programmet igen. Nu när anropet till funktionen `gubbe` är på plats ska gubben vara tillbaka, fortfarande utan armar.
 
-### 3. Vi inför en funktion till, för armarna
+### 3. Flytta gubben så att halsen kommer i origo
+Lite senare kommer vi att rita armarna med hjälp av en matematisk funktion. Därför vill vi först flytta gubben så att dess hals hamnar i origo.
 
-Vi kommer att pröva ett par olika sätt att rita gubbens armar. Först vill vi rita ett helt vanligt streck.
+**Uppdrag:** Lägg till ett anrop till `jumpTo` i början av gubbe-funktionen så att gubbens hals hamnar i origo. Prova olika parametrar till `jumpTo` så du ser vilka koordinater som är lämpliga.
 
-**Uppdrag:** Lägg nu in en tredje funktion i ditt program. Den kan exempelvis heta `armar`. I funktionen `armar` ska tre saker göras:
+*Tips:* För att se var origo är kan du lägga till anropet `jumpTo(0,0)` *efter* anropet till gubben.
 
-1. Sköldpaddan flyttas till koordinaterna `(-100, 0)`. (Du kan använda `jumpTo`, som vi ju återanvände sedan tidigare.)
-2. Sköldpaddans riktning sätts till 0 grader, dvs rakt åt höger. (Du kan använda `t.setheading()`.)
-3. Sköldpaddan tar 200 steg framåt.
+### 4. Vi inför en funktion till, för armarna
+
+Vi kommer att pröva ett par olika sätt att rita gubbens armar. Först vill vi rita armarna som ett helt vanligt vågrätt streck.
+
+**Uppdrag:** Lägg till en funktion `armar` som ritar armarna genom att dra ett streck från positionen `(-100, 0)` till `(100, 0)`.
+
+*Tips!* Använd `jumpTo` för att hoppa till (-100,0), `t.setHeading(0)` för att sätta riktningen till 0 grader, dvs rakt åt höger, och sedan `t.forward(...)` för att rita strecket.
+
 
 Provkör programmet. Vad händer?
 
@@ -130,18 +136,13 @@ Kom ihåg att funktionen <code>armar</code> måste anropas, precis som <code>gub
 </p>
 </details>
 
-När du fått programmet att rita ut armarna kommer de troligen att ha hamnat på fel ställe. De utgår från att streckgubben har sina axlar i origo, vilket troligen inte alls passar med din streckgubbe.
+Om du tycker att armarna hamnar för högt eller för lågt, så justera positionen på gubben igen så det ser bra ut.
 
-**Uppdrag:** stoppa in ett `jumpTo`-anrop först i din funktion `gubbe`, så att gubben hamnar med axlarna i origo.
-Justera koordinaterna så att armarna hamnar rätt. Det kan mycket väl behövas några försök för att det ska bli rätt.
-
-Armarna ska vara lika långa, och sitta på kroppen.
-
-### 4. Vi prövar en matematisk funktion
+### 5. Vi prövar en matematisk funktion
 
 Nu lägger vi streckgubben åt sidan en stund. Vi återkommer snart till den.
 
-Istället ska du vi införa en funktion till. Denna gång är det en funktion som, liksom matematiska funktioner, ger ett värde som resultat.
+Istället ska vi införa en funktion till. Denna gång är det en funktion som, liksom matematiska funktioner, ger ett värde som resultat.
 
 Vi börjar med den enkla funktionen
 
@@ -168,7 +169,7 @@ print f(1), f(3), f(-5)
 
 **Uppdrag:** kör programmet, inklusive raderna ovan. Klicka på fliken _Console_, där utskrifterna (`print`) hamnar. Stämmer de tre värdena för f(x)?
 
-### 5. Vi ger gubben matematiska armar
+### 6. Vi ger gubben matematiska armar
 
 Nu ska vi förändra funktionen `armar`, så att gubbens armar ritas genom att vi plottar funktionen `f`. För detta behöver vi återigen införa en hjälpfunktion. Funktionen `plot` nedan använder sköldpaddan för att placera en punkt på koordinaterna `(x,y)`:
 
@@ -178,11 +179,28 @@ def plot(x, y):
   t.dot(1)
 ```
 
-Ändra nu i din funktion `armar` så att du använder repetition (en `for`-sats) för att plotta punkterna `(i, f(i))`. Låt `i` anta värdena 0 till 100.
+**Uppdrag:** Lägg till funktionen `plot` till ditt program. Ändra sedan funktionen `armar` så att den plottar funktionen `f` från 0 till 100, i stället för att rita ett streck.
 
-*Tips:* Ta bort den gamla koden i `armar` som ritade ett streck, och ersätt med en `for`-loop som anropar `plot` för att sätta en punkt för varje varv i loopen.
+*Tips:* För att plotta funktionen kan du använda en `for`-loop med en loop-variabel `i`:
+```python
+for i in range(100):
+  plot(...)
+```
 
-**Uppdrag:** kör programmet. Hur många armar har streckgubben? Kan du se hur armen motsvarar funktionen `f`?
+Variabeln `i` får då värdena 0, 1, 2, 3, ... (ett värde för varje varv i loopen). Vilka skall parametrarna vara till `plot`?
+
+<details>
+<summary markdown="span">
+Lösning:
+</summary>
+<pre>
+def armar():
+  for i in range(100):
+    plot(i, f(i))
+</pre>
+</details>
+
+**Uppdrag:** Kör programmet. Hur många armar har streckgubben? Kan du se hur armen motsvarar funktionen `f(x)`?
 
 <details>
 <summary markdown="span">
@@ -199,11 +217,13 @@ t.getscreen().tracer(10)
 
 Vi behöver tydligen ändra i programmet för att få med båda armarna. Just nu antar `i` ovan bara positiva värden.
 
-**Uppdrag:** Ändra din `for`-sats så att `i` antar värden från -100 till 100. Använd `range(-100,100)`.
+**Uppdrag:** Ändra din `for`-sats så att `i` antar värden från -100 till 100. Använd `range(-100, 100)`.
 
-Nu ska gubben ha två armar, en som pekar uppåt, och en som pekar neråt. Kan du se att det är funktionen f(x) enligt ovan som avbildas?
+Nu ska gubben ha två armar, en som pekar uppåt, och en som pekar neråt. Kan du se att det är funktionen `f(x)` enligt ovan som avbildas?
 
-### 6. Vi prövar andra funktioner
+### 7. Vi prövar andra funktioner
+
+Vi skall nu prova att plotta lite fler funktioner genom att ändra på definitionen av `f(x)`.
 
 **Uppdrag:** använd din streckgubbe för att plotta följande funktioner, en i taget.
 
@@ -218,7 +238,9 @@ I Python skrivs sin(x) som `math.sin(x)` och pi som `math.pi`. Detta förutsätt
 
 *Tips:* För att armarna skall hamna förnuftigt, så se till att funktionen är noll eller nära noll för x=0. Du kan göra `print(f(0))` för att se vad funktionens värde är vid x=0.
 
-### 7. Funktion som parameter (avancerat)
+*Tips:* Du kan också behöva skala funktionen så att värdena inte blir alldeles för stora (eller för små) vid slutet av armarna. Prova t.ex. med `print(f(100))` för att se funktionens värde vid x=100. Prova att ändra funktionen genom att multiplicera eller dividera med 100 eller någon annan konstant för att få lagom stora värden.
+
+### 8. Funktion som parameter (avancerat)
 
 Uppgiften ovan löste du genom att ändra i din funktion `f`. Det vore praktiskt om man istället kunde ha många olika funktioner definierade, och därefter bara peka ut den önskade funktionen i anropet till `armar`.
 
@@ -250,4 +272,6 @@ I <code>armar</code> används namnet <code>f</code> för att bestämma vilken fu
 
 Genom att ändra `g` till `h` ovan kan man nu enkelt välja vilken funktion som ska plottas.
 
-*Kommentar:* Vid divisionerna i `g` och `h` används reella tal som `2.0` och `100.0` i stället för heltal `2` och `100`. Det är för att Python 2.7 (som används för paddan) tolkar division mellan två heltal som heltalsdivision där resten försvinner. När t.ex. Python räknar ut 3/2 blir resultatet 1 (i stället för 1.5). Men när något av talen i divisionen är ett reellt tal, så blir resultatet också reellt. Så när Python räknar ut 3/2.0 blir resultatet 1.5, som vi förväntar oss.
+*Kommentar 1:* Vid divisionerna i `g` och `h` används reella tal som `2.0` och `100.0` i stället för heltal `2` och `100`. Det är för att Python 2.7 (som används för paddan) tolkar division mellan två heltal som heltalsdivision där resten försvinner. När t.ex. Python räknar ut 3/2 blir resultatet 1 (i stället för 1.5). Men när något av talen i divisionen är ett reellt tal, så blir resultatet också reellt. Så när Python räknar ut 3/2.0 blir resultatet 1.5, som vi förväntar oss.
+
+*Kommentar 2:* Skall man vara riktigt noga så ger `range(-100,100)` värdena -100, -99, -98, ... 97, 98, 99. Dvs för att plotta funktionen från -100 till 100 borde vi egentligen skriva `range(-100, 101)`.

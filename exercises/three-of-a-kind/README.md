@@ -45,7 +45,7 @@ Nu ska vi försöka kontrollera detta experimentellt.
 
 <p><font color="blue">Antal kast: 100<br>
 Antal 6:or: 12<br>
-Utfall: 0.12</p>
+Utfall: 0.12</font></p>
 
 *Tips!* Använd en `for`-loop för att slå tärningen 100 gånger. Använd en variabel för att hålla reda på hur många 6:or du får. Exemplet nedan visar hur du kan öka variabeln med 1 varje gång du fått en 6:a
 

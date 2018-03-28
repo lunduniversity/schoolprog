@@ -43,15 +43,15 @@ print("Hejsan " + namn)
 Svar:
 </summary>
 <ol>
-<li>Programmet skriver ut texten "Vad heter du?" och väntar på svar.
-<li>Användaren skriver in ett svar, t.ex. "Lisa", och trycker på return.
-<li>Programmet fortsätter köra och lagrar svaret ("Lisa") i variabeln <i>namn</i>.
-<li>Programmet lägger ihop texten "Hejsan " med texten i variabeln <i>namn</i> till den längre texten: "Hejsan Lisa"
-<li>Programmet skriver ut den längre texten, "Hejsan Lisa".
+<li>Programmet skriver ut texten "Vad heter du?" och väntar på svar.</li>
+<li>Användaren skriver in ett svar, t.ex. "Lisa", och trycker på return.</li>
+<li>Programmet fortsätter köra och lagrar svaret ("Lisa") i variabeln <i>namn</i>.</li>
+<li>Programmet lägger ihop texten "Hejsan " med texten i variabeln <i>namn</i> till den längre texten: "Hejsan Lisa".</li>
+<li>Programmet skriver ut den längre texten, "Hejsan Lisa".</li>
 </ol>
 </details>
 
-Texter, som t.ex. "Hejsan" och "Lisa", kallas *strings* på engelska, och på svenska säger vi *strängar*.
+Texter, som t.ex. "Hejsan" och "Vad heter du?", kallas *strings* på engelska, och på svenska säger vi *strängar*.
 
 Observera att strängar kan *läggas ihop* med plustecknet. Det betyder att de läggs efter varann till en längre sträng. Om vi t.ex. lägger ihop
 ```python

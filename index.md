@@ -38,6 +38,7 @@ Här är några uppdrag (i svårighetsordning):
 * [Slumpvandring](exercises/random-walk) (Python-turtle)
 * [Funktionsgubbe](exercises/functional-strawman) (Python-turtle)
 * [Kvadrera talet](exercises/square-the-number) (Python 3)
+* [Triss](exercises/three-of-a-kind) (Python 3)
 * [Gissa det hemliga numret](exercises/guess-the-secret-number/) (Python 3)
 * [Beräkna ränta](exercises/interest-rates) (Python 3)
 * [Aritmetiska operatorer](exercises/implement-arithmetic-operators) (Python 3)

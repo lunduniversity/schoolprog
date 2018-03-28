@@ -75,11 +75,11 @@ print("Utfall:     " + str(count/100))
 </pre>
 </details>
 
-### Variera antalet kast
+### 3. Variera antalet kast
 
 **Uppdrag:** Inför en variabel `e` för antalet experiment (antalet kast). Kör programmet med olika värden på `e`. Hur stort `e` verkar du behöva för att de två första decimalerna (oftast) skall stämma med den teoretiska sannolikheten?
 
-### Triss
+### 4. Triss
 
 Om vi slår tre tärningar, vad är sannolikheten att få triss?
 
@@ -96,7 +96,7 @@ Svar:
 Den första tärningen kan få vilket värde som helst. Sedan är det 1/6 chans att nästa tärning får samma värde. Om detta händer är det sedan 1/6 chans att sista tärningen också får samma värde. Alltså är sannolikheten 1/36 att alla tre har samma värde.
 </details>
 
-### Extra: Snabba upp experimentet
+### 5. Extra: Snabba upp experimentet
 
 Det kan ta lång tid att köra experimentet. Kanske kan man snabba upp det? För att mäta hur lång tid det tar att köra programmet kan man läsa av klockan i början och slutet:
 

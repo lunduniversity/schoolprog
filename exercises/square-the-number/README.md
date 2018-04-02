@@ -13,7 +13,7 @@ I denna uppgift får du träna på att låta programmet skriva ut och läsa in t
 
 Koden i denna uppgift är provkörd på [http://repl.it/languages/python3](http://repl.it/languages/python3) (Python 3).
 
-### 1. Hello world!
+## 1. Hello world!
 
 Det enklaste program man kan tänka sig är ett som skriver ut en text när man kör det, t.ex. *Hello world!*. Så här ser detta program ut i Python 3:
 
@@ -27,7 +27,7 @@ Texten dyker upp i den så kallade *console*-vyn. Kärt barn har många namn, oc
 
 (Dessa termer härstammar från datorns barndom innan det fanns grafiska skärmar med fönster och pixlar. Då styrde man datorn från en "console" eller "terminal" som hade en enkel textskärm och där man skrev kommandon som text-rader.)
 
-### 2. Om inläsning, strängar, och konkatenering
+## 2. Inläsning
 
 Nu skall vi ändra programmet så det kan *läsa in*, och inte bara *skriva ut* något. Följande program frågar vad du heter, och hejar sedan på dig:
 
@@ -51,6 +51,8 @@ Svar:
 </ol>
 </details>
 
+## 3. Strängar och konkatenering
+
 Texter, som t.ex. "Hejsan" och "Vad heter du?", kallas *strings* på engelska, och på svenska säger vi *strängar*.
 
 Observera att strängar kan *läggas ihop* med plustecknet. Det betyder att de läggs efter varann till en längre sträng. Om vi t.ex. lägger ihop
@@ -68,7 +70,7 @@ Att lägga ihop två strängar kallas också att man *konkatenerar* dem.
 
 Det programmet skriver ut kallas *utdata*. Det programmet läser in kallas *indata*.
 
-### 3. Om typer
+## 4. Om typer
 
 Värden i datorn kan vara av olika *typer*. T.ex. *sträng*, *heltal*, och *decimaltal*. På engelska kallas de *string*, *integer* och *float*.
 
@@ -97,6 +99,10 @@ vilket betyder att `7` har typen *int*, vilket är kort för *integer*, alltså 
 
 Som du ser kan man ibland lägga ihop värden som är av *olika* typ, t.ex. (`3 + 5.2`). När detta uttryck beräknas kommer Python att först göra om heltalet `3` till decimaltalet `3.0`, och sedan lägga ihop det med `5.2`. Resultatet blir ett decimaltal (en *float*).
 
+### 4.1 Typfel
+
+Det är inte alltid man kan kombinera värden av olika typer.
+
 **Uppdrag:** Försök ta reda på typen för följande uttryck
 ```python
 3 + "vligt"
@@ -113,20 +119,82 @@ Det betyder alltså att Python 3 <i>inte</i> stödjer att man lägger ihop helta
 </p>
 </details>
 
+### 4.2 Typomvandling till sträng
 
-Om du hade tänkt dig att uttrycket skulle räknas ut till strängen `"3vligt"`, så måste du själv först göra om heltalet `3` till strängen `"3"`. Det kan du gära med hjälp av funktionen `str` som gör om olika typer av värden till strängar:
+Om du hade tänkt dig att uttrycket ovan skulle räknas ut till strängen `"3vligt"`, så måste du själv först göra om heltalet `3` till strängen `"3"`. Det kan du gära med hjälp av funktionen `str` som gör om olika typer av värden till strängar:
 
 ```python
 str(3) + "vligt"
 ```
+**Uppdrag:** Ta reda på typen av detta uttryck.
 
-**Uppdrag:** Ta reda på typen av ovanstående uttryck.
+### 4.3 Typomvandling till heltal
 
-Man kan omvandla strängar till tal med funktionen `int`.
+Man kan omvandla strängar till heltal med funktionen `int`.
 
 **Uppdrag:** Ta reda på typen för `int("42")`
 
-### 4. Kvadrera talet
+### 4.4 Sträng-interpolering: blanda strängar och tal
+
+Följande program skriver ut vad klockan är (på den dator där programmet körs):
+
+```python
+import datetime
+now = datetime.datetime.now()
+print("Klockan är " + str(now.hour) + ":" + str(now.minute) + " på den här datorn!")
+```
+Det kan kännas lite krångligt att behöva omvandla talen till strängar och använda strängkonkatering. Men det finns ett enklare sätt:
+
+```python
+import datetime
+now = datetime.datetime.now()
+print(f"Klockan är {now.hour}:{now.minute} på den här datorn!")
+```
+
+Detta kallas *stränginterpolering*, det vill säga att en text ändras genom att andra värden stoppas in på olika ställen i den. De andra värdena, som `now.hour` och `now.minute`, omvandlas automatiskt till strängar. För att denna formattering skall fungera behöver man skriva ett litet `f` framför strängen: `f"..."`. På engelska kallas detta *string interpolation*.
+
+**Uppdrag:** Skriv ett program som använder stränginterpolering för att skriva ut vad klockan är, inklusive sekunder. (Använd `now.second`.)
+
+### 4.5 Logiska värden (Boolean)
+
+Om man jämför två tal får man ett *logiskt* värde, som antingen är sant eller falskt. Sådana värden kallas också *Booleska* värden (eller *Boolean* på engelska) efter matematikern George Boole (1815-1864).
+
+**Uppdrag:** Ta reda på vad typen är på följande uttryck: `4 < 5`. Ta också reda på vad värdet är.
+
+<details>
+<summary markdown="span">
+Svar:
+</summary>
+<p>
+Typen är <i>bool</i>, alltså boolean. Värdet är <i>True</i>, alltså sant.
+<pre>
+print(type(4<5))
+print(4<5)
+</pre>
+
+</p>
+</details>
+
+### 4.6 Floats är inte exakta
+
+Decimaltal representeras med *flyttal* (floats) i datorn. Floats är inte exakta, utan approximativa värden.
+
+**Uppdrag:** Prova vad `7.2 - 7.1` har för värde.
+
+<details>
+<summary markdown="span">
+Svar:
+</summary>
+<p>
+Du kan göra:
+<pre>
+print(7.2 - 7.1)
+</pre>
+Du ser att 7.2 - 7.1 inte är exakt 0.1.
+</p>
+</details>
+
+## 5. Kvadrera talet
 
 **Uppdrag:** Skriv ett program som frågar efter ett tal och skriver ut vad kvadraten av talet är.
 
@@ -144,11 +212,11 @@ Lösning:
 <pre>
 tal = int(input("Skriv ett tal jag skall kvadrera: "))
 kvadrat = tal * tal
-print("Kvadraten av " + str(tal) + " är " + str(kvadrat))
+print(f"Kvadraten av {tal} är {kvadrat}")
 </pre>
 </details>
 
-### 5. Beräkna hypotenusan av en rätvinklig triangel
+## 6. Beräkna hypotenusan av en rätvinklig triangel
 
 **Uppdrag:** Skriv ett program som frågar användaren efter längden på två kateter hos en rätvinklig triangel och skriver ut hypotenusan som svar.
 
@@ -178,7 +246,7 @@ import math
 ...
 ```
 
-### 6. Extra: Hitta på en egen beräkning
+## 7. Extra: Hitta på en egen beräkning
 
 **Uppdrag:** Hitta på en egen beräkning där användaren skriver in tal och programmet räknar ut något. Några ideer:
   * Arean på en rätvinklig triangel

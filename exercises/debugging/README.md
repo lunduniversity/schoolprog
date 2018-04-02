@@ -290,8 +290,8 @@ Här är en lista på vad som händer när vi kör programmet:
 <li>Python läser igenom definitionen av <i>hittaMax</i>, utan att köra funktionen</li>
 <li>Python sätter värdet på variabeln <i>minLista</i></li>
 <li>Python anropar <i>hittaMax</i>-funktionen</li>
-<li>... många satser utförs inuti <i>hittaMax</i>
-<li>Python hoppar tillbaka till huvudprogrammet och skriver ut resultatet från <i>hittaMax</i>
+<li>... många satser utförs inuti <i>hittaMax</i></li>
+<li>Python hoppar tillbaka till huvudprogrammet och skriver ut resultatet från <i>hittaMax</i></li>
 </ul>
 </p>
 </details>

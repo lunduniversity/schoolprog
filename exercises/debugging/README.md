@@ -55,6 +55,8 @@ Det finns många andra syntaxfel man kan göra.
 
 Vissa fel får man när man kör programmet. Många programmeringsspråk gör mycket analys av programmen innan man kör dem, för att upptäcka fler fel än enkla syntaxfel. Men Python gör väldigt lite analys, och många fel kommer i stället när man kör programmet. Sådana fel kallas *exekveringsfel* eller *runtime-fel*, och man säger att programmet *kraschar*.
 
+Det finns många olika slags exekveringsfel. Här tar vi bara upp två: typfel och division med noll.
+
 ### 2.1 Typfel
 
 Ett vanligt fel i Python är *typfel*, det vill säga att en operation förväntade sig ett värde av en viss typ, t.ex. sträng, men fick ett värde av en annan typ, t.ex. heltal.
@@ -129,6 +131,13 @@ print(f"Det blir {timdel} timmar och {minutdel} minuter")
 Svar
 </summary>
 Jämförelsen i while-satsen borde ändras från > till >= så att om det är 60 minuter kvar så omvandlas de också till en timme.
+</details>
+
+<details>
+<summary markdown="span">
+Kommentar
+</summary>
+Det finns ytterligare ett problem med programmet: det hanterar inte felaktig indata. Prova att svara en text, t.ex "hej", i stället för ett tal när du kör programmet. Programmet kraschar. Detta kan hanteras med hjälp av en programkonstruktion som kallas <i>exceptions</i>, men det är lite för avancerat för att ta upp i denna introduktion till debugging.
 </details>
 
 ### 3.3 Testning
@@ -359,9 +368,9 @@ gubbe()
 
 *Tips!* Ändra t.ex. definitionen av `oga` så den anropar en ny funktion med fler detaljer om ögon.
 
-### 4.4 Titta på en stack-dump
+### 4.4 Titta på en stack-trace
 
-När ett program kraschar brukar felmeddelandet innehålla inte bara vad som gick fel, utan också en utskrift av stacken, en så kallad *stack-dump*. Det är jättebra information, för då ser man vilka anrop som gjorts och kan lättare lista ut vad som har gått fel.
+När ett program kraschar brukar felmeddelandet innehålla inte bara vad som gick fel, utan också en utskrift av stacken, en så kallad *stack-trace*. Det är jättebra information, för då ser man vilka anrop som gjorts och kan lättare lista ut vad som har gått fel.
 
 **Uppdrag:** Ändra programmet så att det blir fel genom att ändra anropet `ben("två")` till `ben(2)`. Kör programmet som vanligt, utan debuggern. Kan du tolka felmeddelandet? Kan du lista ut vilka funktioner som är inblandade i felet?
 

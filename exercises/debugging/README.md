@@ -359,7 +359,7 @@ gubbe()
 
 *Tips!* Ändra t.ex. definitionen av `oga` så den anropar en ny funktion med fler detaljer om ögon.
 
-## 4.4 Titta på en stack-dump
+### 4.4 Titta på en stack-dump
 
 När ett program kraschar brukar felmeddelandet innehålla inte bara vad som gick fel, utan också en utskrift av stacken, en så kallad *stack-dump*. Det är jättebra information, för då ser man vilka anrop som gjorts och kan lättare lista ut vad som har gått fel.
 

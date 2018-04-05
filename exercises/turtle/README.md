@@ -210,7 +210,7 @@ figur()
   <summary markdown="span">
     Tips
   </summary>
-Multiplicera sträckor med <code>h</code> och dividera med 100. Dvs i stället för att skriva <code>forward(60)</code>, skriv <code>forward(60*h/100)</code>.
+Multiplicera sträckor med <code>h</code> och dividera med 100. Dvs i stället för att skriva <code>forward(60)</code>, skriv <code>forward(60*h/100.0)</code>.
 </details>
 
 ### 8. Neutral figur

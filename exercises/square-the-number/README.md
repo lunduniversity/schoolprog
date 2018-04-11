@@ -9,9 +9,10 @@ tags:
  - console i/o
  - types
 ---
-I denna uppgift får du träna på att låta programmet skriva ut och läsa in text. Vi kör Python 3 i denna uppgift, och har inte tillgång till någon sköldpadda. Vi experimenterar också med typer på värden.
+I denna uppgift får du träna på att låta programmet skriva ut och läsa in text. Vi experimenterar också med typer på värden.
+Sedan har vi tillräckligt med kunskaper för att programmera enkla matte-tal med in och utdata, t.ex. kvadrera ett tal.
 
-Koden i denna uppgift är provkörd på [http://repl.it/languages/python3](http://repl.it/languages/python3) (Python 3).
+Vi kör Python 3 i denna uppgift, och har inte tillgång till någon sköldpadda. Koden är provkörd på [http://repl.it/languages/python3](http://repl.it/languages/python3) (Python 3).
 
 ## 1. Hello world!
 
@@ -43,13 +44,15 @@ print("Hejsan " + namn)
 Svar:
 </summary>
 <ol>
-<li>Programmet skriver ut texten "Vad heter du?" och väntar på svar.</li>
+<li><i>input</i>-funktionen skriver ut texten "Vad heter du?" och väntar på svar.</li>
 <li>Användaren skriver in ett svar, t.ex. "Lisa", och trycker på return.</li>
 <li>Programmet fortsätter köra och lagrar svaret ("Lisa") i variabeln <i>namn</i>.</li>
 <li>Programmet lägger ihop texten "Hejsan " med texten i variabeln <i>namn</i> till den längre texten: "Hejsan Lisa".</li>
-<li>Programmet skriver ut den längre texten, "Hejsan Lisa".</li>
+<li><i>print</i>-funktionen anropas och skriver ut den längre texten, "Hejsan Lisa".</li>
 </ol>
 </details>
+
+*Kommentar:* Texten som `input`-funktionen skriver ut kallas *ledtext* eller *prompt*.
 
 ## 3. Strängar och konkatenering
 
@@ -74,10 +77,12 @@ Det programmet skriver ut kallas *utdata*. Det programmet läser in kallas *inda
 
 Värden i datorn kan vara av olika *typer*. T.ex. *sträng*, *heltal*, och *decimaltal*. På engelska kallas de *string*, *integer* och *float*.
 
-I Python kan man ta reda på typen på ett värde med funktionen `type`. T.ex. kan man skriva ut typen på värdet `7` på följande sätt:
+När man anropar en funktion med en parameter, så förväntar sig oftast funktionen att parametern skall ha en särskild typ, t.ex. heltal. Råkar man skicka in ett värde av fel typ, t.ex. en sträng i detta fall, så kan funktionen krascha eller räkna ut fel sak.
+
+I Python kan man ta reda på typen på ett värde med funktionen `type`. T.ex. kan man skriva ut typen på värdet `7+3` på följande sätt:
 
 ```python
-print(type(7))
+print(type(7+3))
 ```
 
 I Python 3 representeras typerna av något som kallas *klasser*, och ovanstående program skriver ut
@@ -88,7 +93,9 @@ I Python 3 representeras typerna av något som kallas *klasser*, och ovanståend
 
 vilket betyder att `7` har typen *int*, vilket är kort för *integer*, alltså ett heltal.
 
-**Uppdrag:** Ta reda på typen för följande uttryck:
+För att förstå typer bättre skall vi experimentera lite:
+
+**Uppdrag:** Använd `print` och `type` för att ta reda på typen för följande uttryck:
   * `5.2`
   * `3`
   * `3 + 3`
@@ -103,7 +110,7 @@ Som du ser kan man ibland lägga ihop värden som är av *olika* typ, t.ex. (`3 
 
 Det är inte alltid man kan kombinera värden av olika typer.
 
-**Uppdrag:** Försök ta reda på typen för följande uttryck
+**Uppdrag:** Ta reda på typen för följande uttryck:
 ```python
 3 + "vligt"
 ```
@@ -115,26 +122,36 @@ Svar:
 <pre>
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
 </pre>
-Det betyder alltså att Python 3 <i>inte</i> stödjer att man lägger ihop heltal med strängar.
+Det betyder alltså att Python 3 <i>inte</i> stödjer att man lägger ihop heltal med strängar. Programmet kraschar när man försöker göra detta.
 </p>
 </details>
 
 ### 4.2 Typomvandling till sträng
 
-Om du hade tänkt dig att uttrycket ovan skulle räknas ut till strängen `"3vligt"`, så måste du själv först göra om heltalet `3` till strängen `"3"`. Det kan du gära med hjälp av funktionen `str` som gör om olika typer av värden till strängar:
+Om du hade tänkt dig att uttrycket ovan skulle räknas ut till strängen `"3vligt"`, så måste du själv först göra om heltalet `3` till strängen `"3"`. Det kan du gära med hjälp av funktionen `str` som gör om heltal eller decimaltal (eller andra typer) till strängar:
 
 ```python
 str(3) + "vligt"
 ```
-**Uppdrag:** Ta reda på typen av detta uttryck.
+**Uppdrag:** Ta reda på värdet och typen av detta uttryck.
 
-### 4.3 Typomvandling till heltal
+<details>
+<summary markdown="span">
+Tips:
+</summary>
+<p>Du kan skriva ut värdet med:
+<pre>
+print(...)
+</pre>
+och typen med
+<pre>
+print(type(...))
+</pre>
+</p>
 
-Man kan omvandla strängar till heltal med funktionen `int`.
+</details>
 
-**Uppdrag:** Ta reda på typen för `int("42")`
-
-### 4.4 Sträng-interpolering: blanda strängar och tal
+### 4.3 Sträng-interpolering: skriv strängar som innehåller tal
 
 Följande program skriver ut vad klockan är (på den dator där programmet körs):
 
@@ -155,9 +172,37 @@ Detta kallas *stränginterpolering*, det vill säga att en text ändras genom at
 
 **Uppdrag:** Skriv ett program som använder stränginterpolering för att skriva ut vad klockan är, inklusive sekunder. (Använd `now.second`.)
 
+### 4.4 Typomvandling till heltal
+
+Ibland kan man behöva omvandla strängar till tal, t.ex. när man läser in med `input`-funktionen.
+
+Man kan omvandla strängar till heltal med funktionen `int`.
+
+**Uppdrag:** Ta reda på typen för
+  * `"42"`
+  * `int("42")`
+
+`int`-funktionen är praktisk t.ex. när man vill läsa in ett tal med `input`-funktionen. Resultatet av `input`-funktionen är alltid en sträng.
+
+**Uppdrag:** Ta reda på typen på `x` respektive `y` i nedanstående program.
+
+```python
+x = input("Skriv ett tal: ")
+y = int(input("Skriv ett tal"))
+```
+
+<details>
+<summary markdown="span">
+Svar:
+</summary>
+<p>
+<code>x</code> är en sträng. <code>y</code> är ett heltal.
+</p>
+</details>
+
 ### 4.5 Logiska värden (Boolean)
 
-Om man jämför två tal får man ett *logiskt* värde, som antingen är sant eller falskt. Sådana värden kallas också *Booleska* värden (eller *Boolean* på engelska) efter matematikern George Boole (1815-1864).
+Om man jämför två tal får man ett *logiskt* värde, som antingen är sant (`True`) eller falskt (`False`). Sådana värden kallas också *Booleska* värden (eller *Boolean* på engelska) efter matematikern George Boole (1815-1864).
 
 **Uppdrag:** Ta reda på vad typen är på följande uttryck: `4 < 5`. Ta också reda på vad värdet är.
 
@@ -177,7 +222,7 @@ print(4<5)
 
 ### 4.6 Floats är inte exakta
 
-Decimaltal representeras med *flyttal* (floats) i datorn. Floats är inte exakta, utan approximativa värden.
+Decimaltal representeras med *flyttal* (floats) i datorn. Floats är inte exakta, utan approximativa värden. Anledningen är att de representeras av ett fixt antal *bitar* där varje bit är noll eller ett.
 
 **Uppdrag:** Prova vad `7.2 - 7.1` har för värde.
 
@@ -195,6 +240,8 @@ Du ser att 7.2 - 7.1 inte är exakt 0.1.
 </details>
 
 ## 5. Kvadrera talet
+
+Nu när vi har ett hum om hur in och utdata och typer fungerar kan vi programmera enkla matte-tal.
 
 **Uppdrag:** Skriv ett program som frågar efter ett tal och skriver ut vad kvadraten av talet är.
 

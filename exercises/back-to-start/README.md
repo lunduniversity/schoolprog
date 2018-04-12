@@ -109,7 +109,15 @@ Raden <code>t.left(120)</code> behöver ändras.
 </p>
 </details>
 
-**Uppdrag:** ändra programmet så att det fungerar för andra värden på `n`. (T.ex., om n = 5 skall en liksidig femhörning ritas ut.)
+**Uppdrag:** ändra programmet så att det fungerar för godtyckliga värden på `n`, där `n` matas in av användaren. (T.ex., om n = 5 skall en liksidig femhörning ritas ut.)
+
+För att läsa in `n` från tangentbordet kan du göra så här:
+
+```python
+n = input("Antal sidor: ")
+```
+
+Notera att inmatningen sker i fliken **console**, så när du kör programmet måste du växla till den, knappan in `n`, och därefter växla till fliken **result** för att se din `n`-hörning.
 
 <details>
 <summary markdown="span">
@@ -131,3 +139,5 @@ För att få med decimalerna i kvoten behöver man skriva <code>360.0 / n</code>
 Om man skriver <code>360 / n</code> får man en kvot utan decimaler, så om <code>n = 7</code> får man kvoten 51 istället för 51,428.
 </p>
 </details>
+
+Talet 360 är delbart med väldigt många heltal (1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30 och 60). Babylonierna, som delade in cirkeln i 360 grader för sisådär 4000 år sedan, visste vad de gjorde. 

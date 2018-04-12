@@ -122,7 +122,7 @@ Vi kommer att pröva ett par olika sätt att rita gubbens armar. Först vill vi 
 
 **Uppdrag:** Lägg till en funktion `armar` som ritar armarna genom att dra ett streck från positionen `(-100, 0)` till `(100, 0)`.
 
-*Tips!* Använd `jumpTo` för att hoppa till (-100,0), `t.setHeading(0)` för att sätta riktningen till 0 grader, dvs rakt åt höger, och sedan `t.forward(...)` för att rita strecket.
+*Tips!* Använd `jumpTo` för att hoppa till (-100,0), `t.setheading(0)` för att sätta riktningen till 0 grader, dvs rakt åt höger, och sedan `t.forward(...)` för att rita strecket.
 
 
 Provkör programmet. Vad händer?

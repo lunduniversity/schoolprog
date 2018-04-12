@@ -111,10 +111,10 @@ Raden <code>t.left(120)</code> behöver ändras.
 
 **Uppdrag:** ändra programmet så att det fungerar för godtyckliga värden på `n`, där `n` matas in av användaren. (T.ex., om n = 5 skall en liksidig femhörning ritas ut.)
 
-För att läsa in `n` från tangentbordet kan du göra så här:
+För att läsa in ett heltal `n` från tangentbordet kan du göra så här:
 
 ```python
-n = input("Antal sidor: ")
+n = int(input("Antal sidor: "))
 ```
 
 Notera att inmatningen sker i fliken **console**, så när du kör programmet måste du växla till den, knappan in `n`, och därefter växla till fliken **result** för att se din `n`-hörning.

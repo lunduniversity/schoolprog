@@ -117,7 +117,7 @@ För att läsa in ett heltal `n` från tangentbordet kan du göra så här:
 n = int(input("Antal sidor: "))
 ```
 
-Notera att inmatningen sker i fliken **console**, så när du kör programmet måste du växla till den, knappan in `n`, och därefter växla till fliken **result** för att se din `n`-hörning.
+Notera att inmatningen sker i fliken **console**, så när du kör programmet måste du växla till den, knappa in `n`, och därefter växla till fliken **result** för att se din `n`-hörning.
 
 <details>
 <summary markdown="span">
@@ -140,4 +140,4 @@ Om man skriver <code>360 / n</code> får man en kvot utan decimaler, så om <cod
 </p>
 </details>
 
-Talet 360 är delbart med väldigt många heltal (1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30 och 60). Babylonierna, som delade in cirkeln i 360 grader för sisådär 4000 år sedan, visste vad de gjorde. 
+Talet 360 är delbart med väldigt många heltal (1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30 och 60). Babylonierna, som delade in cirkeln i 360 grader för sisådär 4000 år sedan, visste vad de gjorde.

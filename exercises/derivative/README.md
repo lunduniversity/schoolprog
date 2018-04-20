@@ -21,7 +21,7 @@ Börja med att öppna ett befintligt Python-program. Det heter "plotta", och du 
 
 **Uppdrag:** Tryck på knappen **Fork**. Programmet kopieras då till ditt eget repl.it-konto.
 
-**Uppdrag:** Kör programmet som vanligt. Bland filerna till vänster ska det nu, förutom main.py, även finnas en fil `plot.png` med en funktionsgraf. Klicka på `plot.png`. 
+**Uppdrag:** Kör programmet som vanligt. Bland filerna till vänster ska det nu, förutom main.py, även finnas en fil `plot.png` med en funktionsgraf. Klicka på `plot.png`. Du ska kunna se den plottade funktionen.
 
 **Uppdrag:** Läs programmet och ta reda på vilken funktion som plottats.
 
@@ -121,6 +121,7 @@ Du kan exempelvis införa en funktion som följer:
 def diff1(x):
   return deriv(x) - s1(x)
 </pre>
+Plotta funktionen.
 Den visar hur mycket <code>deriv</code> och <code>s1</code> skiljer sig åt. Om de är helt lika blir skillnaden 0, och då ska grafen för <code>diff1</code> ju bli en horisontell, rät linje.
 </p>
 </details>

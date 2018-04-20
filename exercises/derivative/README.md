@@ -21,7 +21,9 @@ Börja med att öppna ett befintligt Python-program. Det heter "plotta", och du 
 
 **Uppdrag:** Tryck på knappen **Fork**. Programmet kopieras då till ditt eget repl.it-konto.
 
-**Uppdrag:** Kör programmet som vanligt. Bland filerna till vänster ska det nu, förutom main.py, även finnas en fil med en funktionsgraf. Klicka på grafen. Läs programmet och ta reda på vilken funktion som plottats.
+**Uppdrag:** Kör programmet som vanligt. Bland filerna till vänster ska det nu, förutom main.py, även finnas en fil `plot.png` med en funktionsgraf. Klicka på `plot.png`. 
+
+**Uppdrag:** Läs programmet och ta reda på vilken funktion som plottats.
 
 ### 2. Vi inför en ny funktion
 
@@ -33,11 +35,27 @@ Nu är vi redo att titta på en annan funktion.  Vi ska undersöka följande fun
 
 Resultatet som skrivs ut ska vara ungefär -0.34.
 
+<details>
+<summary markdown="span">
+Tips
+</summary>
+<p>
+<pre>
+def g(x):
+  # ... 
+...
+print(g(2))
+</pre>
+</p>
+</details>
+
 ### 3. Plotta funktionen
 
 Att skriva ut ett enda funktionsvärde, som ovan, säger oss inte speciellt mycket om hur funktionen ser ut. Vi vill istället plotta funktionen för x-värden från 0 till 10. 
 
 **Uppdrag:** Modifiera ditt program så att funktionen `g(x)` plottas för x-värden i intervallet 0 <= x < 10. 
+
+**Uppdrag:** Du finner, som tidigare, din graf i filen 
 
 ### 4. Derivera numeriskt
 
@@ -84,3 +102,26 @@ När <code>g</code> har ett lokalt minimum ska derivatan vara noll.
 När <code>g</code> pekar som brantast uppåt ska derivatan ha ett lokalt maximum.
 </p>
 </details>
+
+### 5. Testa några möjliga derivator
+
+Som vi redan nämnt kan man även derivera `g` symboliskt, det vill säga med hjälp av deriveringsreglerna. De tre vännerna Bent, Alva och Kit har försökt göra detta, men det är länge sedan de gick i gymnasiet, och endast ett vagt minne av deriveringsreglerna återstår. De kommer fram till olika svar:
+
+<img src="sx.png">
+
+**Uppdrag:** Använd Python för att ta reda på vilken av derivatorna s~1, s~2 och s~3 som bäst stämmer överens med den beräknade (`deriv`). 
+
+<details>
+<summary markdown="span">
+Tips
+</summary>
+<p>
+Du kan exempelvis införa en funktion som följer:
+<pre>
+def diff1(x):
+  return deriv(x) - s1(x)
+</pre>
+Den visar hur mycket <code>deriv</code> och <code>s1</code> skiljer sig åt. Om de är helt lika blir skillnaden 0, och då ska grafen för <code>diff1</code> ju bli en horisontell, rät linje.
+</p>
+</details>
+

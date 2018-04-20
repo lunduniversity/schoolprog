@@ -109,7 +109,7 @@ Som vi redan nämnt kan man även derivera `g` symboliskt, det vill säga med hj
 
 <img src="sx.png">
 
-**Uppdrag:** Använd Python för att ta reda på vilken av derivatorna s~1, s~2 och s~3 som bäst stämmer överens med den beräknade (`deriv`). 
+**Uppdrag:** Använd Python för att ta reda på vilken av derivatorna s1, s2 och s3 som bäst stämmer överens med den beräknade (`deriv`). 
 
 <details>
 <summary markdown="span">

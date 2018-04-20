@@ -55,7 +55,7 @@ Att skriva ut ett enda funktionsvärde, som ovan, säger oss inte speciellt myck
 
 **Uppdrag:** Modifiera ditt program så att funktionen `g(x)` plottas för x-värden i intervallet 0 <= x < 10. 
 
-**Uppdrag:** Du finner, som tidigare, din graf i filen 
+**Uppdrag:** Du finner, som tidigare, din graf i filen `plot.png`.
 
 ### 4. Derivera numeriskt
 
@@ -105,11 +105,15 @@ När <code>g</code> pekar som brantast uppåt ska derivatan ha ett lokalt maximu
 
 ### 5. Testa några möjliga derivator
 
-Som vi redan nämnt kan man även derivera `g` symboliskt, det vill säga med hjälp av deriveringsreglerna. De tre vännerna Bent, Alva och Kit har försökt göra detta, men det är länge sedan de gick i gymnasiet, och endast ett vagt minne av deriveringsreglerna återstår. De kommer fram till olika svar:
+Som vi redan nämnt kan man även derivera `g` symboliskt, det vill säga med hjälp av deriveringsreglerna.
+
+De tre vännerna Bent, Alva och Kit har försökt göra detta, men det är länge sedan de gick i gymnasiet, och endast ett vagt minne av deriveringsreglerna återstår. De kommer fram till olika svar:
 
 <img src="sx.png">
 
-**Uppdrag:** Använd Python för att ta reda på vilken av derivatorna s1, s2 och s3 som bäst stämmer överens med den beräknade (`deriv`). 
+**Uppdrag:** Använd Python för att ta reda på vilken av derivatorna s1, s2 och s3 som bäst stämmer överens med den beräknade (`deriv`). Vem av de tre kan sina deriveringsregler bäst?
+
+Du ska alltså **inte** använda dina egna kunskaper om deriveringsreglerna i denna uppgift.
 
 <details>
 <summary markdown="span">

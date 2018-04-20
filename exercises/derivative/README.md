@@ -42,7 +42,7 @@ Tips
 <p>
 <pre>
 def g(x):
-  # ... 
+  return # ...
 ...
 print(g(2))
 </pre>
@@ -75,7 +75,7 @@ Din Python-kod kan se ut i stil med följande:
 h = 0.00001
 
 def deriv(x):
-  # ... fyll i derivataberäkning här 
+  return # ... fyll i derivataberäkning här 
 ```
 
 **Uppdrag:** Ändra ditt program så att `g` och `deriv` plottas i samma bild.

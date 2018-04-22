@@ -6,10 +6,10 @@ toc: true
 type: exercise
 tags:
  - intermediate
- - math functions
+ - plotting math functions
+ - polynomials
  - list comprehension
  - lambdas (anonymous functions)
- - plotting
 ---
 I denna uppgift kommer vi att experimentera med funktioner genom att plotta dem. Vi kommer att använda ett av Pythons bibliotek, `matplotlib.pyplot` som kan användas för att plotta mätvärden.
 
@@ -60,7 +60,7 @@ Programmet plottar genom att dra raka streck emellan punkterna. Vad händer om f
 <summary markdown="span">
 Tips
 </summary>
-<p>Prova t.ex. att sätta y-värdena till kvadraten av x-värdena: <code>ys = [-9, -4, -1, 0, 1, 4, 9]</code>.</p>
+<p>Prova t.ex. att sätta y-värdena till kvadraten av x-värdena: <code>ys = [9, 4, 1, 0, 1, 4, 9]</code>.</p>
 </details>
 
 ### 2. Plotta en funktion som en jämn kurva
@@ -186,11 +186,17 @@ Alla funktionerna är första gradens polynom (räta linjer), så de bör ha for
 </p>
 </details>
 
-### 7. Utmana dina kompisar (eller din mattelärare :-)
+### 7. Andragradspolynom
+
+Ett andragradspolynom har formen `a2*x*x + a1*x + a0`, där `a2`, `a1` och `a0` är konstanter.
+
+**Uppdrag:** Plotta tre olika andragradspolynom och försök lista ut hur konstanterna påverkar formen på kurvan. Prova med både positiva och negativa konstanter. Skulle du kunna lista ut vad polynomen är om du bara får se kurvan?
+
+### 8. Utmana dina kompisar (eller din mattelärare :-)
 
 **Uppdrag:** Plotta egna funktioner. Kan dina kompisar lista ut vilka de är? (Hade du själv kunnat lista ut det?)
 
-*Tips:* Prova med olika polynom, eller importera biblioteket `math` för att komma åt trigonometriska funktioner, exponential-funktionen, etc. Se [https://docs.python.org/3/library/math.html](https://docs.python.org/3/library/math.html).
+*Tips:* Prova med olika polynom, eller importera biblioteket `math` för att använda trigonometriska funktioner, exponential-funktionen, etc. Se [https://docs.python.org/3/library/math.html](https://docs.python.org/3/library/math.html).
 
 Om du adderar eller multiplicerar olika funktioner med varandra kan det bli väldigt klurigt att lista ut vilka de är. Men du kanske inte skall göra problemen alltför kluriga...
 

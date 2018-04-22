@@ -106,7 +106,7 @@ Tips
 <p>Anropa <code>fplot(g, -5, 5)</code>. Glöm inte att skriva ut den resulterande plotten på fil genom att anropa <code>savefig</code>. </p>
 </details>
 
-### 4. Plotta en funktion till
+### 3. Plotta en funktion till
 
 Vi kan plotta flera funktioner i samma diagram. Det är bara att anropa `fplot` en gång för varje funktion.
 
@@ -126,7 +126,7 @@ Kan du se att <code>h</code> är hälften så hög som <code>g</code> överallt?
 </details>
 
 
-### 5. Sätt etiketter på axlarna
+### 4. Sätt etiketter på axlarna
 
 Vi borde skriva ut etiketter på axlarna och en *legend* som visar vilken funktion som är vilken. Här visas ett exempel som också skriver ut en titel på plotten och visar hjälplinjer.
 
@@ -148,7 +148,7 @@ Resultatet borde se ut så här:
 
 <img src="plot.png" height="300">
 
-### 6. Använd anonyma funktioner (lambdas)
+### 5. Använd anonyma funktioner (lambdas)
 
 Python-funktionerna `g(x)` och `h(x)` har definierats bara för att du skall kunna skicka med dem som parameter till `fplot`. Det finns ett enklare sätt: Du kan skriva funktionen direkt i anropet till `fplot` med hjälp av en så kallad *lambda*. En lambda är en anonym funktion, alltså bara själva funktionsdefinitionen, utan något namn.
 
@@ -169,7 +169,7 @@ fplot(lambda x: x*x, -5, 5, "x*x")
 
 **Uppdrag:** Refaktorisera ditt program så att du använder lambdas istället för `g` och `h`.
 
-### 7. Vilken är funktionen?
+### 6. Vilken är funktionen?
 
 Här visas tre funktioner. Vilka är de?
 
@@ -186,7 +186,7 @@ Alla funktionerna är första gradens polynom (räta linjer), så de bör ha for
 </p>
 </details>
 
-### 8. Utmana dina kompisar (eller din mattelärare :-)
+### 7. Utmana dina kompisar (eller din mattelärare :-)
 
 **Uppdrag:** Plotta egna funktioner. Kan dina kompisar lista ut vilka de är? (Hade du själv kunnat lista ut det?)
 

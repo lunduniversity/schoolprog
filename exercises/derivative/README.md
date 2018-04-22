@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Plotta funktioner
+title: Derivera funktioner
 permalink: /exercises/derivative/
 toc: true
 type: exercise
@@ -9,7 +9,7 @@ tags:
  - functions
  - plotting
 ---
-I denna uppgift kommer du att träna mer på funktioner. Du kommer även att få se hur man kan använda Python för att plotta funktioner.
+I denna uppgift kommer du att träna mer på funktioner. Du kommer även att få se hur man kan använda Python för att plotta funktioner och derivera dem.
 
 Koden i denna uppgift är provkörd på [http://repl.it/languages/python3](http://repl.it/languages/python3) (Python 3).
 
@@ -51,9 +51,9 @@ print(g(2))
 
 ### 3. Plotta funktionen
 
-Att skriva ut ett enda funktionsvärde, som ovan, säger oss inte speciellt mycket om hur funktionen ser ut. Vi vill istället plotta funktionen för x-värden från 0 till 10. 
+Att skriva ut ett enda funktionsvärde, som ovan, säger oss inte speciellt mycket om hur funktionen ser ut. Vi vill istället plotta funktionen för x-värden från 0 till 10.
 
-**Uppdrag:** Modifiera ditt program så att funktionen `g(x)` plottas för x-värden i intervallet 0 <= x < 10. 
+**Uppdrag:** Modifiera ditt program så att funktionen `g(x)` plottas för x-värden i intervallet 0 <= x < 10.
 
 **Uppdrag:** Du finner, som tidigare, din graf i filen `plot.png`.
 
@@ -65,9 +65,9 @@ För detta använder vi derivatans definition:
 
 <img src="fprime.png">
 
-Ofta ser man detta samband som ett gränsvärde, där man tänker sig h gå mot 0 (noll). Här ska vi istället använda sambandet som utgångspunkt för att beräkna derivatan av en funktion `f` för x-värdet `x`. 
+Ofta ser man detta samband som ett gränsvärde, där man tänker sig h gå mot 0 (noll). Här ska vi istället använda sambandet som utgångspunkt för att beräkna derivatan av en funktion `f` för x-värdet `x`.
 
-**Uppdrag:** Inför en Python-funktion `deriv` i ditt program. Dess resultat är funktionen `g`:s derivata för värdet `x`. Använd derivatans definition (ovan) för beräkningen. 
+**Uppdrag:** Inför en Python-funktion `deriv` i ditt program. Dess resultat är funktionen `g`:s derivata för värdet `x`. Använd derivatans definition (ovan) för beräkningen.
 
 Din Python-kod kan se ut i stil med följande:
 
@@ -75,7 +75,7 @@ Din Python-kod kan se ut i stil med följande:
 h = 0.00001
 
 def deriv(x):
-  return # ... fyll i derivataberäkning här 
+  return # ... fyll i derivataberäkning här
 ```
 
 **Uppdrag:** Ändra ditt program så att `g` och `deriv` plottas i samma bild.
@@ -85,7 +85,7 @@ def deriv(x):
 Tips
 </summary>
 <p>
-Du behöver två anrop till <code>fplot</code>: ett för <code>g</code> och ett för <code>deriv</code>. 
+Du behöver två anrop till <code>fplot</code>: ett för <code>g</code> och ett för <code>deriv</code>.
 </p>
 </details>
 
@@ -129,4 +129,3 @@ Plotta funktionen.
 Den visar hur mycket <code>deriv</code> och <code>s1</code> skiljer sig åt. Om de är helt lika blir skillnaden 0, och då ska grafen för <code>diff1</code> ju bli en horisontell, rät linje.
 </p>
 </details>
-

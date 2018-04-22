@@ -190,7 +190,11 @@ Alla funktionerna är första gradens polynom (räta linjer), så de bör ha for
 
 Ett andragradspolynom har formen `a2*x*x + a1*x + a0`, där `a2`, `a1` och `a0` är konstanter.
 
-**Uppdrag:** Plotta tre olika andragradspolynom och försök lista ut hur konstanterna påverkar formen på kurvan. Prova med både positiva och negativa konstanter. Skulle du kunna lista ut vad polynomen är om du bara får se kurvan?
+**Uppdrag:** Plotta polynomen `x*x`, `2*x` och deras summa `x*x + 2*x`. Gör plotten från `-2` till `2`. Kan du se att det tredje polynomet är en summa av de två första?
+
+**Uppdrag:** Vad händer om du lägger till konstanten `5`?
+
+*Tips*: Plotta alla tre termerna var för sig (`x*x`, `2*x` och `5`), och dessutom hela summan.
 
 ### 8. Utmana dina kompisar (eller din mattelärare :-)
 

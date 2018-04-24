@@ -17,7 +17,7 @@ Koden i denna uppgift är provkörd på [http://repl.it/languages/python3](http:
 
 Vi ska undersöka följande funktion:
 
-<img src="g.png">
+<img src="g.png" width="500px">
 
 **Uppdrag:** Skapa ett Python-program med funktionen `g` enligt ovan, definierad som en (vanlig) Python-funktion. Lägg till en utskrift i ditt program, så att funktionens värde för x = 2, dvs `g(2)`, skrivs ut.
 
@@ -53,7 +53,7 @@ Vi intresserar oss nu för funktionens derivata, g'(x). Det är fullt möjligt a
 
 För detta använder vi derivatans definition:
 
-<img src="fprime.png">
+<img src="fprime.png" width="500px">
 
 Ofta ser man detta samband som ett gränsvärde, där man tänker sig h gå mot 0 (noll). Här ska vi istället använda sambandet som utgångspunkt för att beräkna derivatan av en funktion `f` för x-värdet `x`. Vi kommer därför att välja ett "lagom" litet h-värde. Du kommer strax att få se hur det går till.
 
@@ -98,7 +98,7 @@ Som vi redan nämnt kan man även derivera `g` symboliskt, det vill säga med hj
 
 De tre vännerna Bent, Alva och Kit har försökt göra detta, men det är länge sedan de gick i gymnasiet, och endast ett vagt minne av deriveringsreglerna återstår. De kommer fram till olika svar:
 
-<img src="sx.png">
+<img src="sx.png" width="500px">
 
 **Uppdrag:** Använd Python för att ta reda på vilken av derivatorna `s1`, `s2` och `s3` som bäst stämmer överens med den beräknade (`gderiv`). Vem av de tre kan sina deriveringsregler bäst?
 

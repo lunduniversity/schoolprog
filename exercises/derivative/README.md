@@ -165,7 +165,7 @@ Här ska <code>...</code> ersättas med ett lämpligt uttryck. Du ska alltså <b
 
 Ovan har du använt funktioner som parametrar och anonyma funktioner. Du har även skapat en praktisk funktion som kan beräkna derivatavärdet för en godtycklig funktion `f` och ett godtyckligt `x`-värde. Med hjälp av dessa byggstenar kan du lätt plotta andra funktioner och deras derivator.
 
-**Uppdrag:** Plotta följande två funktioner tillsammans med sina derivator, i intervallet -1 <= x <= 1. Du ska **inte** införa några nya, namngivna funktioner (med `def`), utan göra detta med de byggstenar som just nämnts.
+**Uppdrag:** Plotta följande två funktioner tillsammans med sina derivator, i intervallet -5 <= x <= 5. Du ska **inte** införa några nya, namngivna funktioner (med `def`), utan göra detta med de byggstenar som just nämnts.
 
 | funktion | namn i Python |
 | --------- | ----------------- |

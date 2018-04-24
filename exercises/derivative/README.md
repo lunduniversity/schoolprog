@@ -109,13 +109,13 @@ Du ska alltså **inte** använda dina egna kunskaper om deriveringsreglerna i de
 Tips
 </summary>
 <p>
-Du kan exempelvis införa en funktion som följer:
+Du kan förslagsvis införa en funktion som följer:
 <pre>
 def diff1(x):
   return gderiv(x) - s1(x)
 </pre>
 Plotta funktionen.
-Den visar hur mycket <code>gderiv</code> och <code>s1</code> skiljer sig åt. Om de är helt lika blir skillnaden 0, och då ska grafen för <code>diff1</code> ju bli en horisontell, rät linje. (I praktiken blir värdena inte exakt 0, men mycket små.)
+Den visar hur mycket <code>gderiv</code> och <code>s1</code> skiljer sig åt. Om de är helt lika blir skillnaden 0, och då ska grafen för <code>diff1</code> ju bli en horisontell, rät linje. (I praktiken blir värdena inte exakt 0, men mycket små, när derivatan är korrekt.)
 </p>
 </details>
 

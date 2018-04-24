@@ -45,7 +45,7 @@ Att skriva ut ett enda funktionsvärde, som ovan, säger oss inte speciellt myck
 
 Använd samma teknik för plottningen som du prövat i uppgiften "Plotta funktioner". Använd gärna den funktion `fplot` som finns där. Om du gjort en egen variant (exempelvis för att sätta etiketter på funktionerna) går det att använda den också.
 
-**Uppdrag:** Modifiera ditt program så att funktionen `g(x)` plottas för x-värden i intervallet 0 <= x < 10. Glöm inte spara grafen i en fil, så att du kan se den.
+**Uppdrag:** Modifiera ditt program så att funktionen `g(x)` plottas för x-värden i intervallet 0 <= x <= 10. Glöm inte spara grafen i en fil, så att du kan se den.
 
 ### 3. Derivera numeriskt
 

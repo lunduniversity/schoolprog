@@ -9,7 +9,7 @@ tags:
  - functions
  - plotting
 ---
-I denna uppgift kommer du att träna mer på funktioner, och du får se hur man kan beräkna en funktion numeriskt med hjälp av Python. Du kommer även att få se hur man kan använda några finesser i Python, som anonyma funktioner och funktionsparametrar, för att enkelt plotta funktioner.
+I denna uppgift kommer du att träna mer på funktioner, och du får se hur man kan beräkna en derivata numeriskt med hjälp av Python. Du kommer även att få se hur man kan använda några finesser i Python, som anonyma funktioner och funktionsparametrar, för att enkelt plotta funktioner.
 
 Koden i denna uppgift är provkörd på [http://repl.it/languages/python3](http://repl.it/languages/python3) (Python 3).
 

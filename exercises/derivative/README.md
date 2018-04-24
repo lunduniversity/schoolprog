@@ -74,7 +74,7 @@ def gderiv(x):
 Tips
 </summary>
 <p>
-Du behöver två <code>fplot</code>-rader: ett för <code>g</code> och ett för <code>gderiv</code>.
+Du behöver två <code>fplot</code>-rader: en för <code>g</code> och ett för <code>gderiv</code>.
 </p>
 </details>
 

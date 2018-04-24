@@ -60,9 +60,8 @@ Ofta ser man detta samband som ett gränsvärde, där man tänker sig h gå mot 
 Din Python-kod kan se ut i stil med följande:
 
 ```python
-h = 0.00001
-
 def gderiv(x):
+  h = 0.00001
   return # ... fyll i derivataberäkning här
 ```
 
@@ -128,6 +127,7 @@ Idén är att du nu ska kunna skriva `gderiv` enklare. Och nästa gång du behö
 
 ```python
 def deriv(f, x):
+  h = 0.00001
   return ... # derivatan av f
 
 # derivatan av g, som nu kan skrivas enklare

@@ -13,21 +13,9 @@ I denna uppgift kommer du att träna mer på funktioner. Du kommer även att få
 
 Koden i denna uppgift är provkörd på [http://repl.it/languages/python3](http://repl.it/languages/python3) (Python 3).
 
-### 1. Pröva ett befintligt paket för plottning
+### 1. Vi undersöker en funktion
 
-Det finns färdiga funktioner i Python för att plotta exempelvis funktions- eller mätvärden. Vi använder Python-paketet `matplotlib`, och en liten praktisk hjälpfunktion, som gör plottningen enklare.
-
-Börja med att öppna ett befintligt Python-program. Det heter "plotta", och du öppnar det genom att klicka på följande länk: [https://repl.it/@patrikpersson/plotta](https://repl.it/@patrikpersson/plotta)
-
-**Uppdrag:** Tryck på knappen **Fork**. Programmet kopieras då till ditt eget repl.it-konto.
-
-**Uppdrag:** Kör programmet som vanligt. Bland filerna till vänster ska det nu, förutom main.py, även finnas en fil `plot.png` med en funktionsgraf. Klicka på `plot.png`. Du ska kunna se den plottade funktionen.
-
-**Uppdrag:** Läs programmet och ta reda på vilken funktion som plottats.
-
-### 2. Vi inför en ny funktion
-
-Nu är vi redo att titta på en annan funktion.  Vi ska undersöka följande funktion:
+Vi ska undersöka följande funktion:
 
 <img src="g.png">
 
@@ -49,15 +37,15 @@ print(g(2))
 </p>
 </details>
 
-### 3. Plotta funktionen
+### 2. Plotta funktionen
 
 Att skriva ut ett enda funktionsvärde, som ovan, säger oss inte speciellt mycket om hur funktionen ser ut. Vi vill istället plotta funktionen för x-värden från 0 till 10.
 
-**Uppdrag:** Modifiera ditt program så att funktionen `g(x)` plottas för x-värden i intervallet 0 <= x < 10.
+Använd samma teknik för plottningen som du prövat i uppgiften "Plotta funktioner". Använd gärna den funktion `fplot` som finns där. Om du gjort en egen variant går det att använda den också.
 
-**Uppdrag:** Du finner, som tidigare, din graf i filen `plot.png`.
+**Uppdrag:** Modifiera ditt program så att funktionen `g(x)` plottas för x-värden i intervallet 0 <= x < 10. Glöm inte spara grafen i en fil, så att du kan se den.
 
-### 4. Derivera numeriskt
+### 3. Derivera numeriskt
 
 Vi intresserar oss nu för funktionens derivata, g'(x). Det är fullt möjligt att derivera funktionen symboliskt (med hjälp av deriveringsreglerna). Här ska vi emellertid plotta g'(x) på ett annat sätt, nämligen genom att låta datorn **beräkna** derivatans värde för varje x-värde.
 
@@ -67,25 +55,25 @@ För detta använder vi derivatans definition:
 
 Ofta ser man detta samband som ett gränsvärde, där man tänker sig h gå mot 0 (noll). Här ska vi istället använda sambandet som utgångspunkt för att beräkna derivatan av en funktion `f` för x-värdet `x`.
 
-**Uppdrag:** Inför en Python-funktion `deriv` i ditt program. Dess resultat är funktionen `g`:s derivata för värdet `x`. Använd derivatans definition (ovan) för beräkningen.
+**Uppdrag:** Inför en Python-funktion `gderiv` i ditt program. Dess resultat är funktionen `g`:s derivata för värdet `x`. Använd derivatans definition (ovan) för beräkningen.
 
 Din Python-kod kan se ut i stil med följande:
 
 ```python
 h = 0.00001
 
-def deriv(x):
+def gderiv(x):
   return # ... fyll i derivataberäkning här
 ```
 
-**Uppdrag:** Ändra ditt program så att `g` och `deriv` plottas i samma bild.
+**Uppdrag:** Ändra ditt program så att `g` och `gderiv` plottas i samma bild.
 
 <details>
 <summary markdown="span">
 Tips
 </summary>
 <p>
-Du behöver två anrop till <code>fplot</code>: ett för <code>g</code> och ett för <code>deriv</code>.
+Du behöver två anrop till <code>fplot</code>: ett för <code>g</code> och ett för <code>gderiv</code>.
 </p>
 </details>
 
@@ -103,7 +91,7 @@ När <code>g</code> pekar som brantast uppåt ska derivatan ha ett lokalt maximu
 </p>
 </details>
 
-### 5. Testa några möjliga derivator
+### 4. Testa några möjliga derivator
 
 Som vi redan nämnt kan man även derivera `g` symboliskt, det vill säga med hjälp av deriveringsreglerna.
 
@@ -123,9 +111,72 @@ Tips
 Du kan exempelvis införa en funktion som följer:
 <pre>
 def diff1(x):
-  return deriv(x) - s1(x)
+  return gderiv(x) - s1(x)
 </pre>
 Plotta funktionen.
-Den visar hur mycket <code>deriv</code> och <code>s1</code> skiljer sig åt. Om de är helt lika blir skillnaden 0, och då ska grafen för <code>diff1</code> ju bli en horisontell, rät linje.
+Den visar hur mycket <code>gderiv</code> och <code>s1</code> skiljer sig åt. Om de är helt lika blir skillnaden 0, och då ska grafen för <code>diff1</code> ju bli en horisontell, rät linje.
+</p>
+</details>
+
+### 5. Gör en mer generell funktion för numerisk derivering
+
+Titta på din funktion `gderiv` igen. Den är specifikt gjord för att beräkna ett derivatavärde för `g`: om du vill derivera en annan funktion på samma sätt behöver du göra en ny variant på `gderiv`. Det är inte helt praktiskt i längden.
+
+Istället ska vi nu göra en generell funktion, som kan få heta (exempelvis) `deriv`. Den funktionen ska ta *två* parametrar, en funktion `f` att derivataberäkna, samt (som tidigare) ett `x`-värde. Derivatan av `f` beräknas som tidigare, men `f` är alltså nu en parameter.
+
+Idén är att du nu ska kunna skriva `gderiv` enklare. Och nästa gång du behöver beräkna ett derivatavärde för en funktion kan du också, på motsvarande sätt, göra det rätt enkelt.
+
+```python
+def deriv(f, x):
+  return ... # derivatan av f
+
+# derivatan av g, som nu kan skrivas enklare
+def gderiv(x):
+  return deriv(g, x)
+```
+
+**Uppdrag:** Skriv färdigt funktionen `deriv` enligt ovan. Skriv om `gderiv` så att den använder `deriv`, också enligt ovan. Plotta `g` tillsammans med sin derivata. Ser derivataberäkningen ut att fungera?
+
+### 6. Använd anonyma funktioner för att förenkla ditt program
+
+I uppgiften "Plotta funktioner" prövade du att använda anonyma funktioner (lambdas). Gå gärna tillbaka till den uppgiften om du behöver repetera hur de fungerar.
+
+Med hjälp av anonyma funktioner kan man helt låta bli definiera `gderiv` enligt ovan. Det räcker med `g` och `deriv`.
+
+**Uppdrag:** Förenkla ditt program så att `g` och dess derivata plottas, men istället för att plotta `gderiv` använder du en kombination av en anonym funktion, `deriv` och `g`.
+
+<details>
+<summary markdown="span">
+Tips
+</summary>
+<p>
+Du behöver två <code>fplot</code>-rader, i stil med följande:
+<pre>
+fplot(g, 0, 10, "g")
+fplot(lambda x: ..., 0, 10, "g'")
+</pre>
+Här ska <code>...</code> ersättas med ett lämpligt uttryck. Du ska alltså <b>inte</b> använda <code>gderiv</code>.
+</p>
+</details>
+
+### 7. Plotta fler funktioner enkelt
+
+Ovan har du använt funktioner som parametrar och anonyma funktioner. Du har även skapat en praktisk funktion som kan beräkna derivatavärdet för en godtycklig given funktion `f` och ett godtyckligt `x`-värde. Med hjälp av dessa byggstenar kan du lätt plotta funktioner med sina derivator.
+
+**Uppdrag:** Plotta följande två funktioner tillsammans med sina derivator, i intervallet -1 <= x <= 1. Du ska **inte** införa några nya, namngivna funktioner (med `def`), utan göra detta med de byggstenar som just nämnts.
+
+| funktion | namn i Python |
+| --------- | ----------------- |
+| sinus | `math.sin`|
+| absolutvärde | `abs`  eller `math.fabs` |
+
+**Uppdrag:** Plotta den naturliga logaritmen (`math.log`) på samma sätt, i samma intervall. Vad beror felmeddelandet på? Justera intervallet till något mer meningsfullt, och pröva igen.
+
+<details>
+<summary markdown="span">
+Tips
+</summary>
+<p>
+Kom ihåg att du måste välja rätt intervall på två ställen: både för funktionen och för dess derivata.
 </p>
 </details>

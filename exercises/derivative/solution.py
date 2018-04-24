@@ -1,13 +1,12 @@
-# ----------------------------------
 import matplotlib.pyplot as plt
 
-# plotta funktionen f för a <= x < b
-def fplot(f, a, b):
-  N = 1000
-  dx = (b - a) / N
-  xs = [a + i*dx for i in range(N)]
-  plt.plot(xs, list(map(f, xs)))
-# ----------------------------------
+# plotta funktionen f för a <= x <= b
+def fplot(f, a, b, lbl):
+	N = 1000             # Antalet punkter att plotta
+	dx = (b - a) / (N-1) # Avståndet mellan punkterna
+	xs = [a + i*dx for i in range(N)]
+	ys = [f(a + i*dx) for i in range(N)]
+	plt.plot(xs, ys, label=lbl)
 
 import math
 
@@ -15,11 +14,15 @@ def g(x):
   return math.exp(-0.1*x) * math.cos(x)
 
 h = 0.00001
-def deriv(x):
+
+def gderiv(x):
   return (g(x+h) - g(x)) / h
 
+def deriv(f, x):
+	return (f(x+h) - f(x)) / h
+
 fplot(g, 0, 10)
-fplot(deriv, 0, 10)
+fplot(gderiv, 0, 10)
 
 def s1(x):
   return math.exp(-0.1*x) * math.cos(x) - 0.1*math.exp(-0.1*x) * math.sin(x)

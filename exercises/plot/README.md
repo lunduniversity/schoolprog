@@ -22,8 +22,8 @@ För att plotta en funktion med matplotlib skickar man in en lista med x-värden
 ```python
 import matplotlib.pyplot as plt
 
-xs = [-3, -2, -1, 0, 1, 2, 3]
-ys = [-6, -4, -2, 0, 2, 4, 6]
+xs = [-3, -2, -1, 0, 1, 2, 3] # The x values
+ys = [-6, -4, -2, 0, 2, 4, 6] # The y values
 plt.plot(xs, ys)
 plt.savefig('plot.png')
 ```
@@ -31,7 +31,7 @@ Funktionen `plot` sparar plotten på ett internt format inuti biblioteket. Funkt
 
 **Uppdrag:** Läs programmet och försök förstå vad som händer.  Provkör programmet. Bland filerna till vänster ska det nu, förutom `main.py`, även finnas en fil `plot.png` med en funktionsgraf. Klicka på `plot.png`. Du ska kunna se den plottade funktionen.
 
-*Kommentar:* En bugg i repl.it gör att `plot.png` kanske inte dyker upp första gången programmet försöker skapa filer. Lägg i så fall till en fil som heter `plot.png` genom att trycka på den lilla fil-ikonen med ett `+` på ovanför fil-listan. Kör sedan programmet igen.
+*Kommentar:* En bugg i repl.it gör att `plot.png` kanske inte dyker upp. Om detta händer, lägg till en dummy-fil genom att trycka på den lilla "Add file"-ikonen ovanför fil-listan (<img src="addfile.png" height="30">) och skriva in valfritt namn. Detta gör att man kommer runt buggen. Kör sedan programmet igen. Nu bör `plot.png` dyka upp i fil-listan. Dummy-filen kan du sedan ta bort om du vill.
 
 **Quiz:** Vilken funktion illustreras av programmet?
 <details>
@@ -73,9 +73,9 @@ Följande hjälpfunktion `fplot` plottar en funktion `f` mellan x-värdena `a` o
 def fplot(f, a, b):
   N = 1000             # Antalet punkter att plotta
   dx = (b - a) / (N-1) # Avståndet mellan punkterna
-  xs = [a + i*dx for i in range(N)]
-  ys = [f(a + i*dx) for i in range(N)]
-  plt.plot(xs, ys)
+  xs = [a + i*dx for i in range(N)]    # Räkna ut x-värdena
+  ys = [f(a + i*dx) for i in range(N)] # Räkna ut y-värdena
+  plt.plot(xs, ys)     # Plotta funktionen f
 ```
 
 **Uppdrag:** Försök förstå koden i `fplot`. Funktionen använder en konstruktion som kallas *listomfattning* (*list comprehension* på engelska).
@@ -97,7 +97,7 @@ För att beräkna denna lista körs for-loopen igenom 3 gånger, där <code>i</c
 def g(x):
   return x * x
 ```
-och plotta g-funktionen från -5 till 5. Prova med olika värden på `N` i `fplot`. Hur stort värde behövs för att kurvan skall se jämn ut?
+och plotta g-funktionen från -5 till 5.
 
 <details>
 <summary markdown="span">
@@ -105,6 +105,8 @@ Tips
 </summary>
 <p>Anropa <code>fplot(g, -5, 5)</code>. Glöm inte att skriva ut den resulterande plotten på fil genom att anropa <code>savefig</code>. </p>
 </details>
+
+**Uppdrag:** Hur många punkter behövs för att kurvan ska se jämn ut? Klarar man sig med färre än 1000? Experimentera genom att prova med olika värden på `N` i `fplot`.
 
 ### 3. Plotta en funktion till
 
@@ -128,27 +130,87 @@ Kan du se att <code>h</code> är hälften så hög som <code>g</code> överallt?
 
 ### 4. Sätt etiketter på axlarna
 
-Vi borde skriva ut etiketter på axlarna och en *legend* som visar vilken funktion som är vilken. Här visas ett exempel som också skriver ut en titel på plotten och visar hjälplinjer.
+Vi borde skriva ut etiketter på axlarna. Här visas ett exempel som också skriver ut en titel på plotten och visar hjälplinjer.
 
 ```python
-...
-plt.plot(xs1, ys1, label="x*x")
-plt.plot(xs2, ys2, label="0.5*x*x")
+xs = [1,2,3]
+ys = [2,4,7]
+plt.plot(xs, ys)
 plt.title("Mitt fina diagram")   # Sätt titel på diagrammet
 plt.xlabel("x-värden")           # Sätt etikett på x-axeln
 plt.ylabel("y-värden")           # Sätt etikett på y-axeln
-plt.legend(loc = "upper center") # Visa legend uppe i mitten
 plt.grid(True)                   # Visa hjälplinjer
 plt.savefig("plot.png")
 ```
 
-**Uppdrag:** Lägg till titel på plotten, etiketter på axlarna, hjälplinjer och en legend som visar vilken funktion som är vilken. Inför en extra parameter till `fplot` för att kunna sätta etiketter på funktionerna (dessa etiketter används för att skriva ut legenden).
+**Uppdrag:** Ändra ditt program så att du lägger till etiketter på axlarna, hjälplinjer och titel på plotten.
 
-Resultatet borde se ut så här:
+### 5. Skriv ut en legend för funktionerna
+
+När man plottar flera funktioner samtidigt vill man gärna ha en *legend* som visar vilken funktion som är vilken. Detta kan man göra genom att se till att `plt.plot` anropas med ett extra argument på följande sätt:
+
+```python
+plt.plot(xs, ys, label="min funktion")
+```
+Här är `label` namnet på en valfri parameter till plot. (Eftersom parametern är valfri måste vi ange dess namn när vi använder den.)
+
+Förutom att anropa `plt.plot` med den extra parametern behöver vi också göra ett anrop
+
+```python
+plt.legend(loc = "upper center")
+```
+för att legenden skall skrivas ut. Den valfria parametern `loc` anger var i diagrammet legenden skall skrivas ut.
+
+Här är ett exempel där vi lagt till en legend till diagrammet.
 
 <img src="plot.png" height="300">
 
-### 5. Använd anonyma funktioner (lambdas)
+**Uppdrag:** Ändra ditt program så att en legend skrivs ut enligt exemplet ovan. *Tips:* Du behöver lägga till en extra parameter till `fplot`.
+
+<details>
+<summary markdown="span">
+Mer tips
+</summary>
+<p>
+Lägg till en fjärde parameter <code>l</code> i definitionen av <code>fplot</code>. Använd <code>l</code> vid anropet av <code>plt.plot</code>. Ändra anropen till <code>fplot</code> så att du lägger till en fjärde parameter, nämligen strängen du vill skriva ut för kurvan.
+</p>
+</details>
+
+<details>
+<summary markdown="span">
+Lösning
+</summary>
+<p>
+<pre>
+import matplotlib.pyplot as plt
+
+def fplot(f, a, b, l):
+  N = 50
+  dx = (b - a) / (N-1)
+  xs = [a + i*dx for i in range(N)]
+  ys = [f(a + i*dx) for i in range(N)]
+  plt.plot(xs, ys, label=l)
+
+def g(x):
+  return x * x
+
+def h(x):
+  return 0.5 * x * x
+
+fplot(g, -2, 2, "x*x")
+fplot(h, -2, 2, "0.5*x*x")
+plt.title("Mitt fina diagram")
+plt.xlabel("x-värden")
+plt.ylabel("y-värden")
+plt.legend(loc = "upper center")
+plt.grid(True)
+plt.savefig("plot.png")
+</pre>
+</p>
+</details>
+
+
+### 6. Använd anonyma funktioner (lambdas)
 
 Python-funktionerna `g(x)` och `h(x)` har definierats bara för att du skall kunna skicka med dem som parameter till `fplot`. Det finns ett enklare sätt: Du kan skriva funktionen direkt i anropet till `fplot` med hjälp av en så kallad *lambda*. En lambda är en anonym funktion, alltså bara själva funktionsdefinitionen, utan något namn.
 
@@ -169,7 +231,7 @@ fplot(lambda x: x*x, -5, 5, "x*x")
 
 **Uppdrag:** Refaktorisera ditt program så att du använder lambdas istället för `g` och `h`.
 
-### 6. Vilken är funktionen?
+### 7. Vilken är funktionen?
 
 Här visas tre funktioner. Vilka är de?
 
@@ -186,7 +248,7 @@ Alla funktionerna är första gradens polynom (räta linjer), så de bör ha for
 </p>
 </details>
 
-### 7. Andragradspolynom
+### 8. Andragradspolynom
 
 Ett andragradspolynom har formen `a2*x*x + a1*x + a0`, där `a2`, `a1` och `a0` är konstanter.
 
@@ -196,7 +258,7 @@ Ett andragradspolynom har formen `a2*x*x + a1*x + a0`, där `a2`, `a1` och `a0` 
 
 *Tips*: Plotta alla tre termerna var för sig (`x*x`, `2*x` och `5`), och dessutom hela summan.
 
-### 8. Utmana dina kompisar (eller din mattelärare :-)
+### 9. Utmana dina kompisar (eller din mattelärare :-)
 
 **Uppdrag:** Plotta egna funktioner. Kan dina kompisar lista ut vilka de är? (Hade du själv kunnat lista ut det?)
 

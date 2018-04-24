@@ -19,7 +19,7 @@ Vi ska undersöka följande funktion:
 
 <img src="g.png">
 
-**Uppdrag:** Modifiera ditt program så att du inför en funktion `g` enligt ovan. Definiera den som en (vanlig) Python-funktion. Lägg till en utskrift i ditt program, så att funktionens värde för x = 2, dvs `g(2)`, skrivs ut.
+**Uppdrag:** Skapa ett Python-program med funktionen `g` enligt ovan, definierad som en (vanlig) Python-funktion. Lägg till en utskrift i ditt program, så att funktionens värde för x = 2, dvs `g(2)`, skrivs ut.
 
 Resultatet som skrivs ut ska vara ungefär -0.34.
 
@@ -29,6 +29,8 @@ Tips
 </summary>
 <p>
 <pre>
+import math
+
 def g(x):
   return # ...
 ...
@@ -39,9 +41,9 @@ print(g(2))
 
 ### 2. Plotta funktionen
 
-Att skriva ut ett enda funktionsvärde, som ovan, säger oss inte speciellt mycket om hur funktionen ser ut. Vi vill istället plotta funktionen för x-värden från 0 till 10.
+Att skriva ut ett enda funktionsvärde, som ovan, säger oss inte speciellt mycket om hur funktionen ser ut. En graf vore mycket bättre. Vi vill istället plotta funktionen för x-värden från 0 till 10.
 
-Använd samma teknik för plottningen som du prövat i uppgiften "Plotta funktioner". Använd gärna den funktion `fplot` som finns där. Om du gjort en egen variant går det att använda den också.
+Använd samma teknik för plottningen som du prövat i uppgiften "Plotta funktioner". Använd gärna den funktion `fplot` som finns där. Om du gjort en egen variant (exempelvis för att sätta etiketter på funktionerna) går det att använda den också.
 
 **Uppdrag:** Modifiera ditt program så att funktionen `g(x)` plottas för x-värden i intervallet 0 <= x < 10. Glöm inte spara grafen i en fil, så att du kan se den.
 
@@ -53,7 +55,7 @@ För detta använder vi derivatans definition:
 
 <img src="fprime.png">
 
-Ofta ser man detta samband som ett gränsvärde, där man tänker sig h gå mot 0 (noll). Här ska vi istället använda sambandet som utgångspunkt för att beräkna derivatan av en funktion `f` för x-värdet `x`. Vi kommer därför att välja ett "lagom" litet h-värde.
+Ofta ser man detta samband som ett gränsvärde, där man tänker sig h gå mot 0 (noll). Här ska vi istället använda sambandet som utgångspunkt för att beräkna derivatan av en funktion `f` för x-värdet `x`. Vi kommer därför att välja ett "lagom" litet h-värde. Du kommer strax att få se hur det går till.
 
 **Uppdrag:** Inför en Python-funktion `gderiv` i ditt program. Dess resultat är funktionen `g`:s derivata för värdet `x`. Använd derivatans definition (ovan) för beräkningen.
 
@@ -72,7 +74,7 @@ def gderiv(x):
 Tips
 </summary>
 <p>
-Du behöver två anrop till <code>fplot</code>: ett för <code>g</code> och ett för <code>gderiv</code>.
+Du behöver två <code>fplot</code>-rader: ett för <code>g</code> och ett för <code>gderiv</code>.
 </p>
 </details>
 
@@ -98,7 +100,7 @@ De tre vännerna Bent, Alva och Kit har försökt göra detta, men det är läng
 
 <img src="sx.png">
 
-**Uppdrag:** Använd Python för att ta reda på vilken av derivatorna s1, s2 och s3 som bäst stämmer överens med den beräknade (`deriv`). Vem av de tre kan sina deriveringsregler bäst?
+**Uppdrag:** Använd Python för att ta reda på vilken av derivatorna `s1`, `s2` och `s3` som bäst stämmer överens med den beräknade (`gderiv`). Vem av de tre kan sina deriveringsregler bäst?
 
 Du ska alltså **inte** använda dina egna kunskaper om deriveringsreglerna i denna uppgift.
 
@@ -119,9 +121,9 @@ Den visar hur mycket <code>gderiv</code> och <code>s1</code> skiljer sig åt. Om
 
 ### 5. Gör en mer generell funktion för numerisk derivering
 
-Titta på din funktion `gderiv` igen. Den är specifikt gjord för att beräkna ett derivatavärde för `g`: om du vill derivera en annan funktion på samma sätt behöver du göra en ny variant på `gderiv`. Det är inte helt praktiskt i längden.
+Titta på din funktion `gderiv` igen. Den är specifikt gjord för att beräkna ett derivatavärde för `g`: om du vill derivera en annan funktion på samma sätt behöver du göra en ny variant på `gderiv`. Det är opraktiskt i längden.
 
-Istället ska vi nu göra en generell funktion, som kan få heta (exempelvis) `deriv`. Den funktionen ska ta *två* parametrar, en funktion `f` att derivataberäkna, samt (som tidigare) ett `x`-värde. Derivatan av `f` beräknas som tidigare, men `f` är alltså nu en parameter.
+Istället ska vi nu göra en generell funktion, som kan få heta `deriv`. Den funktionen ska ta *två* parametrar, en funktion `f` att derivataberäkna, samt (som tidigare) ett `x`-värde. Derivatan av `f` beräknas som tidigare, men `f` är alltså nu en parameter.
 
 Idén är att du nu ska kunna skriva `gderiv` enklare. Och nästa gång du behöver beräkna ett derivatavärde för en funktion kan du också, på motsvarande sätt, göra det rätt enkelt.
 
@@ -155,13 +157,13 @@ Du behöver två <code>fplot</code>-rader, i stil med följande:
 fplot(g, 0, 10, "g")
 fplot(lambda x: ..., 0, 10, "g'")
 </pre>
-Här ska <code>...</code> ersättas med ett lämpligt uttryck. Du ska alltså <b>inte</b> använda <code>gderiv</code>.
+Här ska <code>...</code> ersättas med ett lämpligt uttryck. Du ska alltså <b>inte</b> använda <code>gderiv</code>. (Notera också att vi här utgått från att din <code>fplot</code>-funktion tar funktionens ettikett som fjärde parameter; du kan ev. behöva justera dessa detaljer för att passa in egen <code>fplot</code>.) 
 </p>
 </details>
 
 ### 7. Plotta fler funktioner enkelt
 
-Ovan har du använt funktioner som parametrar och anonyma funktioner. Du har även skapat en praktisk funktion som kan beräkna derivatavärdet för en godtycklig given funktion `f` och ett godtyckligt `x`-värde. Med hjälp av dessa byggstenar kan du lätt plotta funktioner med sina derivator.
+Ovan har du använt funktioner som parametrar och anonyma funktioner. Du har även skapat en praktisk funktion som kan beräkna derivatavärdet för en godtycklig funktion `f` och ett godtyckligt `x`-värde. Med hjälp av dessa byggstenar kan du lätt plotta andra funktioner och deras derivator.
 
 **Uppdrag:** Plotta följande två funktioner tillsammans med sina derivator, i intervallet -1 <= x <= 1. Du ska **inte** införa några nya, namngivna funktioner (med `def`), utan göra detta med de byggstenar som just nämnts.
 

@@ -83,15 +83,22 @@ plt.savefig('plot3.png')
 plt.clf()   # töm grafen
 plt.title("några derivator")
 
-fplot(math.sin, -1, 1, "abs")
-fplot(lambda x: deriv(math.sin, x), -1, 1, "sin'")
+fplot(math.sin, -5, 5, "abs")
+fplot(lambda x: deriv(math.sin, x), -5, 5, "sin'")
 
-fplot(abs, -1, 1, "abs")
+fplot(abs, -5, 5, "abs")
 fplot(lambda x: deriv(abs, x), -1, 1, "abs'")
+
+plt.legend(loc = "upper center")
+plt.grid(True)
+plt.savefig('plot4.png')
+
+plt.clf()   # töm grafen
+plt.title("logaritmen och dess derivata")
 
 fplot(math.log, 0.1, 1, "log")
 fplot(lambda x: deriv(math.log, x), 0.1, 1, "log'")
 
 plt.legend(loc = "upper center")
 plt.grid(True)
-plt.savefig('plot4.png')
+plt.savefig('plot5.png')

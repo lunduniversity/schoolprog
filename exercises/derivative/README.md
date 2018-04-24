@@ -53,7 +53,7 @@ För detta använder vi derivatans definition:
 
 <img src="fprime.png">
 
-Ofta ser man detta samband som ett gränsvärde, där man tänker sig h gå mot 0 (noll). Här ska vi istället använda sambandet som utgångspunkt för att beräkna derivatan av en funktion `f` för x-värdet `x`.
+Ofta ser man detta samband som ett gränsvärde, där man tänker sig h gå mot 0 (noll). Här ska vi istället använda sambandet som utgångspunkt för att beräkna derivatan av en funktion `f` för x-värdet `x`. Vi kommer därför att välja ett "lagom" litet h-värde.
 
 **Uppdrag:** Inför en Python-funktion `gderiv` i ditt program. Dess resultat är funktionen `g`:s derivata för värdet `x`. Använd derivatans definition (ovan) för beräkningen.
 
@@ -141,7 +141,7 @@ def gderiv(x):
 
 I uppgiften "Plotta funktioner" prövade du att använda anonyma funktioner (lambdas). Gå gärna tillbaka till den uppgiften om du behöver repetera hur de fungerar.
 
-Med hjälp av anonyma funktioner kan man helt låta bli definiera `gderiv` enligt ovan. Det räcker med `g` och `deriv`.
+Med hjälp av en sådan anonym funktion kan man helt låta bli definiera `gderiv` enligt ovan. Det räcker med `g` och `deriv`.
 
 **Uppdrag:** Förenkla ditt program så att `g` och dess derivata plottas, men istället för att plotta `gderiv` använder du en kombination av en anonym funktion, `deriv` och `g`.
 
@@ -170,7 +170,20 @@ Ovan har du använt funktioner som parametrar och anonyma funktioner. Du har äv
 | sinus | `math.sin`|
 | absolutvärde | `abs`  eller `math.fabs` |
 
-**Uppdrag:** Plotta den naturliga logaritmen (`math.log`) på samma sätt, i samma intervall. Vad beror felmeddelandet på? Justera intervallet till något mer meningsfullt, och pröva igen.
+**Uppdrag:** Plotta den naturliga logaritmen (`math.log`) på samma sätt, i samma intervall.
+
+Vad beror felmeddelandet på?
+
+<details>
+<summary markdown="span">
+Tips
+</summary>
+<p>
+Logaritmen log(x) är inte definierad för x=0. Vad är derivatan av log(x)? Varför kan den inte fungera för x=0?
+</p>
+</details>
+
+**Uppdrag:** Justera intervallet till något mer meningsfullt, och pröva igen.
 
 <details>
 <summary markdown="span">

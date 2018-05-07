@@ -1,13 +1,14 @@
 ---
 layout: page
-title: Piece of cake (Scala, svenska)
+title: Piece of cake
 permalink: /exercises/piece-of-cake/scala
 toc: true
 type: exercise
 tags:
- - nybörjare
- - bråk
- - grafiskt
+- medel
+- sköldpaddsgrafik
+- Scala
+- bråkräkning
 proglang: scala
 ext: scala
 ---

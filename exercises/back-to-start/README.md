@@ -5,9 +5,12 @@ permalink: /exercises/back-to-start/
 toc: true
 type: exercise
 tags:
- - beginner
- - geometry
- - turtle graphics
+ - bra första-uppgift
+ - sköldpaddsgrafik
+ - sekvens
+ - for-loop
+ - geometri
+ - vinklar
 ---
 I denna uppgift kommer du att träna på vinklar i regelbundna månghörningar. Vi använder "turtle graphics" för detta.
 

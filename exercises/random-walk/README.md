@@ -5,10 +5,13 @@ permalink: /exercises/random-walk/
 toc: true
 type: exercise
 tags:
- - beginner
- - if statement
- - block structure
- - turtle graphics
+ - nybörjare
+ - sköldpaddsgrafik
+ - if-sats
+ - block-struktur
+ - slump
+ - geometri
+ - vinklar
 ---
 <img src="fig-randomwalk.png" height="100">
 

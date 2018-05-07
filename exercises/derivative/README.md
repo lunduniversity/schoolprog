@@ -5,9 +5,11 @@ permalink: /exercises/derivative/
 toc: true
 type: exercise
 tags:
- - intermediate
- - functions
- - plotting
+ - medel
+ - plottning
+ - trigonometriska funktioner
+ - exponentialfunktion
+ - derivator
 ---
 I denna uppgift kommer du att träna mer på funktioner, och du får se hur man kan beräkna en derivata numeriskt med hjälp av Python. Du kommer även att få se hur man kan använda några finesser i Python, som anonyma funktioner och funktionsparametrar, för att enkelt plotta funktioner.
 
@@ -157,7 +159,7 @@ Du behöver två <code>fplot</code>-rader, i stil med följande:
 fplot(g, 0, 10, "g")
 fplot(lambda x: ..., 0, 10, "g'")
 </pre>
-Här ska <code>...</code> ersättas med ett lämpligt uttryck. Du ska alltså <b>inte</b> använda <code>gderiv</code>. (Notera också att vi här utgått från att din <code>fplot</code>-funktion tar funktionens ettikett som fjärde parameter; du kan ev. behöva justera dessa detaljer för att passa in egen <code>fplot</code>.) 
+Här ska <code>...</code> ersättas med ett lämpligt uttryck. Du ska alltså <b>inte</b> använda <code>gderiv</code>. (Notera också att vi här utgått från att din <code>fplot</code>-funktion tar funktionens ettikett som fjärde parameter; du kan ev. behöva justera dessa detaljer för att passa in egen <code>fplot</code>.)
 </p>
 </details>
 

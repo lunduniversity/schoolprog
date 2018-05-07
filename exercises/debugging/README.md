@@ -5,7 +5,8 @@ permalink: /exercises/debugging/
 toc: true
 type: exercise
 tags:
- - beginner
+ - nybörjare
+ - text
  - debugging
 ---
 När man programmerar kan det bli fel på många olika sätt. Felen kallas *buggar* eller *bugs* på engelska. Buggar är en naturlig del av all programmering. I den här uppgiften skall vi skapa lite olika slags buggar så att vi lättare kan hantera dem när de senare händer på riktigt.
@@ -16,7 +17,7 @@ Koden i denna uppgift är provkörd på [http://repl.it/languages/python3](http:
 <summary markdown="span">
 Kommentar:
 </summary>
-<p>Ordet "bug" är en term för tekniska fel av olika slag, och det finns belägg för den sedan åtminstone 1870-talet (<a href="https://en.wikipedia.org/wiki/Software_bug#Etymology">Wikipedia, Software bug</a>).
+<p>Ordet "bug" är en term för tekniska fel av olika slag, och det finns belägg för den sedan åtminstone 1870-talet (<a href="https://en.wikipedia.org/wiki/Software_bug#Etymology">Wikipedia, Software bug</a>). I programmeringssammanhang säger man ibland "lus" på svenska, men det försvenskade "bugg" är vanligare.
 </p>
 </details>
 

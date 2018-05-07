@@ -1,11 +1,10 @@
 ---
 layout: page
-title: Math Exerciser
+title: Mattetränaren
 permalink: /exercises/math-exerciser/
 type: exercise
-tags: 
- - avancerad
- - funktioner
+tags:
+ - avancerad, text, listor, spel, godtyckliga mattetal
 toc: true
 ---
 ![solution](https://media.githubusercontent.com/media/ahnlabb/schoolprog-external/master/math-exerciser.gif)

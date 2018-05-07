@@ -5,11 +5,11 @@ permalink: /exercises/plot/
 toc: true
 type: exercise
 tags:
- - intermediate
- - plotting math functions
- - polynomials
+ - medel
+ - plottning
  - list comprehension
- - lambdas (anonymous functions)
+ - lambdas
+ - polynom
 ---
 I denna uppgift kommer vi att experimentera med funktioner genom att plotta dem. Vi kommer att använda ett av Pythons bibliotek, `matplotlib.pyplot` som kan användas för att plotta mätvärden.
 

@@ -6,8 +6,9 @@ toc: true
 type: exercise
 tags:
  - medel
- - bråk
  - text
+ - spel
+ - bråkräkning
 ---
 <img src="brakspel.png" height="100">
 

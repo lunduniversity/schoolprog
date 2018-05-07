@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Piece of cake (Python, svenska)
+title: Piece of cake
 permalink: /exercises/piece-of-cake/python
 toc: true
 type: exercise
 tags:
- - nybörjare
- - bråk
- - grafiskt
+ - medel
+ - sköldpaddsgrafik
+ - bråkräkning
 proglang: python
 ext: py
 ---

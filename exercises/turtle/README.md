@@ -1,12 +1,16 @@
 ---
-title: Turtle graphics (Sköldpaddsgrafik)
+title: Sköldpadda
 toc: true
 layout: page
 type: exercise
 tags:
- - nybörjare
- - grafiskt
- - funktioner
+ - bra första-uppgift
+ - sköldpaddsgrafik
+ - sekvens
+ - for-loop
+ - funktionsdefinitioner och anrop
+ - geometri
+ - vinklar
 permalink: /exercises/turtle/
 cover_image: https://i.imgur.com/YHHBJaS.png
 cover_y_offset: 25%

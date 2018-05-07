@@ -5,11 +5,11 @@ permalink: /exercises/three-of-a-kind/
 toc: true
 type: exercise
 tags:
- - beginner
- - console i/o
- - variables
- - experiment
- - probabilities
+ - nybörjare
+ - text
+ - variabel
+ - kasta tärning
+ - sannolikhet
 ---
 Hur sannolikt är det att få triss om man slår tre tärningar? I denna uppgift skall vi programmera ett experiment där vi tar reda på det.
 

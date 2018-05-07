@@ -5,9 +5,9 @@ permalink: /exercises/functional-strawman/
 toc: true
 type: exercise
 tags:
- - intermediate
- - functions
- - turtle graphics
+ - medel
+ - sköldpaddsgrafik
+ - trigonometriska funktioner
 ---
 <img src="strawman.png" height="100">
 I denna uppgift kommer du att träna på funktioner.

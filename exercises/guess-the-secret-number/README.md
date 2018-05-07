@@ -6,10 +6,12 @@ toc: true
 type: exercise
 tags:
  - medel
+ - text
  - spel
+ - while-sats
+ - elif i if-sats
  - slump
  - intervallhalvering
- - text
 ---
 
 <!--**Note:** This exercise is also available [in english](README_EN.md).-->

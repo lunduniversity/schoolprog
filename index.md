@@ -7,48 +7,50 @@ layout: default
 
 # Välkommen till programmeringens värld!
 
-Här hittar du programmeringsuppdrag tänkta att användas i Matematik 1C på gymnasiet. Du kan programmera i vilket språk du vill, men vi ger specifika tips för språken Scala och Python.
+Här hittar du programmeringsuppdrag tänkta att användas i matematik på högstadiet och gymnasiet.
 
-<!--
-Om du inte har programmerat tidigare rekommenderar vi att du börjar med [Kojo/Scala](http://www.lth.se/programmera/).
--->
+Vi börjar med några uppdrag där du samtidigt lär dig enkel programmering i Python. Vi använder en online-miljö (repl.it) för programmeringen, så du behöver inte installera något på din egen dator.
 
-## Kom igång
+## Sköldpaddsgrafik
+Ett bra sätt att börja programmera är med *sköldpaddsgrafik*  (*turtle graphics* på engelska). Då övar man sig samtidigt på geometri och koordinatsystem. Prova:
 
-För att komma igång snabbt kan du programmera online. Då slipper du ladda ner en programmeringsmiljö på din egen dator. Vi rekommenderar:
+* [Sköldpadda](exercises/turtle) (Bra första-uppgift. Du lär dig om sekvenser, loopar och funktioner.)
+* [Månghörningar](exercises/back-to-start) (Bra första-uppgift. Du lär dig om sekvenser och loopar.)
+* [Slumpvandring](exercises/random-walk) (Bra att fortsätta med. Du lär dig om villkorssatser och blockstruktur.)
+* [Funktionsgubbe](exercises/functional-strawman) (Bra att fortsätta med. Gymnasienivå. Du ritar trigonometriska funktioner med hjälp av programmeringsfunktioner.)
 
-* **Python med turtle graphics**:
-    * Kör online på [Python-turtle på repl.it](https://repl.it/languages/python_turtle)
-    * Vår [snabbreferens till Python-turtle](programming/turtle-cheatsheet/python.md).
-    * Vår [snabbreferens till Python-konstruktioner](programming/python/CHEATSHEET.md).
-    * Kör online utan turtle på [Python3 på repl.it](https://repl.it/languages/python3).
+Sköldpaddsmiljön vi använt ovan stöder bara Python 2.7, som är en lite äldre version av Python. I uppgifterna nedan använder vi text input/output och plottning. Då använder vi Python 3 i stället, som är modernare.
 
-* **Scala med kojo turtle graphics**:
-    * Kör online på [kojo-js](http://kojojs.kogics.net/) (experimentell än så länge)
-    * Vår [snabbreferens till kojo-js](programming/turtle-cheatsheet/scala.md)
-    * Kör offline genom att [ladda ner kojo](http://www.lth.se/programmera/installera/) på din dator.
+## Input/Output
+Nästa steg är att lära sig lite om att skriva ut och läsa in text och tal.
 
+* [Kvadrera talet](exercises/square-the-number) (Du lär dig lite om input, output, strängar och andra typer av värden. Sedan får du programmera enkla matte-tal som att kvadrera tal.)
+* [Triss](exercises/three-of-a-kind) (Du får använda variabler som uppdateras. Vi låter datorn kasta tärning.)
+* [Avlusning](exercises/debugging) (Lite grunder om felsökning vilket är mycket viktigt när man programmerar.)
 
-## Uppdrag
+## Plotta
+Nästa steg är att låta datorn visualisera data genom att rita diagram.
+* [Plotta funktioner](exercises/plot) (Vi använder biblioteket `matplotlib.pyplot` för att plotta enkla funktioner som polynom.)
+* [Derivera funktioner](exercises/derivative) (En gymnasie-nivå-uppgift där vi låter datorn numeriskt räkna ut derivator för trigonometriska funktioner och exponentialfunktioner och plotta dem.)
 
-Här är några uppdrag (i svårighetsordning):
+## Fler uppdrag
+Nu kan du en hel del programmering. Här är fler uppdrag du kan prova:
+* [Gissa det hemliga numret](exercises/guess-the-secret-number/) (Du skriver ett litet spel och får lära dig om while-satser och if-satser och intervallhalvering.)
+* [Beräkna ränta](exercises/interest-rates)
+* [Aritmetiska operatorer](exercises/implement-arithmetic-operators)
+* [Piece of cake](exercises/piece-of-cake/python.md) (Bråkräkning med sköldpaddsgrafik)
+* [Bråkspel](exercises/fractions) (Bråkräkning som ett spel)
+* [Mattetränaren](exercises/math-exerciser) (Gör ett spel av dina matte-tal)
 
-* [Sköldpaddsgrafik](exercises/turtle) (Python-turtle)
-* [Månghörningar](exercises/back-to-start) (Python-turtle)
-* [Slumpvandring](exercises/random-walk) (Python-turtle)
-* [Funktionsgubbe](exercises/functional-strawman) (Python-turtle)
-* [Kvadrera talet](exercises/square-the-number) (Python 3)
-* [Triss](exercises/three-of-a-kind) (Python 3)
-* [Avlusning](exercises/debugging) (Python 3)
-* [Plotta funktioner](exercises/plot) (Python 3)
-* [Derivera funktioner](exercises/derivative) (Python 3)
-* [Gissa det hemliga numret](exercises/guess-the-secret-number/) (Python 3)
-* [Beräkna ränta](exercises/interest-rates) (Python 3)
-* [Aritmetiska operatorer](exercises/implement-arithmetic-operators) (Python 3)
-* [Bråk med Piece of cake](exercises/piece-of-cake/python.md) (Python-turtle)
-* [Bråk med Piece of cake](exercises/piece-of-cake/scala.md) (Kojo/Scala)
-* [Bråkspel](exercises/fractions) (Python 3)
-* [Mattetränaren](exercises/math-exerciser) (Python 3)
+Du hittar alla våra uppdrag under [Uppdrags-fliken](exercises).
+
+## Andra programmeringsspråk
+Vill du prova ett annat programmeringsspråk? Här är ett uppdrag som använder språket Scala:
+* [Piece of cake](exercises/piece-of-cake/scala.md) (Bråkräkning med sköldpaddsgrafik, i Scala)
+
+## Hjälp
+Se våra snabbguider och länkar till andra siter under [Hjälp-fliken](programming).
+
 
 ## Unplugged
 

@@ -1,5 +1,5 @@
 ---
-title: låna pengar
+title: Låna pengar
 layout: page
 toc: true
 type: exercise

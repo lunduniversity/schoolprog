@@ -2,7 +2,6 @@
 title: Implementera aritmetiska operatorer
 toc: true
 layout: page
-type: exercise
 tags:
  - aritmetik
  - funktioner
@@ -52,4 +51,3 @@ def power(a, b):
         acc = mul(acc, a)
     return acc
 ```
-

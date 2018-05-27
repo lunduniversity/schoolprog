@@ -37,6 +37,7 @@ Nästa steg är att låta datorn visualisera data genom att rita diagram.
 Nu kan du en hel del programmering. Här är fler uppdrag du kan prova:
 * [Gissa det hemliga numret](exercises/guess-the-secret-number/) (Du skriver ett litet spel och får lära dig om while-satser och if-satser och intervallhalvering.)
 * [Låna pengar](exercises/interest-rates) (Du beräknar ränta på sms-lån och ser skulden växa i en plott.)
+* [Aritmetiska operatorer](exercises/implement-arithmetic-operators) (Du implementerar operatorer för multiplikation, heltalsdivision och exponentiering enbart med hjälp av addition och negering.)
 * [Piece of cake](exercises/piece-of-cake/python.md) (Bråkräkning med sköldpaddsgrafik)
 * [Bråkspel](exercises/fractions) (Bråkräkning som ett spel)
 * [Mattetränaren](exercises/math-exerciser) (Gör ett spel av dina matte-tal)

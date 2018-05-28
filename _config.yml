@@ -38,6 +38,7 @@ plugins:
 header_pages:
   - exercises/README.md
   - programming/README.md
+  - for-teachers/README.md
   - about.md
 
 # Exclude from processing.

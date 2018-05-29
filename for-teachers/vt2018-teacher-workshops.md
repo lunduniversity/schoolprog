@@ -2,7 +2,7 @@
 title: Programmeringsworkshops för lärare
 layout: page
 toc: true
-permalink: /for-teachers/vt2018-teacher-workshops.md
+permalink: /for-teachers/vt2018-teacher-workshops
 ---
 Våren 2018 körde vi en serie workshops på Vattenhallen baserat på dessa övningar. Deltagarna var främst mattelärare på gymnasiet, men även några högstadielärare. Många var helt nybörjare på programmering, medan andra var erfarna. Båda grupperna var mycket nöjda med workshoparna. <!--Vi körde också en serie träffar med elevklasser, både på N/T och Estetiska programmet.-->
 

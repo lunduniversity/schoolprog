@@ -17,4 +17,4 @@ permalink: /for-teachers/
 
 Vi vill gärna ha feedback på övningarna, både om de gick bra och om du har förslag på förbättringar eller nya övningar! [Fyll i feedback här!](https://docs.google.com/forms/d/e/1FAIpQLSdsyYYZXVpJnUU5qYpvgyrZxhG8eee-s3oD7mnfXoxd447WSw/viewform)
 
-Under vt 2018 körde vi flera av övningarna på en serie workshops för mattelärare, främst på gymnasiet. Läs [här](/for-teachers/vt2018-teacher-workshops) om vad de tyckte.
+Under vt 2018 körde vi flera av övningarna på en serie workshops för mattelärare, främst på gymnasiet. Läs [här](vt2018-teacher-workshops.md) om vad de tyckte.

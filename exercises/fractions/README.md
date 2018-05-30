@@ -147,18 +147,18 @@ Nu skall vi programmera ett spel där spelaren får svara på hur ett bråk kan 
 Vi börjar med en mycket enkel prototyp för spelet, som hela tiden hittar på samma bråk, och som inte ännu kontrollerar om spelaren svarat rätt:
 
 ```python
-def inventFraction():   # Hitta på ett bråk
+def invent_fraction():   # Hitta på ett bråk
   return(4,6)
 
-def strFraction(a,b):   # Gör om bråket från tal till sträng
+def str_fraction(a,b):   # Gör om bråket från tal till sträng
   return str(a) + "/" + str(b)
 
 def game():             # Spelet
-  (a,b) = inventFraction()
-  print("Förenkla " + strFraction(a,b))
+  (a,b) = invent_fraction()
+  print("Förenkla " + str_fraction(a,b))
   pa = int(input("Vad blir täljaren?"))
   pb = int(input("Vad blir nämnaren?"))
-  print("Du svarade: " + strFraction(pa,pb))
+  print("Du svarade: " + str_fraction(pa,pb))
   print("Jag vet inte om det är rätt.")
 
 game()                 # Kör spelet
@@ -170,14 +170,14 @@ game()                 # Kör spelet
 
 ### A.6 Intressant Bråkspel
 
-För att spelet skall bli intressant behöver vi ändra funktionen `inventFraction` så att den hittar på ett nytt bråk varje gång. Detta kan vi göra med standard-funktionen `random` som drar ett slumptal:
+För att spelet skall bli intressant behöver vi ändra funktionen `invent_fraction` så att den hittar på ett nytt bråk varje gång. Detta kan vi göra med standard-funktionen `random` som drar ett slumptal:
 
 ```python
 from random import randint
 r = randint(5,10)   # Returns a random int between 5 and 10
 ```
 
-**Uppdrag:** Ändra funktionen `inventFraction` så att den returnerar ett slumpmässigt bråk. Hur skall du konstruera ett bråk så det blir intressant att förenkla? Prova ditt spel. Kan du svara rätt? Blir det lagom svårt?
+**Uppdrag:** Ändra funktionen `invent_fraction` så att den returnerar ett slumpmässigt bråk. Hur skall du konstruera ett bråk så det blir intressant att förenkla? Prova ditt spel. Kan du svara rätt? Blir det lagom svårt?
 
 
 <details>
@@ -259,13 +259,13 @@ Om vi provar på exemplet vi hade i början får vi:
 
 Utgå från programmet du gjorde i uppgift A. (Spara gärna en kopia först.)
 
-**Uppdrag:** Skriv en funktion `sumFractions(a, b, c, d)` som räknar ut summan av `a/b` och `c/d`. Resultatet skall förenklas och returneras som en täljare och en nämnare.
+**Uppdrag:** Skriv en funktion `sum_fractions(a, b, c, d)` som räknar ut summan av `a/b` och `c/d`. Resultatet skall förenklas och returneras som en täljare och en nämnare.
 
-Prova att anropa `sumFractions` för några exempel och att skriva ut resultatet. T.ex. för att summera 2/3 + 1/6:
+Prova att anropa `sum_fractions` för några exempel och att skriva ut resultatet. T.ex. för att summera 2/3 + 1/6:
 
 ```python
-(t, n) = sumFractions(2, 3, 1, 3)
-print(strFraction(t,n))
+(t, n) = sum_fractions(2, 3, 1, 3)
+print(str_fraction(t,n))
 ```
 
 Här är några exempel du kan testa, så du ser att resultatet blir rätt:
@@ -277,7 +277,7 @@ Här är några exempel du kan testa, så du ser att resultatet blir rätt:
 ### B.2 Spel som summerar två bråk
 
 **Uppdrag:**
-Ändra spelet så att det hittar på två bråk och frågar spelaren om vad summan är. Ändra funktionen `inventFraction` så att spelet blir lagom svårt.
+Ändra spelet så att det hittar på två bråk och frågar spelaren om vad summan är. Ändra funktionen `invent_fraction` så att spelet blir lagom svårt.
 
 C: Extra. Utöka spelet
 ----------------------

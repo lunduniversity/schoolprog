@@ -155,16 +155,16 @@ Se nästa uppgift för exempel på hur koden kan refaktoriseras.
 Här är en refaktoriserad version av koden i förra uppgiften. Förhoppningsvis tycker du också att koden är lättare att förstå nu.
 
 ```python
-def omvandlaTillTimmarOchMinuter(minuter):
+def omvandla_till_timmar_och_minuter(minuter):
   timmar = 0
-  minuterKvar = minuter
-  while minuterKvar > 60:
-    minuterKvar = minuterKvar-60
+  minuter_kvar = minuter
+  while minuter_kvar > 60:
+    minuter_kvar = minuter_kvar-60
     timmar = timmar + 1
-  return (timmar, minuterKvar)
+  return (timmar, minuter_kvar)
 
 minuter = int(input("Skriv in antal minuter: "))
-(timdel, minutdel) = omvandlaTillTimmarOchMinuter(minuter)
+(timdel, minutdel) = omvandla_till_timmar_och_minuter(minuter)
 print(f"Det blir {timdel} timmar och {minutdel} minuter")
 ```
 
@@ -210,15 +210,15 @@ När man får ett exekveringsfel, eller när programmet inte fungerar som man t�
 Här är ett program som innehåller ett fel! Programmet skall leta reda på det största talet i en lista och skriva ut det, alltså 5 i detta fall.
 
 ```python
-def hittaMax (lista):
+def hitta_max(lista):
   maximum = 0
   for x in lista:
     if x < maximum:
       maximum = x
   return maximum
 
-minLista = [1, 2, 3, 5, 3, 2]
-print(hittaMax(minLista))
+min_lista = [1, 2, 3, 5, 3, 2]
+print(hitta_max(min_lista))
 ```
 
 **Uppdrag:** Kör programmet. Vilket värde skrivs ut? Fundera en liten stund på vad som kan vara fel.
@@ -234,7 +234,7 @@ Ett primitivt men mycket användbart sätt att samla bevis är att lägga in `pr
 Till att börja med kan vi fundera på om programmet överhuvudtaget kommer in i `for`-loopen. Vi tror att det gör det, men vi lägger in en print-sats för att kontrollera saken:
 
 ```python
-def hittaMax (lista):
+def hitta_max(lista):
   maximum = 0
   for x in lista:
     print(f"x = {x}, max = {maximum}")
@@ -242,8 +242,8 @@ def hittaMax (lista):
       maximum = x
   return maximum
 
-minLista = [1, 2, 3, 5, 3, 2]
-print(hittaMax(minLista))
+min_lista = [1, 2, 3, 5, 3, 2]
+print(hitta_max(min_lista))
 ```
 
 **Uppdrag:** Lägg till print-satsen ovan och kör programmet för att kontrollera att vi kommer in i loopen.
@@ -272,7 +272,7 @@ Programmet kommer aldrig in i if-satsen. Det beror på att det testar om x är <
 En debugger är ett verktyg där man kan köra programmet stegvis. För repl.it finns en väldigt enkel debugger. Här är det rättade programmet från förra uppgiften, och med några extra print-satser:
 
 ```python
-def hittaMax (lista):
+def hitta_max(lista):
   maximum = 0
   for x in lista:
     print(f"x = {x}")
@@ -281,17 +281,16 @@ def hittaMax (lista):
       print(f"max = {maximum}")
   return maximum
 
-minLista = [1, 2, 3, 5, 3, 2]
-print(hittaMax(minLista))
+min_lista = [1, 2, 3, 5, 3, 2]
+print(hitta_max(min_lista))
 ```
 
-För att köra programmet med debuggern trycker man på den inringade symbolen:
+För att köra programmet med debuggern öppnar man först debug-vyn (1). Därefter startar man programmet med debuggerns run-symbol (2). Tryck sedan på `step into`-knappen (3) så kör programmet ett steg. Vilken rad man är på visas med ljusblått i editorn (4).
 
-<img src="debug.png" height="175">
+<img src="debug.png" height="250">
 
-Då dyker debug-vyn upp där man kan köra stegvis. Tryck på `step in` så kör programmet ett steg. Vilken rad man är på visas med ljusblått i editorn.
 
-**Uppdrag:** Kör igenom programmet stegvis. Tryck på `step in` om och om igen och se hur den blåa raden flyttar sig. Är du med på vad som händer när programmet körs?
+**Uppdrag:** Kör igenom programmet stegvis. Tryck på `step into` om och om igen och se hur den blåa raden flyttar sig. Är du med på vad som händer när programmet körs?
 
 <details>
 <summary markdown="span">
@@ -300,23 +299,24 @@ Svar:
 <p>
 Här är en lista på vad som händer när vi kör programmet:
 <ul>
-<li>Python läser igenom definitionen av <i>hittaMax</i>, utan att köra funktionen</li>
-<li>Python sätter värdet på variabeln <i>minLista</i></li>
-<li>Python anropar <i>hittaMax</i>-funktionen</li>
-<li>... många satser utförs inuti <i>hittaMax</i></li>
-<li>Python hoppar tillbaka till huvudprogrammet och skriver ut resultatet från <i>hittaMax</i></li>
+<li>Python läser igenom definitionen av <i>hitta_max</i>, utan att köra funktionen</li>
+<li>Python sätter värdet på variabeln <i>min_lista</i></li>
+<li>Python anropar <i>hitta_max</i>-funktionen</li>
+<li>... många satser utförs inuti <i>hitta_max</i></li>
+<li>Python hoppar tillbaka till huvudprogrammet och skriver ut resultatet från <i>hitta_max</i></li>
 </ul>
 </p>
 </details>
 
+Förutom `step into` finns det tre andra knappar man kan trycka på. Från vänster till höger är de: `resume`, `step over`, `step into` och `step out`.
 
-Kommandot `step in` betyder att man går in i funktioner som anropas. Om man har ett stort program kan man vilja hoppa över vissa anrop, och då gör man `step over` i stället.
+Kommandot `step into` betyder att man går in i funktioner som anropas. Om man har ett stort program kan man vilja hoppa över vissa anrop, och då gör man `step over` i stället.
 
 **Uppdrag:** Kör igenom programmet med debuggern igen, men använd nu `step over` i stället. Ser du skillnaden?
 
-Om man gjort `step in` och kommit in i en funktion som har många steg så kan man göra `step out` för att köra färdigt funktionen och komma ut till anropet igen.
+Om man gjort `step into` och kommit in i en funktion som har många steg så kan man göra `step out` för att köra färdigt funktionen och komma ut till anropet igen.
 
-**Uppdrag:** Kör igenom programmet med debuggern igen, och använd `step in`. Men när du kört något varv i loopen, tryck en gång på `step out`.
+**Uppdrag:** Kör igenom programmet med debuggern igen, och använd `step into`. Men när du kört något varv i loopen, tryck en gång på `step out`.
 
 Det finn också ett kommando `resume`. Det betyder helt enkelt att man kör vidare i programmet, utan att stega alls.
 
@@ -390,16 +390,16 @@ Du ser att programmet kraschade med ett typ-fel inne i ben-funktionen. Du ser oc
 Vi utgår från programmet som omvandlar från minuter till timmar och minuter igen (fast nu den rättade versionen):
 
 ```python
-def omvandlaTillTimmarOchMinuter(minuter):
+def omvandla_till_timmar_och_minuter(minuter):
   timmar = 0
-  minuterKvar = minuter
-  while minuterKvar >= 60:
-    minuterKvar = minuterKvar-60
+  minuter_kvar = minuter
+  while minuter_kvar >= 60:
+    minuter_kvar = minuter_kvar-60
     timmar = timmar + 1
-  return (timmar, minuterKvar)
+  return (timmar, minuter_kvar)
 
 minuter = int(input("Skriv in antal minuter: "))
-(timdel, minutdel) = omvandlaTillTimmarOchMinuter(minuter)
+(timdel, minutdel) = omvandla_till_timmar_och_minuter(minuter)
 print(f"Det blir {timdel} timmar och {minutdel} minuter")
 ```
 
@@ -410,9 +410,9 @@ I stället för att testa programmet för hand, genom att köra det om och om ig
 Ett enkelt sätt att göra detta är att lägga till `assert`-satser. Engelska *assert* betyder *hävda*. När man t.ex. skriver
 
 ```python
-assert omvandlaTillTimmarOchMinuter(70) == (1, 10)
+assert omvandla_till_timmar_och_minuter(70) == (1, 10)
 ```
-så kan vi läsa det som att *jag hävdar att* `omvandlaTillTimmarOchMinuter(70)` *är lika med* `(1, 10)` (alltså 1 timme och 10 minuter).
+så kan vi läsa det som att *jag hävdar att* `omvandla_till_timmar_och_minuter(70)` *är lika med* `(1, 10)` (alltså 1 timme och 10 minuter).
 
 
 När Python kör en assert-sats så blir det exekveringsfel om det man hävdar inte stämmer.
@@ -431,13 +431,13 @@ Refaktorisering är en naturlig del av all programmering. När man löst ett pro
 När man lärt sig lite mer Python-konstruktioner kan man t.ex. upptäcka att programmet ovan kan formuleras enklare så här:
 
 ```python
-def omvandlaTillTimmarOchMinuter(minuter):
+def omvandla_till_timmar_och_minuter(minuter):
   timdel = minuter//60
   minutdel = minuter%60
   return (timdel, minutdel)
 
 minuter = int(input("Skriv in antal minuter: "))
-(timdel, minutdel) = omvandlaTillTimmarOchMinuter(minuter)
+(timdel, minutdel) = omvandla_till_timmar_och_minuter(minuter)
 print(f"Det blir {timdel} timmar och {minutdel} minuter")
 ```
 

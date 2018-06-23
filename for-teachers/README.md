@@ -15,6 +15,8 @@ permalink: /for-teachers/
 
 <!--Här kommer vi att samla exempel på lektioner...-->
 
-Vi vill gärna ha feedback på övningarna, både om de gick bra och om du har förslag på förbättringar eller nya övningar! [Fyll i feedback här!](https://docs.google.com/forms/d/e/1FAIpQLSdsyYYZXVpJnUU5qYpvgyrZxhG8eee-s3oD7mnfXoxd447WSw/viewform)
+* **Ge feedback.** Gick övningarna bra? Har du förslag på förbättringar eller nya övningar? [Ge feedback här!](https://docs.google.com/forms/d/e/1FAIpQLSdsyYYZXVpJnUU5qYpvgyrZxhG8eee-s3oD7mnfXoxd447WSw/viewform)
 
-Under vt 2018 körde vi flera av övningarna på en serie workshops för mattelärare, främst på gymnasiet. Läs [här](vt2018-teacher-workshops.md) om vad de tyckte.
+* **Vad tyckte andra lärare?** Under vt 2018 körde vi flera av övningarna på en serie workshops för mattelärare, främst på gymnasiet. [Läs här vad de tyckte](vt2018-teacher-workshops.md).
+
+* **Övningsförslag.** Mattelärarna på vt2018-workshoparna skapade förslag på lektioner och övningar. [Läs förslagen här](https://docs.google.com/document/d/1Egre1BUaUCugxstR1sCHbXw_jMpPJT8iCnRNC4iAhi0/edit?usp=sharing). 

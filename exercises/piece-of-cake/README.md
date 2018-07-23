@@ -2,7 +2,7 @@
 
 Denna uppgift går ut på att illustrera heltalsbråk som delar av tårtor.
 
-Innan du gör uppgiften bör du ha lite koll på "turtle graphics", t.ex. genom att göra uppgiften [Turtle](exercises/turtle).
+Innan du gör uppgiften bör du ha lite koll på "turtle graphics", t.ex. genom att göra uppgiften [Turtle](../turtle).
 
 {% case page.proglang %}
 {% when "python" %}
@@ -503,4 +503,4 @@ Hur skulle du kunna förbättra och utöka programmet? Kanske:
 * rita cirkulära tårtor i stället för rektangulära
 * ...
 
-Du kan också gå vidare med uppdraget [Bråkspel](exercises/fractions) som också handlar om bråk, och där du får göra ett spel.
+Du kan också gå vidare med uppdraget [Bråkspel](../fractions) som också handlar om bråk, och där du får göra ett spel.

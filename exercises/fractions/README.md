@@ -14,7 +14,7 @@ tags:
 
 I denna uppgift programmerar vi ett spel där datorn kan hjälpa oss att förenkla och summera heltalsbråk, och kontrollera att vi räknar rätt.
 
-Innan du gör uppgiften kan det vara bra att ha gjort uppgiften [Piece of cake](../piece-of-cake/README.md) som också handlar om bråktal.
+Innan du gör uppgiften kan det vara bra att ha gjort uppgiften [Piece of cake](exercises/piece-of-cake/python) som också handlar om bråktal.
 
 A. Förenkla bråk
 ----------------

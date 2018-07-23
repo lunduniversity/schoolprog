@@ -19,7 +19,9 @@ x = "hej" # variabeln x får ett nytt värde: texten "hej"
 print(x)  # texten "hej" skrivs ut i terminalfönstret
 ```
 
-## Typer
+## Typer och värden
+
+### Typer
 Varje värde har en *typ*, t.ex. sträng (string), heltal (integer), decimaltal (float)
 eller logiskt värde (boolean).
 
@@ -36,7 +38,13 @@ a = 1<2      # resultatet av mindre-än-operationen är True
 Notera att `int("hej")` kommer att krascha programmet.
 `int` och `float`-funktionerna förväntar sig strängar som kan tolkas som tal.
 
-## Aritmetiska uttryck
+Ta reda på typen med funktionen `type`:
+```python
+x = ...
+print(type(x))
+```
+
+### Aritmetiska uttryck
 
 ```python
 x0 = 1 + 1   # addition:        x0 == 2
@@ -47,6 +55,10 @@ x4 = 13 // 5 # heltalsdivision: x4 == 2 (största heltalet <= 13/5)
 x5 = 13 % 5  # rest:            x5 == 3 (13 - (13//5))
 x6 = 2 ** 3  # upphöjt till:    x6 == 8 (2^3).
 ```
+
+
+
+### Math-paketet
 Många matematiska funktioner, som `sin` och `sqrt` (square root, d.v.s. roten ur)
 finns i `math`-paketet.
 ```python
@@ -55,7 +67,14 @@ import math
 print(math.sqrt(4)) # skriver ut 2
 ```
 
-## Logiska uttryck
+### Random-paketet
+```python
+import random
+
+k = random.randint(1,6) # Dra ett slumptal mellan 1 och 6.
+```
+
+### Logiska uttryck
 
 ```python
 x = 1
@@ -78,13 +97,39 @@ print(a and b) # Konjunktion (a och b)
 print(a or b)  # Disjunktion (a eller b)
 ```
 
-## Strängkonkatenering
+### Prioriteter
+Operatorer har olika prioritet som bestämmer hur ett uttryck med flera operatorer tolkas. T.ex. har `**` högre prioritet än `*` och `/`, som i sin tur har högre prioritet än `+` och `-`.
+
+Till exempel tolkas `a + b * c` som `a + (b * c)`, och inte som `(a + b) * c`. Om det var den senare tolkningen du ville ha så måste du skriva parenteserna.
+
+De aritmetiska operatorerna har högre prioritet än jämförelseoperatorerna, som i sin tur har högre prioritet än de Booleska operatorerna. Bland de Booleska operatorerna har `not` högst prioritet, sedan `and`, sedan `or`.
+
+Till exempel tolkas `not a and b or c` som `((not a) and b) or c`.
+
+Är du tveksam om vilka prioriteter operatorerna har, så kan du alltid skriva ut parenteserna.
+
+
+### Strängkonkatenering
 
 Lägg ihop strängar till en längre sträng.
 ```python
 a = "hej"
 b = "dig"
 print(a + " på " + b) # Skriver ut "hej på dig"
+```
+
+### Stränginterpolering
+Sätt ihop en sträng som innehåller tal. Sätt ett litet `f` framför strängen så kan man spränga in tal i strängen genom att omgärda talen med `{}` parenteser.
+```python
+a = 18
+b = 13
+print(f"Klockan är {a}:{b}.")
+```
+Samma resultat kan åstadkommas med typomvandling och konkatenering, men då blir koden lite krångligare:
+```python
+a = 18
+b = 13
+print("Klockan är " + str(a) + ":" + str(b) + ".")
 ```
 
 ## Inläsning och utskrift
@@ -103,7 +148,9 @@ ar = int(input("Hur gammal är du? "))
 print("Då är du " + str(ar+1) + "om ett år!")
 ```
 
-## Villkorssatser (if-sats, alternativ)
+## Sammansatta konstruktioner
+
+### Villkorssatser (if-sats, alternativ)
 
 Gör olika saker beroende på logiska värdet hos ett uttryck:
 
@@ -134,9 +181,9 @@ else:
 ```
 
 
-## Repetition (iteration, loop)
+### Repetition (iteration, loop)
 
-### For-loop
+#### For-loop
 
 Repetera ett bestämt antal gånger.
 
@@ -161,7 +208,7 @@ for i in range(10):
         print(i)
 ```
 
-### While-loop
+#### While-loop
 
 Repetera så länge ett villkor är True:
 ```python
@@ -174,7 +221,7 @@ while forsok != losenord:
 print("Bravo! Du behövde " + str(raknare) + " försök för att gissa rätt.")
 ```
 
-## Funktioner (abstraktion)
+### Funktioner (abstraktion)
 
 Med en funktion kan du återanvända en beräkning flera gånger. Genom att ge funktionen parametrar kan du anpassa vad funktionen gör eller räknar ut.
 
@@ -207,31 +254,52 @@ a = triangel_area(5, 8)
 print("Arean är: " + str(a))
 ```
 
-## Indentering
+### Indentering
+
 Python använder *indentering* (blanktecken i början på raden) för att tolka strukturen hos sammansatta konstruktioner som if, for, och funktionsdefinitioner.
 
 Det är viktigt att delarna i en struktur har *samma* indentering. Oftast används 4 blanktecken. Men ibland 2.
 
 ```python
-# Fel indentering inuti if-satsen
+# Fel: de inre satserna har olika indentering.
 if x > 1:
   print(x)
     print(x + 2)
 ```
 ```python
-# Korrekt indentering
+# Rätt: de inre satserna har samma indentering.
 if x > 1:
   print(x)
   print(x + 2)
 ```
 
-## Listor
-
-Bygg en enkel lista:
+När sammansatta konstruktioner nästlas inne i varandra ökar man antalet blanka för varje nivå. Exempel:
 
 ```python
-lista = [1, 2, 3]
-print(lista)
+for x in range(5): # första FOR
+  print("x = " + str(x))
+  if x%2 == 1:       # IF nästlad inuti första FOR
+    print("x är udda")
+    for y in range(7): # ny FOR nästlad inuti IF
+      print("y = " + str(y))
+      if y%2 == 1:       # ny IF nästlad inuti andra FOR
+        print("Både x och y är udda")
+  else:              # hör till första IF
+    print("x är jämn")
+print("Beräkningen är färdig.")
+```
+
+## Sammansatta datatyper
+### Lista
+
+Listor är ordnade. Elementen i listan är oftast av *samma* typ. Samma element kan finnas på flera ställen i listan.
+
+```python
+frukter = ["äpple", "päron", "apelsin", "äpple"]
+print(frukter)        # Skriv ut hela listan
+print(frukter[0])     # Skriv ut det första elementet
+frukter[2] = "citron" # Ändra tredje elementet
+print(frukter)        # Skriv ut listan igen
 ```
 
 Gör något med varje tal i listan:
@@ -242,22 +310,73 @@ for nummer in lista:
     print(nummer * 2)
 ```
 
-Bygg en lista med de första `n` heltalen och summera dem.
+### Tupel
+
+Tupler är ordnade och kan *inte* ändras (de är immutable). De används ofta för att gruppera data som kan vara av *olika* typer. En vanlig användning är att ha en lista av tupler.
 
 ```python
-n = 100
-lista = list(range(n))
-print(sum(lista))
+person_1 = ("Stina", 14, "Lund")
+person_2 = ("Kalle", 13, "Eslöv")
+person_3 = ("Alex", 15, "Åkarp")
+personer = [person_1, person_2, person_3]
+
+for p in personer:
+  print(p[0] + " är " + str(p[1]) + " år och bor i " + p[2])
 ```
 
-## Debugging
+### Mängd (set)
 
-Försäkra dig om att ett villkor är sant. Om det inte är sant kommer programmet att krascha.
+Mängder är *oordnade*. Det spelar inte någon roll i vilken ordning vi lägger till saker i en mängd. Om vi försöker lägga till ett värde som redan finns, så ändras inte mängden.
+
+```python
+set_1 = {"a", "b"}
+set_2 = {"b", "a"}
+assert set_1 == set_2
+set_2.add("b")
+assert set_1 == set_2
+```
+
+Vi kan iterera över elementen i en mängd:
+```python
+for e in set_1:
+  print(e)
+```
+
+### Nyckel-värdetabell (mappning, dictionary, lexikon)
+
+En nyckel-värdetabell är en mappning från en nyckel till ett värde. Med hjälp av en nyckel kan vi slå upp värdet för nyckeln.
+
+Exempel: volleybollföreningens inventarieförteckning:
+
+```python
+inventarier = {"boll":17, "vattenflaska":10, "matchtröja":18}
+
+inventarier["boll"] = 18  # Ändra värdet för nyckeln "boll"
+inventarier["pokal"] = 28 # Sätt värde för nyckeln "pokal"
+
+# Slå upp ett värde
+pokaler = inventarier["pokal"]
+print("Vi har " + str(pokaler) + " pokaler")
+```
+
+
+## Assert-satser
+
+En assert-sats används för att kontrollera om ett villkor är sant. Om det inte är sant kommer programmet att krascha.
+
 
 ```python
 assert True        # Fungerar fint
 assert 3 * 2 == 6  # Fungerar fint
 assert 1 + 1 == 3  # Kommer att krascha programmet
+```
+
+Exempel på användning: Kontrollera att en funktion bara anropas med positiva tal:
+
+```python
+def kelvin_till_celsius(k):
+  assert k >= 0
+  return k - 273.15
 ```
 
 ## Konventioner

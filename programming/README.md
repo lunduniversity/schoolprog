@@ -9,6 +9,7 @@ permalink: /programming/
 * [Snabbreferens för Python 3](python/CHEATSHEET.md)
 * [Snabbreferens för Python-turtle](turtle-cheatsheet/python.md)
 * [Snabbreferens för Scala-turtle](turtle-cheatsheet/scala.md)
+* [Hitta rätt på tangentbordet](programming/general/keyboard)
 
 
 ### Rekommenderade online-miljöer

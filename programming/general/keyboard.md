@@ -22,7 +22,7 @@ För att få fram tecknen behöver du känna till
 * SKIFT-tangenten - den man får stora bokstäver med
 * ALT-tangenten - sitter nere till vänster. Kallas också *option*.
 
-<img src="fig-mac-keyboard.jpg" height="200">
+<img src="fig-mac-keyboard.jpg" height="240">
 
 Genom att hålla nere en eller båda av dessa tangenter innan du trycker på en annan tangent kan du få fram ovanliga tecken.
 

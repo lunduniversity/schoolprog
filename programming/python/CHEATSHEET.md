@@ -5,9 +5,12 @@ toc: true
 permalink: /cheatsheet/python/
 ---
 
+Denna snabbreferens innehåller vanliga konstruktioner för Python 3.6. För mer information, se t.ex. [The Python Tutorial](https://docs.python.org/3.6/tutorial/index.html).
+
 ## Kommentarer
 ```python
 # Detta är en kommentar.
+x = 1 # Kommentaren fortsätter till radens slut
 ```
 
 ## Variabler, tilldelning och utskrift
@@ -38,7 +41,7 @@ a = 1<2      # resultatet av mindre-än-operationen är True
 Notera att `int("hej")` kommer att krascha programmet.
 `int` och `float`-funktionerna förväntar sig strängar som kan tolkas som tal.
 
-Ta reda på typen med funktionen `type`:
+Ta reda på typen för ett värde med funktionen `type`:
 ```python
 x = ...
 print(type(x))
@@ -58,21 +61,6 @@ x6 = 2 ** 3  # upphöjt till:    x6 == 8 (2^3).
 
 
 
-### Math-paketet
-Många matematiska funktioner, som `sin` och `sqrt` (square root, d.v.s. roten ur)
-finns i `math`-paketet.
-```python
-import math
-
-print(math.sqrt(4)) # skriver ut 2
-```
-
-### Random-paketet
-```python
-import random
-
-k = random.randint(1,6) # Dra ett slumptal mellan 1 och 6.
-```
 
 ### Logiska uttryck
 
@@ -132,6 +120,35 @@ b = 13
 print("Klockan är " + str(a) + ":" + str(b) + ".")
 ```
 
+## Standardbiblioteket
+
+[Standardbiblioteket](https://docs.python.org/3.6/library/index.html) i Python innehåller många användbara paket med funktionalitet.
+
+### Math-paketet
+Många matematiska funktioner, som `sin` och `sqrt` (square root, d.v.s. roten ur)
+finns i `math`-paketet.
+```python
+import math
+
+print(math.sqrt(4)) # skriver ut 2
+```
+
+### Random-paketet
+```python
+import random
+
+k = random.randint(1,6) # Dra ett slumptal mellan 1 och 6.
+```
+
+Om det är bara en funktion man vill ha i ett bibliotek kan den importeras så att man kommer åt den direkt:
+
+```python
+from random import randint
+
+k = randint(1,6) # Dra ett slumptal mellan 1 och 6.
+```
+
+
 ## Inläsning och utskrift
 
 Läs in en sträng och använd i utskrift:
@@ -145,7 +162,7 @@ Läs in ett heltal och använd i utskrift:
 
 ```python
 ar = int(input("Hur gammal är du? "))
-print("Då är du " + str(ar+1) + "om ett år!")
+print("Då är du " + str(ar+1) + " om ett år!")
 ```
 
 ## Sammansatta konstruktioner
@@ -165,7 +182,7 @@ if a < 10:
 if a < 10:
     print("a är mindre än 10")
 else:
-    print("a är lika med eller större än 10")
+    print("a är större än eller lika med 10")
 ```
 
 ```python
@@ -187,14 +204,14 @@ else:
 
 Repetera ett bestämt antal gånger.
 
-Skriv ut orden i listan med stora bokstäver:
+Omvandla orden i listan till stora bokstäver och skriv ut dem.
 
 ```python
 for ord in ["hej", "på", "dig"]:
   print(ord.upper())
 ```
 
-Skriv ut de 4 första talen från och med noll,
+Skriv ut de 4 första naturliga talen,
 dvs 0, 1, 2, 3:
 ```python
 for i in range(4):
@@ -292,55 +309,102 @@ print("Beräkningen är färdig.")
 ## Sammansatta datatyper
 ### Lista
 
-Listor är ordnade. Elementen i listan är oftast av *samma* typ. Samma element kan finnas på flera ställen i listan.
+Listor är ordnade. Elementen i listan är oftast av *samma* typ. Samma värde kan finnas på flera ställen i listan.
+
+Exempel: Löpande band med frukter
 
 ```python
-frukter = ["äpple", "päron", "apelsin", "äpple"]
-print(frukter)        # Skriv ut hela listan
-print(frukter[0])     # Skriv ut det första elementet
-frukter[2] = "citron" # Ändra tredje elementet
-print(frukter)        # Skriv ut listan igen
+lopande_band = ["äpple", "päron", "apelsin", "äpple"]
+print(lopande_band)        # Skriv ut hela listan
+print(lopande_band[0])     # Skriv ut det första elementet
+lopande_band[2] = "citron" # Ändra tredje elementet
+lopande_band.append("persika") # Lägg till ett element sist
+print(lopande_band)        # Skriv ut listan igen
 ```
 
-Gör något med varje tal i listan:
+Gör något med varje element i listan:
 
 ```python
-lista = [1, 2, 3]
-for nummer in lista:
-    print(nummer * 2)
+for frukt in lopande_band:
+    print("Nu kom det en frukt av typ: " + frukt)
+```
+
+#### Listbyggare (list comprehension, listomfattning)
+
+Skapa en lista som omfattar vissa värden.
+
+Exempel: Givet det löpande bandet ovan, skapa en lista med fruktnamn omvandlat till stora bokstäver, men bara för de frukter som börjar på `p`. T.ex. från listan ["äpple", "päron", "citron", "äpple", "persika"] vill vi få en lista ["PÄRON", "PERSIKA"].
+
+```python
+stora_p = [p.upper() for p in lopande_band if p[0]=="p"]
+```
+Ovanstående är ekvivalent med:
+```python
+stora_p = [] # Tom lista
+for p in lopande_band:
+  if p[0]=="p":
+    stora_p.append(p.upper())
 ```
 
 ### Tupel
 
-Tupler är ordnade och kan *inte* ändras (de är immutable). De används ofta för att gruppera data som kan vara av *olika* typer. En vanlig användning är att ha en lista av tupler.
+Tupler är ordnade och kan *inte* ändras (de är immutable). De används ofta för att gruppera data som hör ihop och som kan vara av *olika* typer.
 
 ```python
-person_1 = ("Stina", 14, "Lund")
-person_2 = ("Kalle", 13, "Eslöv")
-person_3 = ("Alex", 15, "Åkarp")
-personer = [person_1, person_2, person_3]
-
-for p in personer:
-  print(p[0] + " är " + str(p[1]) + " år och bor i " + p[2])
+person = ("Stina", 14, "Lund") # Person med namn, ålder och ort
+punkt = (3, 5) # Punkt med x- och y-koordinat
 ```
+Man kan plocka ut elementen i en tupel med indexering:
+
+```python
+namn =  person[0] # Plocka ut första elementet
+alder = person[1] # Plocka ut andra elementet
+ort =   person[2] # Plocka ut tredje elementet
+```
+Men det är ofta trevligare att plocka ut elementen genom att "packa upp" tupeln:
+```python
+namn, alder, ort = person
+x, y = punkt
+```
+
+En vanlig användning är när man vill att en funktion skall returnera mer än ett resultat:
+
+```python
+def spegla_i_x_axeln(p): # spegla punkt i x-axeln
+  x, y = p
+  return -x, y
+
+sx, sy = spegla_i_x_axeln(punkt)
+```
+
 
 ### Mängd (set)
 
 Mängder är *oordnade*. Det spelar inte någon roll i vilken ordning vi lägger till saker i en mängd. Om vi försöker lägga till ett värde som redan finns, så ändras inte mängden.
 
 ```python
-set_1 = {"a", "b"}
-set_2 = {"b", "a"}
-assert set_1 == set_2
-set_2.add("b")
-assert set_1 == set_2
+frukter_1 = {"äpple", "päron", "persika"}
+frukter_2 = {"päron", "äpple", "persika"}
+assert frukter_1 == frukter_2 # Mängderna är lika
+frukter_2.add("äpple")
+assert frukter_1 == frukter_2 # Mängderna är fortfarande lika
 ```
 
 Vi kan iterera över elementen i en mängd:
 ```python
-for e in set_1:
-  print(e)
+for f in frukter_1:
+  print(f)
 ```
+
+#### Mängdbyggare (set comprehension)
+
+Vi kan bygga en mängd på liknande sätt som vi bygger en lista.
+
+Exempel: Skapa mängd av fruktnamn som har högst sex tecken.
+```python
+korta_fruktnamn = [f for f in frukter_1 if len(f)<=6]
+```
+
 
 ### Nyckel-värdetabell (mappning, dictionary, lexikon)
 
@@ -445,9 +509,9 @@ def cirkel_area(r):
   return area
 ```
 
-### `_` i långa funktionsnamn
+### långa`_`funktionsnamn
 
-Vid långa namn på funktioner och variabler, använd understrykningstecken, `_`, mellan orden. (I flera andra språk används "camel case".)
+Vid långa namn på funktioner och variabler, använd understrykningstecken, `_`, mellan orden. (I flera andra språk är det i stället vanligt med "camel case".)
 
 ```python
 # "camel case" är inte så vanligt på funktioner i Python:

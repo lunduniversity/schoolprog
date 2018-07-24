@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Python-turtle snabbreferens
+title: Snabbreferens för Python-turtle
 permalink: turtle-cheatsheet/python
 toc: true
 ---
@@ -151,36 +151,9 @@ from random import randint
 t = randint(1,9)       # Ger ett slumptal mellan 1 och 9
 ```
 
-# Tangentbordet
-
-Har du svårt att hitta vissa tecken på tangentbordet? För ett svenskt tangentbord behöver du känna till:
-
-* SKIFT-tangenten - den man får stora bokstäver med
-* På Mac: ALT-tangenten - sitter någonstans nere till vänster.
-* På Windows: ALT-GR-tangenten - sitter någonstans nere till höger. Ibland är den bara märkt med ALT.
-
-Genom att hålla nere en eller flera av dessa tangenter innan du trycker på en annan tangent kan du få fram ovanliga tecken.
-
-* `#` kallas "brädgård" ("hash" på engelska). Används för att inleda en kommentar i Python.
-* `*` används för multiplikation i kod.
-* `[]` kallas "hakparenteser" ("square brackets" på engelska). Används för listor i Python.
-* `{ }` kallas "krullparenteser" eller "måsvingar" ("curly brackets", "braces", eller "curly braces" på engelska). Används för mängder i Python.
-
-Prova att hålla nere SKIFT-tangenten för att få fram `#` och `*`.
-
-För att få fram hakparenteser:
-* På Mac: håll nere ALT och tryck på `(` för vänsterhake och `)` för högerhake.
-* På Windows: håll nere ALT-GR och tryck på `8` för vänsterhake och `9` för högerhake.
-
-För att få fram krullparenteserna:
-* På Mac: håll nere *både* SKIFT och ALT och tryck på `(` för vänsterkrulle och `)` för högerkrulle.
-* På Windows: håll nere ALT-GR och tryck på `7` för vänsterkrulle och `0` för högerkrulle.
-
-Fungerar inte detta? Prova dig fram, eller fråga eller googla.
-
 
 
 # Mer information
 
-* [Python cheatsheet](../../programming/python/CHEATSHEET.md) (Mer tips om hur du skriver python-kod.)
+* [Snabbreferens för Python](../../programming/python/CHEATSHEET.md) (Mer tips om hur du skriver python-kod.)
 * [Dokumentation för Python 2.7's turtle-bibliotek](https://docs.python.org/2/library/turtle.html)

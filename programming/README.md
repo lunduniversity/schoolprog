@@ -5,25 +5,26 @@ toc: true
 permalink: /programming/
 ---
 
+### Snabbreferenser
+* [Snabbreferens för Python 3](python/CHEATSHEET.md)
+* [Snabbreferens för Python-turtle](turtle-cheatsheet/python.md)
+* [Snabbreferens för Scala-turtle](turtle-cheatsheet/scala.md)
+
 
 ### Rekommenderade online-miljöer
-* Python: [python-turtle](https://repl.it/languages/python_turtle)
-* Python: [Python 3](https://repl.it/languages/python3)
-* Scala: [kojo-js](http://kojojs.kogics.net/)
+* [Python 3](https://repl.it/languages/python3)
+* [Python-turtle](https://repl.it/languages/python_turtle)
+* [Scala-turtle](http://kojojs.kogics.net/)
 
-### Snabbreferenser
-* Python: [Vanliga kommandon för turtle graphics](turtle-cheatsheet/python.md)
-* Python: [Vanliga programkonstruktioner](python/CHEATSHEET.md)
-* Scala: [Vanliga kommandon för turtle graphics](turtle-cheatsheet/scala.md)
 
 <!--
 * Komma igång med python-turtle och Python 3 i repl.it (TODO)
-* Hitta tecken på tangentbordet (TODO)
-* Felsökning (TODO)
-* Problemlösning (TODO)
 -->
 
-### Länkar
-* Python: [Turtle Graphics for Tk](https://docs.python.org/2/library/turtle.html) (dokumentation för turtle-biblioteket)
-* Python: [The Python Tutorial](https://docs.python.org/3/tutorial/)
-* Scala: [Kojo Programming Quick Ref](https://bitbucket.org/lalit_pant/kojo/downloads/KojoQuickref-301014.pdf) by Lalit Pant
+### Länkar för Python
+* [The Python Tutorial](https://docs.python.org/3.6/tutorial/index.html) (för Python 3.6)
+* [The Python Standard Libraries](https://docs.python.org/3.6/library/index.html) (för Python 3.6)
+* [Turtle Graphics for Tk](https://docs.python.org/2/library/turtle.html) (dokumentation för turtle-biblioteket i Python 2.7)
+
+### Länkar för Scala
+* [Kojo Programming Quick Ref](https://bitbucket.org/lalit_pant/kojo/downloads/KojoQuickref-301014.pdf) by Lalit Pant

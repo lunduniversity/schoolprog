@@ -1,5 +1,5 @@
 ---
-title: Snabbreferens för Python
+title: Snabbreferens för Python 3
 layout: page
 toc: true
 permalink: /cheatsheet/python/

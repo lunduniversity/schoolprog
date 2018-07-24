@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Kojo/Scala Turtle snabbreferens
+title: Snabbreferens för Scala-turtle
 permalink: turtle-cheatsheet/scala
 toc: true
 ---
@@ -179,29 +179,6 @@ else {
   println("Det var större än 10")
 }
 ```
-
-# Tangentbordet
-
-Har du svårt att hitta vissa tecken på tangentbordet? För ett svenskt tangentbord behöver du känna till:
-
-* SKIFT-tangenten - den man får stora bokstäver med
-* ALT-tangenten - sitter någonstans nere till vänster.
-* ALT-GR-tangenten - finns på Windows-datorer. Sitter någonstans nere till höger. Ibland är den bara märkt med ALT.
-
-Genom att hålla nere en eller flera av dessa tangenter innan du trycker på en annan tangent kan du få fram ovanliga tecken.
-
-* `/` kallas "snedstreck" ("slash" på engelska). Två snedstreck används för att inleda en kommentar i Scala.
-* `*` används för multiplikation i kod.
-* `{ }` kallas "krullparenteser" eller "måsvingar" ("curly brackets", "braces", eller "curly braces" på engelska).
-
-Prova att hålla nere SKIFT-tangenten för att t.ex. skriva `/` eller `*`.
-
-För att få fram krullparenteserna:
-* På Mac: håll nere *både* SKIFT och ALT och tryck på `(` för vänsterkrulle och `)` för högerkrulle.
-* På Windows: håll nere ALT-GR och tryck på `7` för vänsterkrulle och `0` för högerkrulle.
-
-Fungerar inte detta? Prova dig fram, fråga, eller googla.
-
 
 # Mer information
 

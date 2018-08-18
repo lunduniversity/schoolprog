@@ -235,12 +235,12 @@ Det kan vara praktiskt att en ritfunktion är både *rotations-* och *positionsn
 Detta kan du åstadkomma genom att spara positionen och riktningen innan du ritar, och återställa dem efteråt:
 
 ```python
-x = t.xcor()    // spara x-koordinaten i variabeln x
-y = t.ycor()    // spara y-koordinaten i variabeln y
-v = t.heading() // spara vinkeln i variabeln v
+x = t.xcor()     # spara x-koordinaten i variabeln x
+y = t.ycor()     # spara y-koordinaten i variabeln y
+v = t.heading()  # spara vinkeln i variabeln v
 # rita ...
-jumpTo(x,y)     // hoppa tillbaka
-t.setheading(v) // återställ riktningen
+jumpTo(x,y)      # hoppa tillbaka
+t.setheading(v)  # återställ riktningen
 ```
 
 **Uppdrag:** Ändra din funktion `figur` så den blir rotations- och positionsneutral.

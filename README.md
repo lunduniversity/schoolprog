@@ -41,6 +41,10 @@ Then start the development server with:
 make serve
 ```
 
+Then browse to the local pages:
+
+`http://localhost:4000/schoolprog/`
+
 
 ## Problems
 

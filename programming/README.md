@@ -23,9 +23,13 @@ permalink: /programming/
 -->
 
 ### Länkar för Python
+* [Lärobok i Python](https://runestone.academy/runestone/static/thinkcspy/index.html) (Interaktiv utgåva av den välkända boken "Think Python. How to Think like a Computer Scientist")
 * [The Python Tutorial](https://docs.python.org/3.6/tutorial/index.html) (för Python 3.6)
 * [The Python Standard Libraries](https://docs.python.org/3.6/library/index.html) (för Python 3.6)
 * [Turtle Graphics for Tk](https://docs.python.org/2/library/turtle.html) (dokumentation för turtle-biblioteket i Python 2.7)
 
 ### Länkar för Scala
-* [Kojo Programming Quick Ref](https://bitbucket.org/lalit_pant/kojo/downloads/KojoQuickref-301014.pdf) by Lalit Pant
+* [Kojo Programming Quick Ref](https://bitbucket.org/lalit_pant/kojo/downloads/KojoQuickref-301014.pdf) av Lalit Pant
+
+### Mer från Lunds universitet
+* [Lär dig programmera](http://www.lth.se/programmera/)

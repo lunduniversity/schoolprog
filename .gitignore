@@ -9,3 +9,10 @@
 _site
 .sass-cache
 .jekyll-metadata
+
+# Ruby
+.bundle
+vendor
+
+# Mac
+.DS_Store

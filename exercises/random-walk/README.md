@@ -116,7 +116,7 @@ t.speed(10)
 
 from random import randint
 
-def randomwalk(steps, angle, steplength)
+def randomwalk(steps, angle, steplength):
   for c in range(steps):
     r = randint(1,2)
     # lägg till en if-sats här för att svänga och byta färg

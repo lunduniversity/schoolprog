@@ -1,5 +1,6 @@
 import gzip
 import matplotlib.pyplot as plt
+plt.ion()
 
 
 def get_station_data():
@@ -16,7 +17,7 @@ def get_station_data():
 
 
 def plot(x=None, y=None, fname='plot.png'):
-    if x: 
+    if x:
         plt.plot(x, y)
     else:
         plt.plot(y)

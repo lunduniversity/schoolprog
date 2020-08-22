@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+plt.ion()
 
 # plotta funktionen f för a <= x <= b
 def fplot(f, a, b, lbl):

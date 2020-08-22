@@ -162,6 +162,7 @@ Till vår hjälp kan vi använda följande funktion `intplot` som plottar y-vär
 
 ```python
 import matplotlib.pyplot as plt
+plt.ion()
 
 def intplot(f, m, lbl):
   xs = [i+1 for i in range(m)]

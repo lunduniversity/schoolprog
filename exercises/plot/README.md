@@ -21,13 +21,14 @@ För att plotta en funktion med matplotlib skickar man in en lista med x-värden
 
 ```python
 import matplotlib.pyplot as plt
+plt.ion()
 
 xs = [-3, -2, -1, 0, 1, 2, 3] # The x values
 ys = [-6, -4, -2, 0, 2, 4, 6] # The y values
 plt.plot(xs, ys)
 plt.savefig('plot.png')
 ```
-Funktionen `plot` sparar plotten på ett internt format inuti biblioteket. Funktionen `savefig` räknar ut en representation av plotten i `png`-format, och sparar i en fil.
+Funktionen `plot` sparar plotten på ett internt format inuti biblioteket. Funktionen `savefig` räknar ut en representation av plotten i `png`-format, och sparar i en fil. Anropet `plt.ion()` sätter på "interactive" mode så att plotten även syns i ett fönster.
 
 **Uppdrag:** Läs programmet och försök förstå vad som händer.  Provkör programmet. Bland filerna till vänster ska det nu, förutom `main.py`, även finnas en fil `plot.png` med en funktionsgraf. Klicka på `plot.png`. Du ska kunna se den plottade funktionen.
 
@@ -183,6 +184,7 @@ Lösning
 <p>
 <pre>
 import matplotlib.pyplot as plt
+plt.ion()
 
 def fplot(f, a, b, l):
   N = 50

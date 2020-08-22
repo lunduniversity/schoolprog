@@ -9,6 +9,7 @@ def debt_after_m_months(loan, month_rate, month_fee, m):
   return debt
 
 import matplotlib.pyplot as plt
+plt.ion()
 
 def intplot(f, m, lbl):
   xs = [i+1 for i in range(m)]

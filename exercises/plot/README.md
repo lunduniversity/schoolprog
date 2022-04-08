@@ -13,7 +13,7 @@ tags:
 ---
 I denna uppgift kommer vi att experimentera med funktioner genom att plotta dem. Vi kommer att använda ett av Pythons bibliotek, `matplotlib.pyplot` som kan användas för att plotta mätvärden.
 
-Koden i denna uppgift är provkörd på [http://repl.it/languages/python3](http://repl.it/languages/python3) (Python 3).
+Koden i denna uppgift är provkörd på [https://repl.it/languages/python3](http://repl.it/languages/python3) (Python 3).
 
 ### 1. Plotta en enkel funktion
 
@@ -30,7 +30,7 @@ plt.savefig('plot.png')
 ```
 Funktionen `plot` sparar plotten på ett internt format inuti biblioteket. Funktionen `savefig` räknar ut en representation av plotten i `png`-format, och sparar i en fil. Anropet `plt.ion()` sätter på "interactive" mode så att plotten även syns i ett fönster.
 
-**Uppdrag:** Läs programmet och försök förstå vad som händer.  Provkör programmet. Bland filerna till vänster ska det nu, förutom `main.py`, även finnas en fil `plot.png` med en funktionsgraf. Klicka på `plot.png`. Du ska kunna se den plottade funktionen.
+**Uppdrag:** Läs programmet och försök förstå vad som händer.  Provkör programmet. (Obs! Det kan ta lite tid första gången programmet körs eftersom replit behöver läsa in matplotlib biblioteket.) Bland filerna till vänster ska det nu, förutom `main.py`, även finnas en fil `plot.png` med en funktionsgraf. Klicka på `plot.png`. Du ska kunna se den plottade funktionen.
 
 *Kommentar:* En bugg i repl.it gör att `plot.png` kanske inte dyker upp. Om detta händer, lägg till en dummy-fil genom att trycka på den lilla "Add file"-ikonen ovanför fil-listan (<img src="addfile.png" height="30">) och skriva in valfritt namn. Detta gör att man kommer runt buggen. Kör sedan programmet igen. Nu bör `plot.png` dyka upp i fil-listan. Dummy-filen kan du sedan ta bort om du vill.
 

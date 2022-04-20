@@ -28,7 +28,7 @@ google_analytics: UA-113639419-1
 markdown: kramdown
 kramdown:
     input: GFM
-theme: minima
+theme: jekyll-theme-architect
 sass:
     sass_dir: _sass
 plugins:

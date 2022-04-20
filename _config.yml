@@ -14,32 +14,31 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: LU Skolprogrammering
-author: ''
-email:
-description: >- # this means to ignore newlines until "baseurl:"
-  Programmering för lärare och elever, utvecklat på Lunds universitet.
-baseurl: "/schoolprog" # the subpath of your site, e.g. /blog
-url: "https://lunduniversity.github.io/schoolprog/" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username:
-github_username:  lunduniversity
-google_analytics: UA-113639419-1
+#author: ''
+#email:
+description: Programmering för lärare och elever, utvecklat på Lunds universitet.
+#baseurl: "/schoolprog" # the subpath of your site, e.g. /blog
+#url: "https://lunduniversity.github.io/schoolprog/" # the base hostname & protocol for your site, e.g. http://example.com
+#twitter_username:
+#github_username:  lunduniversity
+#google_analytics: UA-113639419-1
 
 # Build settings
-markdown: kramdown
-kramdown:
-    input: GFM
+#markdown: kramdown
+#kramdown:
+#    input: GFM
 theme: jekyll-theme-architect
-sass:
-    sass_dir: _sass
-plugins:
-  - jekyll-feed
-  - jekyll-toc
-  - jekyll-relative-links
-header_pages:
-  - exercises/README.md
-  - programming/README.md
-  - for-teachers/README.md
-  - about.md
+#sass:
+#    sass_dir: _sass
+#plugins:
+#  - jekyll-feed
+#  - jekyll-toc
+#  - jekyll-relative-links
+#header_pages:
+#  - exercises/README.md
+#  - programming/README.md
+#  - for-teachers/README.md
+#  - about.md
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

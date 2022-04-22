@@ -15,11 +15,17 @@ cover_y_offset: 25%
 
 # Sköldpadda
 
-|<img src="https://i.imgur.com/YHHBJaS.png" width="180">|Vill du rita snygga & coola saker med en programmerbar sköldpadda? Då är detta uppdraget för dig!|
-|-----|-----|
+<table>
+  <tr>
+    <td><img src="https://i.imgur.com/YHHBJaS.png" width="180"></td>
+    <td>Vill du rita snygga & coola saker med en programmerbar sköldpadda? Då är detta uppdraget för dig!</td>
+  </tr>
+</table>
+
+
 
 |En bra första-uppgift. Du lär dig...|
-|-----|
+|:-----|
 |Sköldpaddsgrafik|
 |sekvens och for-loop|
 |funktionsdefinitioner och anrop|

@@ -1,0 +1,16 @@
+
+# Site navigation links
+- title: Hem
+  url: /
+
+- title: Uppdrag
+  url: /exercises/README.html
+
+- title: Hjälp
+  url: /programming/README.html
+
+- title: För lärare
+  url: /for-teachers/README.html
+
+- title: Om sidan
+  url: /about.html

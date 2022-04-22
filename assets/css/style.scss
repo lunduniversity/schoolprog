@@ -1,0 +1,143 @@
+---
+---
+/* Import theme default css, all css under this import will override the theme default settings.*/
+@import "{{ site.theme }}";
+
+
+/* Make sure the body is 100% of window to place footer at bottom. */
+html,body {
+  height: 100%;
+}
+
+
+
+/* Change font of headlines */
+#main-content h1{
+  font-family: Helvetica;
+}
+
+/* Remove theme specific backslash before headlines */
+#main-content h1::before{
+  padding-right: 0.3em;
+  margin-left: -0.5em;
+  content: "";
+}
+
+#main-content h2 {
+  font-family: Helvetica;
+}
+
+#main-content h2::before{
+  padding-right: 0.3em;
+  margin-left: -0.5em;
+  content: "";
+}
+
+#main-content h3 {
+  font-family: Helvetica;
+}
+
+#main-content h3::before{
+  padding-right: 0.3em;
+  margin-left: -0.5em;
+  content: "";
+}
+
+#main-content h4 {
+  font-family: Helvetica;
+}
+
+#main-content h5::before{
+  padding-right: 0.3em;
+  margin-left: -0.5em;
+  content: "";
+}
+
+
+/* Styling and placing of the navigation bar */
+.navigation-wrapper {
+  background-color: #33B5FF;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  float: right;
+  z-index: 1000;
+  padding-left: 10%;
+}
+
+
+/* Style the links inside the navigation bar */
+.navigation-wrapper a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navigation-wrapper a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+/*Set height of content to 100% - (footer + navigation height) */
+#content-wrapper {
+  height: calc(100% - 150px);
+  min-height: calc(100% - 150px);
+  margin:auto;
+  width: 100%;
+}
+
+
+/* Add padding at top and bottom to not overlap with navigation and footer */
+.inner-clearfix {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  margin: auto;
+  width: 70%;
+  height: calc(100% - 92px);
+  min-height: calc(100% - 92px);
+}
+
+
+/* Set max heigh of pictures in footer to not escape the footer.*/
+#footer_image{
+  max-height: 20px;
+}
+
+/* Set some margin to the left of the first footer entry */
+.bd-footer-links {
+  margin-left: 10%;
+}
+
+/* Set font-size of footer link text and set margin between each entry */
+.bd-footer-links a{
+  font-size: 18px;
+  margin-right: 4%;
+}
+
+/* Styling and placing of the footer */
+.page__footer {
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  clear: both;
+  position: relative;
+  bottom: 0;
+  height: 50px;
+  color: black;
+  background-color: #F0F0F0;
+
+  footer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5em;
+    max-width: 100%;
+    padding: 0 0em 1.5em;
+  }
+}

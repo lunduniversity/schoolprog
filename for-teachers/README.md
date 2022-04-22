@@ -1,8 +1,5 @@
 ---
-title: För lärare
-layout: page
-toc: true
-permalink: /for-teachers/
+layout: default
 ---
 
 <!--Matematikämnet har mycket att vinna på att använda sig av programmering i undervisningen:

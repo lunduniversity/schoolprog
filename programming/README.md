@@ -1,8 +1,5 @@
 ---
-title: Hjälp
-layout: page
-toc: true
-permalink: /programming/
+layout: default
 ---
 
 ### Snabbreferenser

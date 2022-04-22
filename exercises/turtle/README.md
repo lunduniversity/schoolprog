@@ -1,20 +1,17 @@
 ---
-title: Sköldpadda
-toc: true
-layout: page
-type: exercise
+layout: default
+---
+<!-- - bra första-uppgift
 tags:
- - bra första-uppgift
  - sköldpaddsgrafik
  - sekvens
  - for-loop
  - funktionsdefinitioner och anrop
  - geometri
  - vinklar
-permalink: /exercises/turtle/
 cover_image: https://i.imgur.com/YHHBJaS.png
 cover_y_offset: 25%
----
+ -->
 
 Vill du rita snygga & coola saker med en programmerbar sköldpadda? Då är detta uppdraget för dig!
 

@@ -13,7 +13,17 @@ cover_image: https://i.imgur.com/YHHBJaS.png
 cover_y_offset: 25%
  -->
 
-Vill du rita snygga & coola saker med en programmerbar sköldpadda? Då är detta uppdraget för dig!
+# Sköldpadda
+
+|<img src="https://i.imgur.com/YHHBJaS.png" width="180">|Vill du rita snygga & coola saker med en programmerbar sköldpadda? Då är detta uppdraget för dig!|
+|-----|-----|
+
+|En bra första-uppgift. Du lär dig...|
+|-----|
+|Sköldpaddsgrafik|
+|sekvens och for-loop|
+|funktionsdefinitioner och anrop|
+|geometri och vinklar|
 
 ### 1. Komma igång
 

@@ -15,10 +15,10 @@ cover_y_offset: 25%
 
 # Sköldpadda
 
-<table>
-  <tr>
-    <td style="border: none;"><img src="https://i.imgur.com/YHHBJaS.png" width="180"></td>
-    <td style="border: none;">Vill du rita snygga & coola saker med en programmerbar sköldpadda? <br> Då är detta uppdraget för dig!</td>
+<table style="border:hidden;">
+  <tr style="border:hidden;">
+    <td style="border:hidden;"><img src="https://i.imgur.com/YHHBJaS.png" width="180"></td>
+    <td style="border:hidden;">Vill du rita snygga & coola saker med en programmerbar sköldpadda? <br> Då är detta uppdraget för dig!</td>
   </tr>
 </table>
 

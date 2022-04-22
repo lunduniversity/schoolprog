@@ -23,13 +23,12 @@ cover_y_offset: 25%
 </table>
 
 
+**En bra första-uppgift. Du lär dig...**
 
-|En bra första-uppgift. Du lär dig...|
-|:-----|
-|Sköldpaddsgrafik|
-|sekvens och for-loop|
-|funktionsdefinitioner och anrop|
-|geometri och vinklar|
+* Sköldpaddsgrafik
+* sekvens och for-loop
+* funktionsdefinitioner och anrop
+* geometri och vinklar
 
 ### 1. Komma igång
 

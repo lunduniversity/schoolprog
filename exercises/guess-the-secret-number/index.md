@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Gissa det hemliga numret
 permalink: /exercises/guess-the-secret-number/
 toc: true
@@ -13,6 +13,7 @@ tags:
  - slump
  - intervallhalvering
 ---
+# Gissa det hemliga numret
 
 <!--**Note:** This exercise is also available [in english](README_EN.md).-->
 

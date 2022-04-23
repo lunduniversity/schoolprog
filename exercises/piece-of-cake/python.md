@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Piece of cake
 permalink: /exercises/piece-of-cake/python
 toc: true
@@ -11,4 +11,5 @@ tags:
 proglang: python
 ext: py
 ---
+# Piece of cake
 {% include_relative index.md %}

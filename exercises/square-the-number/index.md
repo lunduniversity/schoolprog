@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Kvadrera talet
 permalink: /exercises/square-the-number/
 toc: true
@@ -14,6 +14,7 @@ tags:
  - kvadrat
  - hypotenusa
 ---
+# Kvadrera talet
 I denna uppgift får du träna på att låta programmet skriva ut och läsa in text. Vi experimenterar också med typer på värden.
 Sedan har vi tillräckligt med kunskaper för att programmera enkla matte-tal med in och utdata, t.ex. kvadrera ett tal.
 

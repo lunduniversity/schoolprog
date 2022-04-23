@@ -1,13 +1,14 @@
 ---
 title: Unplugged
 toc: true
-layout: page
+layout: default
 type: exercise
 tags:
  - nybörjare
  - programmering utan dator
 permalink: /exercises/unplugged/
 ---
+# Unplugged
 
 Kom igång med programmering utan dator!
 

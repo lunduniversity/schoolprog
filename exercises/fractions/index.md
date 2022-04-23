@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Bråkspel
 permalink: /exercises/fractions/
 toc: true
@@ -10,6 +10,8 @@ tags:
  - spel
  - bråkräkning
 ---
+# Bråkspel
+
 <img src="brakspel.png" height="100">
 
 I denna uppgift programmerar vi ett spel där datorn kan hjälpa oss att förenkla och summera heltalsbråk, och kontrollera att vi räknar rätt.

@@ -1,17 +1,6 @@
 ---
 layout: default
 ---
-<!-- - bra första-uppgift
-tags:
- - sköldpaddsgrafik
- - sekvens
- - for-loop
- - funktionsdefinitioner och anrop
- - geometri
- - vinklar
-cover_image: https://i.imgur.com/YHHBJaS.png
-cover_y_offset: 25%
- -->
 
 # Sköldpadda
 
@@ -24,11 +13,10 @@ cover_y_offset: 25%
 
 
 **En bra första-uppgift. Du lär dig...**
-
 * Sköldpaddsgrafik
-* sekvens och for-loop
-* funktionsdefinitioner och anrop
-* geometri och vinklar
+* Sekvens och for-loopar
+* Funktionsdefinitioner och anrop
+* Geometri och vinklar
 
 ### 1. Komma igång
 

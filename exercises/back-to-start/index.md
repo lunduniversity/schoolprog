@@ -1,20 +1,18 @@
 ---
-layout: page
-title: Månghörningar
-permalink: /exercises/back-to-start/
-toc: true
-type: exercise
-tags:
- - bra första-uppgift
- - sköldpaddsgrafik
- - sekvens
- - for-loop
- - geometri
- - vinklar
+layout: default
 ---
+
+# Månghörningar
+
 I denna uppgift kommer du att träna på vinklar i regelbundna månghörningar. Vi använder "turtle graphics" för detta.
 
 Du får även träna på att ändra i och experimentera med program.
+
+**En bra första-uppgift. Du lär dig...**
+* Sköldpaddsgrafik
+* Sekvens och for-loopar
+* Geometri och vinklar
+
 
 Koden i denna uppgift är provkörd på [http://repl.it/languages/python-turtle](http://repl.it/languages/python-turtle) (Python 2.7).
 

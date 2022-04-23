@@ -2,9 +2,10 @@
 layout: default
 type: exercise
 tags:
- - Sköldpaddsgrafik
- - Sekvenser och loopar
- - Geometri och vinklar
+ - bra första-uppgift
+ - sköldpaddsgrafik
+ - sekvenser och loopar
+ - geometri och vinklar
 ---
 
 # Månghörningar

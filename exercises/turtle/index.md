@@ -2,10 +2,11 @@
 layout: default
 type: exercise
 tags:
- - Sköldpaddsgrafik
- - Sekvenser och loopar
- - Funktionsdefinitioner och anrop
- - Geometri och vinklar
+ - bra första-uppgift
+ - sköldpaddsgrafik
+ - sekvenser och loopar
+ - funktionsdefinitioner och anrop
+ - geometri och vinklar
 ---
 
 # Sköldpadda

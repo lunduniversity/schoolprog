@@ -9,7 +9,7 @@ tags:
  - text
  - spel
  - while-sats
- - elif i if-sats
+ - "elif" i if-sats
  - slump
  - intervallhalvering
 ---

@@ -2,6 +2,8 @@
 layout: default
 ---
 
+# Om sidan
+
 Detta är en hemsida utvecklad vid Lunds universitet för högstadie/gymnasie-elever och lärare som vill lära sig programmering. Vi gör detta med hjälp av (förhoppningsvis) roliga uppdrag som är lätta att komma igång med som demonstrerar grundläggande idéer i programmering.
 
 Vi hoppas att dessa uppdrag kan hjälpa elever och lärare att komma igång med programmering, och ha kul under tiden.

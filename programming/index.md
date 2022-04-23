@@ -2,6 +2,8 @@
 layout: default
 ---
 
+# Hjälp
+
 ### Snabbreferenser
 * [Snabbreferens för Python 3](python/CHEATSHEET.md)
 * [Snabbreferens för Python-turtle](turtle-cheatsheet/python.md)

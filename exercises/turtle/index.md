@@ -1,5 +1,11 @@
 ---
 layout: default
+type: exercise
+tags:
+ - Sköldpaddsgrafik
+ - Sekvenser och loopar
+ - Funktionsdefinitioner och anrop
+ - Geometri och vinklar
 ---
 
 # Sköldpadda
@@ -14,7 +20,7 @@ layout: default
 
 **En bra första-uppgift. Du lär dig...**
 * Sköldpaddsgrafik
-* Sekvens och for-loopar
+* Sekvenser och loopar
 * Funktionsdefinitioner och anrop
 * Geometri och vinklar
 

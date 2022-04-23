@@ -1,5 +1,10 @@
 ---
 layout: default
+type: exercise
+tags:
+ - Sköldpaddsgrafik
+ - Sekvenser och loopar
+ - Geometri och vinklar
 ---
 
 # Månghörningar
@@ -10,7 +15,7 @@ Du får även träna på att ändra i och experimentera med program.
 
 **En bra första-uppgift. Du lär dig...**
 * Sköldpaddsgrafik
-* Sekvens och for-loopar
+* Sekvenser och loopar
 * Geometri och vinklar
 
 

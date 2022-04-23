@@ -12,4 +12,4 @@ tags:
 proglang: scala
 ext: scala
 ---
-{% include_relative README.md %}
+{% include_relative index.md %}

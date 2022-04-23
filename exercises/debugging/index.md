@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Avlusning
 permalink: /exercises/debugging/
 toc: true

@@ -10,7 +10,7 @@ We have received a 15,000€ grant from [Google CS4HS](https://www.cs4hs.com/) t
  - We accept contributions.
 
 ## Website
-<!-->
+<!--
 [![Build Status](https://travis-ci.org/lunduniversity/schoolprog.svg?branch=master)](https://travis-ci.org/lunduniversity/schoolprog)
 -->
 
@@ -23,7 +23,7 @@ It is automatically built by Github <!--[Travis CI](https://travis-ci.org/lundun
 To get started as fast as possible, we suggest you use the online [Python 3 environment at repl.it](https://repl.it/languages/python3).
 
 We still have more work to do before this is usable as a part of a curriculum. But in the meantime, you can check out the cheatsheet and the exercises.
-<!-->
+<!--
 ## Hosting it locally
 
 In case you want to help develop the material you might want to run the website locally to preview your changes before committing and pushing. **If this doesn't work for you, create an issue or contact the maintainers so we can find and eliminate the bugs.**

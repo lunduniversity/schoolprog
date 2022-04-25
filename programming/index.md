@@ -1,9 +1,8 @@
 ---
-title: Hjälp
-layout: page
-toc: true
-permalink: /programming/
+layout: default
 ---
+
+# Hjälp
 
 ### Snabbreferenser
 * [Snabbreferens för Python 3](python/CHEATSHEET.md)

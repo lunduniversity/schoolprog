@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Triss
 permalink: /exercises/three-of-a-kind/
 toc: true
@@ -11,6 +11,7 @@ tags:
  - kasta tärning
  - sannolikhet
 ---
+# Triss
 Hur sannolikt är det att få triss om man slår tre tärningar? I denna uppgift skall vi programmera ett experiment där vi tar reda på det.
 
 Koden i denna uppgift är provkörd på [http://repl.it/languages/python3](http://repl.it/languages/python3) (Python 3).

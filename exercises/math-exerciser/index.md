@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Mattetränaren
 permalink: /exercises/math-exerciser/
 type: exercise
@@ -7,6 +7,7 @@ tags:
  - avancerad, text, listor, spel, godtyckliga mattetal
 toc: true
 ---
+# Mattetränaren
 ![solution](https://media.githubusercontent.com/media/ahnlabb/schoolprog-external/master/math-exerciser.gif)
 
 ## Denna övning innehåller:

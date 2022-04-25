@@ -1,6 +1,6 @@
 ---
 title: Låna pengar
-layout: page
+layout: default
 toc: true
 type: exercise
 permalink: /exercises/interest-rates/
@@ -11,6 +11,7 @@ tags:
  - procent
  - ränta
 ---
+# Låna pengar
 
 Det är lätt att låna pengar, t.ex. med ett sms-lån, men hur mycket kostar det egentligen?
 Vi skall skriva ett program som räknar ut det.

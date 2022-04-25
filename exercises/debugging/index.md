@@ -1,6 +1,5 @@
 ---
-layout: page
-title: Avlusning
+layout: default
 permalink: /exercises/debugging/
 toc: true
 type: exercise
@@ -9,6 +8,7 @@ tags:
  - text
  - debugging
 ---
+# Avlusning
 När man programmerar kan det bli fel på många olika sätt. Felen kallas *buggar* eller *bugs* på engelska. Buggar är en naturlig del av all programmering. I den här uppgiften skall vi skapa lite olika slags buggar så att vi lättare kan hantera dem när de senare händer på riktigt.
 
 Koden i denna uppgift är provkörd på [http://repl.it/languages/python3](http://repl.it/languages/python3) (Python 3).

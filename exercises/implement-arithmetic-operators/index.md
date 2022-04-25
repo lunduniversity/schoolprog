@@ -2,7 +2,7 @@
 title: Implementera aritmetiska operatorer
 toc: true
 type: exercise
-layout: page
+layout: default
 tags:
  - medel
  - text
@@ -10,6 +10,7 @@ tags:
  - funktioner
 permalink: /exercises/implement-arithmetic-operators/
 ---
+# Implementera aritmetiska operatorer
 
 I denna uppgift skall vi undersöka hur vi kan klara oss med enbart addition och negerade tal för att räkna ut olika uttryck och implementera andra operatorer.
 

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Funktionsgubbe
 permalink: /exercises/functional-strawman/
 toc: true
@@ -9,6 +9,8 @@ tags:
  - sköldpaddsgrafik
  - trigonometriska funktioner
 ---
+# Funktionsgubbe
+
 <img src="strawman.png" height="100">
 I denna uppgift kommer du att träna på funktioner.
 

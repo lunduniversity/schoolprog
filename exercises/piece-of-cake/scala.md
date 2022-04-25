@@ -1,6 +1,6 @@
 ---
-layout: page
-title: Piece of cake
+layout: default
+title: Piece of cake, Scala
 permalink: /exercises/piece-of-cake/scala
 toc: true
 type: exercise
@@ -12,4 +12,5 @@ tags:
 proglang: scala
 ext: scala
 ---
-{% include_relative README.md %}
+# Piece of cake, Scala
+{% include_relative index.md %}

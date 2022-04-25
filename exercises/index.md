@@ -1,11 +1,10 @@
 ---
-title: Uppdrag
-layout: page
-toc: true
-permalink: /exercises/
+layout: default
 ---
 
-Här är uppgifterna vi börjat jobba på hittils. De kommer i blandad ordning så använd taggarna som står vid sidan om varje uppgift för att hitta rätt!
+# Uppdrag
+
+Här är uppgifterna vi börjat jobba på hittills. De kommer i blandad ordning så använd taggarna som står vid sidan om varje uppgift för att hitta rätt!
 
 <ul>
 {% assign sitepages = site.pages | sort: 'title' %}

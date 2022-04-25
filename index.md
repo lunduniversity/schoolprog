@@ -5,7 +5,9 @@
 layout: default
 ---
 
-# Välkommen till programmeringens värld!
+# LU Skolprogrammering
+
+Välkommen till programmeringens värld!
 
 Här hittar du programmeringsuppdrag tänkta att användas i matematik på högstadiet och gymnasiet.
 

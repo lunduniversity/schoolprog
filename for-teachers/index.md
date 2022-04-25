@@ -1,8 +1,5 @@
 ---
-title: För lärare
-layout: page
-toc: true
-permalink: /for-teachers/
+layout: default
 ---
 
 <!--Matematikämnet har mycket att vinna på att använda sig av programmering i undervisningen:
@@ -14,6 +11,8 @@ permalink: /for-teachers/
 -->
 
 <!--Här kommer vi att samla exempel på lektioner...-->
+
+# För lärare
 
 * **Ge feedback.** Gick övningarna bra? Har du förslag på förbättringar eller nya övningar? [Ge feedback här!](https://docs.google.com/forms/d/e/1FAIpQLSdsyYYZXVpJnUU5qYpvgyrZxhG8eee-s3oD7mnfXoxd447WSw/viewform)
 

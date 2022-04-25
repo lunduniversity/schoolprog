@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Plotta funktioner
 permalink: /exercises/plot/
 toc: true
@@ -11,6 +11,7 @@ tags:
  - lambdas
  - polynom
 ---
+# Plotta funktioner
 I denna uppgift kommer vi att experimentera med funktioner genom att plotta dem. Vi kommer att använda ett av Pythons bibliotek, `matplotlib.pyplot` som kan användas för att plotta mätvärden.
 
 Koden i denna uppgift är provkörd på [https://repl.it/languages/python3](http://repl.it/languages/python3) (Python 3).

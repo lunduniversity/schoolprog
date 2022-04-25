@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Slumpvandring
 permalink: /exercises/random-walk/
 toc: true
@@ -13,6 +13,7 @@ tags:
  - geometri
  - vinklar
 ---
+# Slumpvandring
 <img src="fig-randomwalk.png" height="100">
 
 I denna uppgift får du träna på if-satser och block-struktur i program.

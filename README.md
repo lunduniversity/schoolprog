@@ -10,19 +10,20 @@ We have received a 15,000€ grant from [Google CS4HS](https://www.cs4hs.com/) t
  - We accept contributions.
 
 ## Website
-
+<!-->
 [![Build Status](https://travis-ci.org/lunduniversity/schoolprog.svg?branch=master)](https://travis-ci.org/lunduniversity/schoolprog)
+-->
 
 The website is served at [lunduniversity.github.io/schoolprog/](https://lunduniversity.github.io/schoolprog/).
 
-It is automatically built by [Travis CI](https://travis-ci.org/lunduniversity/schoolprog) from the master branch whenever it is updated.
+It is automatically built by Github <!--[Travis CI](https://travis-ci.org/lunduniversity/schoolprog) -->from the master branch whenever it is updated.
 
 ## Getting started
 
 To get started as fast as possible, we suggest you use the online [Python 3 environment at repl.it](https://repl.it/languages/python3).
 
 We still have more work to do before this is usable as a part of a curriculum. But in the meantime, you can check out the cheatsheet and the exercises.
-
+<!-->
 ## Hosting it locally
 
 In case you want to help develop the material you might want to run the website locally to preview your changes before committing and pushing. **If this doesn't work for you, create an issue or contact the maintainers so we can find and eliminate the bugs.**
@@ -45,7 +46,7 @@ Then browse to the local pages:
 
 `http://localhost:4000/schoolprog/`
 
-
+-->
 ## Problems
 
  - How do you make programming exercises for a mathematics course?
@@ -73,7 +74,7 @@ Then browse to the local pages:
 
 # License
 
-Copyright &copy; 2018. Dept. of Computer Science at Lund University, Lund, Sweden.
+Copyright &copy; 2017-2022. Dept. of Computer Science at Lund University, Lund, Sweden.
 
 
 This work is licensed under a

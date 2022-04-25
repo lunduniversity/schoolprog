@@ -1,0 +1,24 @@
+{% if site.data.navigation %}
+  <div class="navigation-wrapper">
+    <nav>
+        <!--Creates a menu link for each entry in "/_data/navigation.yml". -->
+        {%- for link in site.data.navigation -%}
+          {%- if link.url contains '://' -%}
+            {%- assign url = link.url -%}
+          {%- else -%}
+            {%- assign url = link.url | relative_url -%}
+          {%- endif -%}
+
+          <!-- Different color on active tab, does not currently work
+          {% if page.url == node.url %}
+            <a href="{{ url }}" id="active">{{ link.title }}</a>
+          {% else %}
+            <a href="{{ url }}">{{ link.title }}</a>
+          {% endif %} -->
+
+          <a href="{{ url }}">{{ link.title }}</a>
+        {%- endfor -%}
+
+    </nav>
+  </div>
+{% endif %}

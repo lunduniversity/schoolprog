@@ -94,4 +94,4 @@ Under the following terms:
 * No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
 
 
-See http://creativecommons.org/licenses/by-sa/4.0/
+See https://creativecommons.org/licenses/by-sa/4.0/

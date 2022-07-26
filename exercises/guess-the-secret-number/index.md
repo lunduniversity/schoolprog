@@ -19,7 +19,7 @@ tags:
 
 Här skriver vi ett litet spel där programmet väljer ett slumpmässigt tal och låter dig gissa dig fram till vilket talet är.
 
-Koden i denna uppgift är provkörd på [http://repl.it/languages/python3](http://repl.it/languages/python3) (Python 3).
+Koden i denna uppgift är provkörd på [http://replit.com/languages/python3](http://replit.com/languages/python3) (Python 3).
 
 ## 1. Gissa en gång
 

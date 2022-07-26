@@ -7,7 +7,7 @@ layout: default
 
 Denna kod är provkörd på online-miljön [python-turtle på replit.com](http://repl.it/languages/python-turtle) för Python 2.7.
 
-# Kom igång
+## Kom igång
 
 Python-turtle är en online-miljö för programspråket Python 2.7 och med stöd för "turtle graphics". Här är ett program som ritar en liten figur.
 
@@ -22,9 +22,9 @@ t.forward(30)        # t går framåt 30 steg
 
 *Obs!* I exemplen nedan förutsätter vi att du har med de två första raderna ovan (`import`... och `t =`) först i varje program.
 
-# Styr sköldpaddan
+## Styr sköldpaddan
 
-## Styr med relativa kommandon
+### Styr med relativa kommandon
 
 ```python
 t.forward(20) # Paddan går 20 steg framåt
@@ -35,7 +35,7 @@ t.circle(50)  # Paddan ritar en cirkel med radien 50
 t.circle(50, extent = 90) # Paddan ritar en båge med radien 50 och vinkeln 90
 ```
 
-## Hoppa framåt
+### Hoppa framåt
 
 Det är praktiskt att låta paddan kunna hoppa framåt utan att rita. För att göra detta, klistra in följande funktion som lyfter pennan, går framåt, och sedan sänker pennan igen:
 
@@ -55,7 +55,7 @@ hop(20)
 t.forward(10)
 ```
 
-## Styr med absoluta koordinater
+### Styr med absoluta koordinater
 
 För att flytta paddan till en viss `(x,y)`-position är följande funktion användbar att klistra in:
 
@@ -73,7 +73,7 @@ Du kan också sätta vinkeln på paddan:
 t.setheading(45)  # Paddan vrider nosen till vinkeln 45 grade
 ```
 
-## Sätt färger, penntjocklek, etc.
+### Sätt färger, penntjocklek, etc.
 
 ```python
 t.color("pink")       # Sätter pennans färg till rosa
@@ -91,14 +91,14 @@ t.forward(50)
 t.fill(False)
 ```
 
-## Låt paddan skriva text
+### Låt paddan skriva text
 
 ```python
 t.write("hello")      # Paddan skriver texten "hello"
 t.write("hello", font=("Arial", 12, "normal"))  # Skriv med ett visst typsnitt
 ```
 
-## Sätt hastigheten på paddan
+### Sätt hastigheten på paddan
 ```python
 t.speed(1)     # Paddan ritar väldigt långsamt
 t.speed(20)    # Paddan ritar väldigt snabbt
@@ -114,9 +114,9 @@ h = t.heading()  // Spara paddans riktning i variabeln h
 t.setheading(h)  // Sätt paddans riktning till h
 ```
 
-# Annat du kan göra i Python-turtle
+## Annat du kan göra i Python-turtle
 
-## Läs in och skriv ut
+### Läs in och skriv ut
 
 Du kan skriva ut text i paddans "console"-fönster:
 
@@ -133,7 +133,7 @@ i = int(input("Write a number: "))  # läs in ett heltal
 
 *Obs!* Python-turtle klarar inte svenska tecken som `åäö` i sina strängar. Därför är frågorna ovan på engelska.
 
-## Sätta ihop strängar
+### Sätta ihop strängar
 
 När du skriver ut är det ofta praktiskt att sätta ihop strängar. Det kan man göra med `+`. Men tal och andra värden som inte är strängar från början behöver då omvandlas till strängar med hjälp av funktionen `str`:
 
@@ -141,7 +141,7 @@ När du skriver ut är det ofta praktiskt att sätta ihop strängar. Det kan man
 print("En vecka har " + str(7) + " dagar.")
 ```
 
-## Dra slumptal
+### Dra slumptal
 
 För att dra slumptal behöver du importera funktionen randint från biblioteket random:
 
@@ -152,7 +152,7 @@ t = randint(1,9)       # Ger ett slumptal mellan 1 och 9
 
 
 
-# Mer information
+## Mer information
 
 * [Snabbreferens för Python](../../programming/python/CHEATSHEET.md) (Mer tips om hur du skriver python-kod.)
 * [Dokumentation för Python 2.7's turtle-bibliotek](https://docs.python.org/2/library/turtle.html)

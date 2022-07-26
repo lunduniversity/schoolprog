@@ -14,7 +14,7 @@ tags:
 # Triss
 Hur sannolikt är det att få triss om man slår tre tärningar? I denna uppgift skall vi programmera ett experiment där vi tar reda på det.
 
-Koden i denna uppgift är provkörd på [http://repl.it/languages/python3](http://repl.it/languages/python3) (Python 3).
+Koden i denna uppgift är provkörd på [http://replit.com/languages/python3](http://replit.com/languages/python3) (Python 3).
 
 ### 1. Kasta tärning
 

@@ -1,9 +1,8 @@
 ---
-layout: page
-title: Snabbreferens för Python-turtle
-permalink: turtle-cheatsheet/python
-toc: true
+layout: default
 ---
+
+# Snabbreferens för Python-turtle 
 
 
 Denna kod är provkörd på online-miljön [python-turtle på replit.com](http://repl.it/languages/python-turtle) för Python 2.7.

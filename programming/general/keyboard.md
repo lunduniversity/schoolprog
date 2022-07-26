@@ -1,9 +1,8 @@
 ---
-layout: page
-title: Hitta rätt på tangentbordet
-permalink: programming/general/keyboard
-toc: true
+layout: default
 ---
+
+# Hitta rätt på tangentbordet
 
 | Tecken  | Svenska  | Engelska  | Används i Python |
 |:-------:|:----:|:--------:|

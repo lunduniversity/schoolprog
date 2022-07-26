@@ -16,7 +16,7 @@ tags:
 Det är lätt att låna pengar, t.ex. med ett sms-lån, men hur mycket kostar det egentligen?
 Vi skall skriva ett program som räknar ut det.
 
-Koden i denna uppgift är provkörd på [http://repl.it/languages/python3](http://repl.it/languages/python3) (Python 3).
+Koden i denna uppgift är provkörd på [http://replit.com/languages/python3](http://replit.com/languages/python3) (Python 3).
 
 Vi vill kunna jämföra erbjudanden om lån från olika firmor. En firma *Buffel&Båg* lånar ut med en månadsränta på 29% och en månadsavgift på 149 kr. En annan firma *Lurendrejarna* lånar ut utan månadsavgift men med 39% månadsränta.
 

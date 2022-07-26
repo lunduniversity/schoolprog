@@ -20,7 +20,7 @@ It is automatically built by Github <!--[Travis CI](https://travis-ci.org/lundun
 
 ## Getting started
 
-To get started as fast as possible, we suggest you use the online [Python 3 environment at repl.it](https://repl.it/languages/python3).
+To get started as fast as possible, we suggest you use the online [Python 3 environment at replit.com](https://replit.com/new/python3).
 
 We still have more work to do before this is usable as a part of a curriculum. But in the meantime, you can check out the cheatsheet and the exercises.
 <!--

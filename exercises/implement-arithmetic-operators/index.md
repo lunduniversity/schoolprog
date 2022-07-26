@@ -14,7 +14,7 @@ permalink: /exercises/implement-arithmetic-operators/
 
 I denna uppgift skall vi undersöka hur vi kan klara oss med enbart addition och negerade tal för att räkna ut olika uttryck och implementera andra operatorer.
 
-Koden i denna uppgift är provkörd på [http://repl.it/languages/python3](http://repl.it/languages/python3) (Python 3).
+Koden i denna uppgift är provkörd på [http://replit.com/languages/python3](http://replit.com/languages/python3) (Python 3).
 
 ### 1. Addition och negation
 

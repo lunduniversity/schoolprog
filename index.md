@@ -50,8 +50,8 @@ Du hittar alla våra uppdrag under [Uppdrags-fliken](exercises).
 Vill du prova ett annat programmeringsspråk? Här är ett uppdrag som använder språket Scala:
 * [Piece of cake](exercises/piece-of-cake/scala.md) (Bråkräkning med sköldpaddsgrafik, i Scala)
 
-## Hjälp
-Se våra snabbguider och länkar till andra siter under [Hjälp-fliken](programming).
+## Hjälp och länkar
+Se våra snabbguider och länkar till andra siter under [Länk-fliken](programming).
 
 
 ## Unplugged

@@ -1,13 +1,12 @@
 ---
-layout: page
-title: Snabbreferens för Scala-turtle
-permalink: turtle-cheatsheet/scala
-toc: true
+layout: default
 ---
+
+# Snabbreferens för Scala-turtle 
 
 Denna kod är provkörd på online-miljön [kojo-js](http://kojojs.kogics.net) för Scala.
 
-# Kom igång
+## Kom igång
 
 Kojo är en miljö för programspråket Scala och med stöd för "turtle graphics". Här är ett program som ritar en liten figur.
 
@@ -17,9 +16,9 @@ right(60)     // Paddan vrider sig 60 grader åt höger
 forward(30)   // Paddan går 20 steg framåt
 ```
 
-# Styr sköldpaddan
+## Styr sköldpaddan
 
-## Styr med relativa kommandon
+### Styr med relativa kommandon
 
 ```scala
 forward(20) // Paddan går 20 steg framåt
@@ -32,7 +31,7 @@ arc(50, 90) // Paddan ritar en båge med radien 50 och vinkeln 90
 circle(50)  // Paddan ritar en cirkel med radien 50
 ```
 
-## Styr med absoluta koordinater
+### Styr med absoluta koordinater
 
 ```scala
 setPosition(50,80) // Paddan hoppar till läget (50, 80) utan att rita
@@ -40,7 +39,7 @@ setHeading(45)     // Paddan vrider nosen till vinkeln 45 grade
 moveTo(10,10)      // Paddan vrider sig och går till läget (10, 10)
 ```
 
-## Sätt färger, penntjocklek, etc.
+### Sätt färger, penntjocklek, etc.
 
 ```scala
 setPenColor(pink)    // Sätter pennans färg till rosa
@@ -48,28 +47,28 @@ setFillColor(purple) // Sätter ifyllnadfärgen till lila
 setPenThickness(20)  // Sätter pennans bredd till 20
 ```
 
-## Låt paddan skriva text
+### Låt paddan skriva text
 
 ```scala
 write("hello")      // Paddan skriver texten "hello"
 setPenFontSize(20)  // Paddan kommer nästa gång att skriva text med storlek 20
 ```
 
-## Sätt hastigheten på paddan
+### Sätt hastigheten på paddan
 ```scala
 setAnimationDelay(0)     // Paddan ritar så snabbt som möjligt
 setAnimationDelay(10000) // Paddan ritar väldigt långsamt
 ```
 
-## Spara/återställ position och riktning
+### Spara/återställ position och riktning
 ```scala
 savePosHe()     // Spara paddans position och riktning
 restorePosHe()  // Återställ tidigare sparad position och riktning
 ```
 
-# Annat du kan göra i Kojo
+## Annat du kan göra i Kojo
 
-## Läs in och skriv ut
+### Läs in och skriv ut
 
 Du kan skriva ut text i paddans fönster:
 
@@ -90,7 +89,7 @@ Typen double används för decimaltal. Man använder punkt i stället för komma
 
 *Obs!* I kojo-js kommer du inte att se vad paddan ritar eller vad `println` skrivit ut förrän programmet kört klart, dvs efter alla reads.
 
-## Sätta ihop strängar
+### Sätta ihop strängar
 
 När du skriver ut är det ofta praktiskt att sätta ihop strängar. Det kan man göra med `+`. Men tal och andra värden som inte är strängar från början behöver då omvandlas till strängar med hjälp av funktionen `toString`:
 
@@ -98,7 +97,7 @@ När du skriver ut är det ofta praktiskt att sätta ihop strängar. Det kan man
 println("En vecka har " + 7.toString + " dagar.")
 ```
 
-## Dra slumptal
+### Dra slumptal
 
 Du kan använda slumptal på följande sätt:
 
@@ -109,11 +108,11 @@ randomBoolean     // Ger slumpmässigt värdet true eller false
 randomFrom(Seq(1,3,5)) // Drar ett värde slumpmässigt från sekvensen
 ```
 
-# Konstruktioner i Scala
+## Konstruktioner i Scala
 
 Kojo är en miljö för språket Scala. Här är några enkla exempel på Scala-konstruktioner.
 
-## Definiera en funktion
+### Definiera en funktion
 
 Med en `def` kan du göra egna funktioner som kan användas som byggblock:
 
@@ -129,7 +128,7 @@ step(20)                  // Anropa funktionen
 step(30)                  // med olika parametrar
 ```
 
-## Deklarera värden och variabler
+### Deklarera värden och variabler
 
 `val` används för att namnge värden. `var` används för att namnge variabler. Man kan ändra värdet på en variabel.
 
@@ -142,7 +141,7 @@ w = w + 1        // värdet på w ändras till 20 + 1
 println(w)       // 21 skrivs ut
 ```
 
-## Repetition
+### Repetition
 
 Med en for-loop kan vi repetera ett visst antal varv:
 
@@ -163,7 +162,7 @@ while (a <= 5) {    // loopa så länge a är mindre eller lika med 5
 }
 ```
 
-## Alternativ
+### Alternativ
 
 Med en if-sats kan man göra alternativa saker beroende på värdet på ett uttryck:
 
@@ -180,6 +179,6 @@ else {
 }
 ```
 
-# Mer information
+## Mer information
 
 * [Lalit Pants snabbreferens till Kojo](https://bitbucket.org/lalit_pant/kojo/downloads/KojoQuickref-301014.pdf) *Obs!* Alla kommandon i kojo fungerar inte ännu på kojo-js miljön.

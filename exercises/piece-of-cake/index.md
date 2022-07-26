@@ -6,7 +6,7 @@ Innan du gör uppgiften bör du ha lite koll på "turtle graphics", t.ex. genom 
 
 {% case page.proglang %}
 {% when "python" %}
-Koden i denna uppgift är provkörd på [http://repl.it/languages/python-turtle](http://repl.it/languages/python-turtle) (Python 2.7).
+Koden i denna uppgift är provkörd på [http://replit.com/languages/python-turtle](http://replit.com/languages/python-turtle) (Python 2.7).
 {% when "scala" %}
 Koden i denna uppgift är provkörd på [http://kojojs.kogics.net](http://kojojs.kogics.net) (Scala).
 {% endcase %}

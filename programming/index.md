@@ -12,8 +12,8 @@ layout: default
 
 
 ### Rekommenderade online-miljöer
-* [Python 3](https://repl.it/languages/python3)
-* [Python-turtle](https://repl.it/languages/python_turtle)
+* [Python 3](https://replit.com/languages/python3)
+* [Python-turtle](https://replit.com/languages/python_turtle) - endast till för att använda till turtle-uppgifter. Miljön använder en gammal version av Python som inte hanterar åäö.
 * [Scala-turtle](http://kojojs.kogics.net/)
 
 

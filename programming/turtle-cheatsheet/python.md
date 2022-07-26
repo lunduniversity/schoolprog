@@ -6,7 +6,7 @@ toc: true
 ---
 
 
-Denna kod är provkörd på online-miljön [python-turtle på repl.it](http://repl.it/languages/python-turtle) för Python 2.7.
+Denna kod är provkörd på online-miljön [python-turtle på replit.com](http://repl.it/languages/python-turtle) för Python 2.7.
 
 # Kom igång
 

@@ -11,7 +11,7 @@ Välkommen till programmeringens värld!
 
 Här hittar du programmeringsuppdrag tänkta att användas i matematik på högstadiet och gymnasiet.
 
-Vi börjar med några uppdrag där du samtidigt lär dig enkel programmering i Python. Vi använder en online-miljö (repl.it) för programmeringen, så du behöver inte installera något på din egen dator.
+Vi börjar med några uppdrag där du samtidigt lär dig enkel programmering i Python. Vi använder en online-miljö (replit.com) för programmeringen, så du behöver inte installera något på din egen dator. Du behöver först skapa ett konto på [replit.com](https://replit.com/signup).
 
 ## Sköldpaddsgrafik
 Ett bra sätt att börja programmera är med *sköldpaddsgrafik*  (*turtle graphics* på engelska). Då övar man sig samtidigt på geometri och koordinatsystem. Prova:

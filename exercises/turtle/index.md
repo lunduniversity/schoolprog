@@ -27,7 +27,7 @@ tags:
 
 ### 1. Komma igång
 
-Börja med att öppna två fönster, sida vid sida. Ett för detta uppdrag, och ett för [Python-turtle](https://repl.it/languages/python_turtle)
+Börja med att öppna två fönster, sida vid sida. Ett för detta uppdrag, och ett för [Python-turtle](https://replit.com/languages/python_turtle). Du måste vara inloggad på ditt replit-konto för att kunna programmera.
 
 *Tips!* För att få fönstren sida vid sida kan du 1) göra detta fönster smalare, som halva skärmbredden, 2) öppna python-turtle i en ny flik, 3) dra fliken till sidan, så blir den ett nytt fönster.
 
@@ -37,6 +37,8 @@ Börja med att öppna två fönster, sida vid sida. Ett för detta uppdrag, och 
 
 ### 2. Rektangel
 <!--Sekvens-->
+
+Ser du att det redan finns kod i ditt python-turtle-fönster? Testa att köra koden genom att klicka på den gröna knappen **Run** högst upp i mitten och se vad som händer. Du kan klicka på knappen flera gånger för att köra om koden. Nu kan du sudda ut all kod så att du kan börja skriva din egen!
 
 Vi börjar med att låta paddan göra några saker i *sekvens*. Här är ett enkelt exempel där paddan går en liten tur:
 
@@ -59,6 +61,8 @@ Kör programmet och se vad som händer. Kan du lista ut vad varje rad gör? Prov
 <img src="fig-rectangle.png" height="70">
 
 *Tips!* Om du tycker paddan ritar för långsamt, lägg till ett anrop `t.speed(10)` för att rita snabbare.
+
+*Tips!* Du kan alltid göra sköldpaddsfönstret större genom att klicka på kvadraten uppe i det högra hörnet.
 
 
 ### 3. Kvadrat

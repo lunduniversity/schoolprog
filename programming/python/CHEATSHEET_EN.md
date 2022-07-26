@@ -1,9 +1,8 @@
 ---
-title: Python Cheatsheet
-layout: page
-toc: true
-permalink: /cheatsheet/python/en/
+layout: default
 ---
+
+# Python Cheatsheet 
 
 ## Variables and printing
 

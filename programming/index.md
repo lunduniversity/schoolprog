@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Hjälp
+# Länkar
 
 ### Snabbreferenser
 * [Snabbreferens för Python 3](python/CHEATSHEET.md)

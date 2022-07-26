@@ -1,9 +1,8 @@
 ---
-title: Snabbreferens för Python 3
-layout: page
-toc: true
-permalink: /cheatsheet/python/
+layout: default
 ---
+
+# Snabbreferens för Python
 
 Denna snabbreferens innehåller vanliga konstruktioner för Python 3.6. För mer information, se t.ex. [The Python Tutorial](https://docs.python.org/3.6/tutorial/index.html).
 

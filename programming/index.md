@@ -32,3 +32,4 @@ layout: default
 
 ### Mer från Lunds universitet
 * [Lär dig programmera](http://www.lth.se/programmera/)
+* [LU miljödataprogrammering](https://lunduniversity.github.io/schoolprog-satellite/) - Pythonprogrammeringsuppgifter där miljödata och satellitbilder analyseras.

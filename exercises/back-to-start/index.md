@@ -20,7 +20,7 @@ Du får även träna på att ändra i och experimentera med program.
 * Geometri och vinklar
 
 
-Koden i denna uppgift är provkörd på [http://repl.it/languages/python-turtle](http://repl.it/languages/python-turtle) (Python 2.7).
+Koden i denna uppgift är provkörd på [http://replit.com/languages/python-turtle](http://replit.com/languages/python-turtle) (Python 2.7).
 
 ### 1. Rita en triangel
 

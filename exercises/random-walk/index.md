@@ -18,7 +18,7 @@ tags:
 
 I denna uppgift får du träna på if-satser och block-struktur i program.
 
-Koden i denna uppgift är provkörd på [http://repl.it/languages/python-turtle](http://repl.it/languages/python-turtle) (Python 2.7).
+Koden i denna uppgift är provkörd på [http://replit.com/languages/python-turtle](http://replit.com/languages/python-turtle) (Python 2.7).
 
 ### 1. Alternativa färger
 

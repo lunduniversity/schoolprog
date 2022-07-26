@@ -21,7 +21,7 @@ Ett bra sätt att börja programmera är med *sköldpaddsgrafik*  (*turtle graph
 * [Slumpvandring](exercises/random-walk) (Bra att fortsätta med. Du lär dig om villkorssatser och blockstruktur.)
 * [Funktionsgubbe](exercises/functional-strawman) (Bra att fortsätta med. Gymnasienivå. Du ritar trigonometriska funktioner med hjälp av programmeringsfunktioner.)
 
-Sköldpaddsmiljön vi använt ovan stöder bara Python 2.7, som är en lite äldre version av Python. I uppgifterna nedan använder vi text input/output och plottning. Då använder vi Python 3 i stället, som är modernare.
+Sköldpaddsmiljön vi använt ovan stöder bara Python 2.7, som är en lite äldre version av Python. I uppgifterna nedan använder vi text input/output och plottning. Då använder vi Python 3 i stället, som är modernare. Om du råkar fortsätta med Python 2.7 så kan du märka att åäö inte fungerar eller att vissa saker ser annorlunda ut.
 
 ## Input/Output
 Nästa steg är att lära sig lite om att skriva ut och läsa in text och tal.

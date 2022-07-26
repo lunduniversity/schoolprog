@@ -18,7 +18,7 @@ tags:
 I denna uppgift får du träna på att låta programmet skriva ut och läsa in text. Vi experimenterar också med typer på värden.
 Sedan har vi tillräckligt med kunskaper för att programmera enkla matte-tal med in och utdata, t.ex. kvadrera ett tal.
 
-Vi kör Python 3 i denna uppgift, och har inte tillgång till någon sköldpadda. Koden är provkörd på [http://repl.it/languages/python3](http://repl.it/languages/python3) (Python 3).
+Vi kör Python 3 i denna uppgift, och har inte tillgång till någon sköldpadda. Koden är provkörd på [http://replit.com/languages/python3](http://replit.com/languages/python3) (Python 3).
 
 ## 1. Hello world!
 
@@ -33,6 +33,8 @@ print("Hello world!")
 Texten dyker upp i den så kallade *console*-vyn. Kärt barn har många namn, och denna vy kallas också för t.ex. *terminalfönstret*, eller *kommandoraden*.
 
 (Dessa termer härstammar från datorns barndom innan det fanns grafiska skärmar med fönster och pixlar. Då styrde man datorn från en "console" eller "terminal" som hade en enkel textskärm och där man skrev kommandon som text-rader.)
+
+*Tips* Om du använder Python-turtle-miljön så kommer inte åäö att fungera. Även andra saker fungerar annorlunda, så vi rekomenderar dig att använda python 3-miljön som är länkad till ovan.
 
 ## 2. Inläsning
 
